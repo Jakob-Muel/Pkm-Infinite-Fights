@@ -1,0 +1,6060 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-03-25",
+  "count": 151,
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "bulbasaur",
+      "display_name": "Bulbasaur",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "sp_attack": 65,
+        "sp_defense": 65,
+        "speed": 45
+      },
+      "moves": [
+        "vine-whip",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "growl",
+        "leech-seed",
+        "growth",
+        "razor-leaf",
+        "solar-beam",
+        "poison-powder",
+        "sleep-powder",
+        "sweet-scent",
+        "synthesis",
+        "worry-seed",
+        "seed-bomb",
+        "power-whip"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ivysaur",
+      "display_name": "Ivysaur",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 62,
+        "defense": 63,
+        "sp_attack": 80,
+        "sp_defense": 80,
+        "speed": 60
+      },
+      "moves": [
+        "vine-whip",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "growl",
+        "leech-seed",
+        "growth",
+        "razor-leaf",
+        "solar-beam",
+        "poison-powder",
+        "sleep-powder",
+        "sweet-scent",
+        "synthesis",
+        "worry-seed",
+        "seed-bomb",
+        "power-whip"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "venusaur",
+      "display_name": "Venusaur",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 82,
+        "defense": 83,
+        "sp_attack": 100,
+        "sp_defense": 100,
+        "speed": 80
+      },
+      "moves": [
+        "vine-whip",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "growl",
+        "leech-seed",
+        "growth",
+        "razor-leaf",
+        "solar-beam",
+        "poison-powder",
+        "sleep-powder",
+        "petal-dance",
+        "amnesia",
+        "sweet-scent",
+        "synthesis",
+        "worry-seed",
+        "seed-bomb",
+        "power-whip",
+        "petal-blizzard"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "charmander",
+      "display_name": "Charmander",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 39,
+        "attack": 52,
+        "defense": 43,
+        "sp_attack": 60,
+        "sp_defense": 50,
+        "speed": 65
+      },
+      "moves": [
+        "scratch",
+        "leer",
+        "growl",
+        "ember",
+        "flamethrower",
+        "dragon-rage",
+        "fire-spin",
+        "rage",
+        "smokescreen",
+        "fury-swipes",
+        "slash",
+        "scary-face",
+        "dragon-breath",
+        "metal-claw",
+        "flare-blitz",
+        "fire-fang",
+        "flame-burst",
+        "inferno"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "charmeleon",
+      "display_name": "Charmeleon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 58,
+        "attack": 64,
+        "defense": 58,
+        "sp_attack": 80,
+        "sp_defense": 65,
+        "speed": 80
+      },
+      "moves": [
+        "scratch",
+        "leer",
+        "growl",
+        "ember",
+        "flamethrower",
+        "dragon-rage",
+        "fire-spin",
+        "rage",
+        "smokescreen",
+        "fury-swipes",
+        "slash",
+        "scary-face",
+        "dragon-breath",
+        "metal-claw",
+        "flare-blitz",
+        "fire-fang",
+        "flame-burst",
+        "inferno"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "charizard",
+      "display_name": "Charizard",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "stats": {
+        "hp": 78,
+        "attack": 84,
+        "defense": 78,
+        "sp_attack": 109,
+        "sp_defense": 85,
+        "speed": 100
+      },
+      "moves": [
+        "scratch",
+        "wing-attack",
+        "leer",
+        "growl",
+        "ember",
+        "flamethrower",
+        "counter",
+        "dragon-rage",
+        "fire-spin",
+        "rage",
+        "smokescreen",
+        "fury-swipes",
+        "slash",
+        "scary-face",
+        "dragon-breath",
+        "metal-claw",
+        "crunch",
+        "heat-wave",
+        "dragon-claw",
+        "flare-blitz",
+        "air-slash",
+        "shadow-claw",
+        "fire-fang",
+        "flame-burst",
+        "inferno"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "squirtle",
+      "display_name": "Squirtle",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 44,
+        "attack": 48,
+        "defense": 65,
+        "sp_attack": 50,
+        "sp_defense": 64,
+        "speed": 43
+      },
+      "moves": [
+        "headbutt",
+        "tackle",
+        "tail-whip",
+        "bite",
+        "water-gun",
+        "hydro-pump",
+        "bubble-beam",
+        "withdraw",
+        "skull-bash",
+        "bubble",
+        "protect",
+        "rapid-spin",
+        "rain-dance",
+        "iron-defense",
+        "water-pulse",
+        "aqua-tail",
+        "shell-smash",
+        "wave-crash"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "wartortle",
+      "display_name": "Wartortle",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 59,
+        "attack": 63,
+        "defense": 80,
+        "sp_attack": 65,
+        "sp_defense": 80,
+        "speed": 58
+      },
+      "moves": [
+        "headbutt",
+        "tackle",
+        "tail-whip",
+        "bite",
+        "water-gun",
+        "hydro-pump",
+        "bubble-beam",
+        "withdraw",
+        "skull-bash",
+        "bubble",
+        "protect",
+        "rapid-spin",
+        "rain-dance",
+        "iron-defense",
+        "water-pulse",
+        "aqua-tail",
+        "shell-smash",
+        "wave-crash"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "blastoise",
+      "display_name": "Blastoise",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 79,
+        "attack": 83,
+        "defense": 100,
+        "sp_attack": 85,
+        "sp_defense": 105,
+        "speed": 78
+      },
+      "moves": [
+        "headbutt",
+        "tackle",
+        "tail-whip",
+        "bite",
+        "water-gun",
+        "hydro-pump",
+        "bubble-beam",
+        "withdraw",
+        "skull-bash",
+        "bubble",
+        "protect",
+        "rapid-spin",
+        "rain-dance",
+        "fake-out",
+        "iron-defense",
+        "water-pulse",
+        "aqua-tail",
+        "flash-cannon",
+        "aqua-jet",
+        "shell-smash",
+        "wave-crash"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "caterpie",
+      "display_name": "Caterpie",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+      "types": [
+        "bug"
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 30,
+        "defense": 35,
+        "sp_attack": 20,
+        "sp_defense": 20,
+        "speed": 45
+      },
+      "moves": [
+        "tackle",
+        "string-shot",
+        "bug-bite"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "metapod",
+      "display_name": "Metapod",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+      "types": [
+        "bug"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 20,
+        "defense": 55,
+        "sp_attack": 25,
+        "sp_defense": 25,
+        "speed": 30
+      },
+      "moves": [
+        "harden"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "butterfree",
+      "display_name": "Butterfree",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 45,
+        "defense": 50,
+        "sp_attack": 90,
+        "sp_defense": 80,
+        "speed": 70
+      },
+      "moves": [
+        "gust",
+        "whirlwind",
+        "tackle",
+        "supersonic",
+        "psybeam",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "string-shot",
+        "confusion",
+        "harden",
+        "safeguard",
+        "silver-wind",
+        "tailwind",
+        "air-slash",
+        "bug-buzz",
+        "captivate",
+        "bug-bite",
+        "rage-powder",
+        "quiver-dance"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "weedle",
+      "display_name": "Weedle",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 35,
+        "defense": 30,
+        "sp_attack": 20,
+        "sp_defense": 20,
+        "speed": 50
+      },
+      "moves": [
+        "poison-sting",
+        "string-shot",
+        "bug-bite"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "kakuna",
+      "display_name": "Kakuna",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 25,
+        "defense": 50,
+        "sp_attack": 25,
+        "sp_defense": 25,
+        "speed": 35
+      },
+      "moves": [
+        "harden"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "beedrill",
+      "display_name": "Beedrill",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 90,
+        "defense": 40,
+        "sp_attack": 45,
+        "sp_defense": 80,
+        "speed": 75
+      },
+      "moves": [
+        "fury-attack",
+        "poison-sting",
+        "twineedle",
+        "pin-missile",
+        "peck",
+        "string-shot",
+        "agility",
+        "rage",
+        "harden",
+        "focus-energy",
+        "outrage",
+        "fury-cutter",
+        "pursuit",
+        "endeavor",
+        "assurance",
+        "toxic-spikes",
+        "poison-jab",
+        "bug-bite",
+        "venoshock",
+        "fell-stinger",
+        "laser-focus"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "pidgey",
+      "display_name": "Pidgey",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 45,
+        "defense": 40,
+        "sp_attack": 35,
+        "sp_defense": 35,
+        "speed": 56
+      },
+      "moves": [
+        "razor-wind",
+        "gust",
+        "wing-attack",
+        "whirlwind",
+        "sand-attack",
+        "tackle",
+        "agility",
+        "quick-attack",
+        "mirror-move",
+        "twister",
+        "feather-dance",
+        "aerial-ace",
+        "roost",
+        "tailwind",
+        "air-slash",
+        "hurricane"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "pidgeotto",
+      "display_name": "Pidgeotto",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "hp": 63,
+        "attack": 60,
+        "defense": 55,
+        "sp_attack": 50,
+        "sp_defense": 50,
+        "speed": 71
+      },
+      "moves": [
+        "razor-wind",
+        "gust",
+        "wing-attack",
+        "whirlwind",
+        "sand-attack",
+        "tackle",
+        "agility",
+        "quick-attack",
+        "mirror-move",
+        "twister",
+        "feather-dance",
+        "aerial-ace",
+        "roost",
+        "tailwind",
+        "air-slash",
+        "hurricane"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "pidgeot",
+      "display_name": "Pidgeot",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "hp": 83,
+        "attack": 80,
+        "defense": 75,
+        "sp_attack": 70,
+        "sp_defense": 70,
+        "speed": 101
+      },
+      "moves": [
+        "razor-wind",
+        "gust",
+        "wing-attack",
+        "whirlwind",
+        "sand-attack",
+        "tackle",
+        "agility",
+        "quick-attack",
+        "mirror-move",
+        "sky-attack",
+        "twister",
+        "heat-wave",
+        "feather-dance",
+        "aerial-ace",
+        "roost",
+        "tailwind",
+        "air-slash",
+        "hurricane"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "rattata",
+      "display_name": "Rattata",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 30,
+        "attack": 56,
+        "defense": 35,
+        "sp_attack": 25,
+        "sp_defense": 35,
+        "speed": 72
+      },
+      "moves": [
+        "tackle",
+        "take-down",
+        "double-edge",
+        "tail-whip",
+        "bite",
+        "quick-attack",
+        "focus-energy",
+        "hyper-fang",
+        "super-fang",
+        "pursuit",
+        "crunch",
+        "endeavor",
+        "assurance",
+        "sucker-punch",
+        "laser-focus"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "raticate",
+      "display_name": "Raticate",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 55,
+        "attack": 81,
+        "defense": 60,
+        "sp_attack": 50,
+        "sp_defense": 70,
+        "speed": 97
+      },
+      "moves": [
+        "swords-dance",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "tail-whip",
+        "bite",
+        "counter",
+        "quick-attack",
+        "focus-energy",
+        "fury-swipes",
+        "hyper-fang",
+        "super-fang",
+        "scary-face",
+        "pursuit",
+        "crunch",
+        "endeavor",
+        "assurance",
+        "sucker-punch",
+        "laser-focus"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "spearow",
+      "display_name": "Spearow",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 60,
+        "defense": 30,
+        "sp_attack": 31,
+        "sp_defense": 31,
+        "speed": 70
+      },
+      "moves": [
+        "wing-attack",
+        "fury-attack",
+        "take-down",
+        "leer",
+        "growl",
+        "peck",
+        "drill-peck",
+        "agility",
+        "focus-energy",
+        "mirror-move",
+        "pursuit",
+        "aerial-ace",
+        "roost",
+        "assurance"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "fearow",
+      "display_name": "Fearow",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 90,
+        "defense": 65,
+        "sp_attack": 61,
+        "sp_defense": 61,
+        "speed": 100
+      },
+      "moves": [
+        "wing-attack",
+        "fury-attack",
+        "take-down",
+        "leer",
+        "growl",
+        "peck",
+        "drill-peck",
+        "agility",
+        "quick-attack",
+        "focus-energy",
+        "mirror-move",
+        "sky-attack",
+        "pursuit",
+        "aerial-ace",
+        "roost",
+        "pluck",
+        "assurance",
+        "drill-run"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "ekans",
+      "display_name": "Ekans",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 60,
+        "defense": 44,
+        "sp_attack": 40,
+        "sp_defense": 54,
+        "speed": 55
+      },
+      "moves": [
+        "slam",
+        "wrap",
+        "poison-sting",
+        "leer",
+        "bite",
+        "acid",
+        "toxic",
+        "screech",
+        "haze",
+        "glare",
+        "sludge-bomb",
+        "stockpile",
+        "spit-up",
+        "swallow",
+        "gastro-acid",
+        "poison-jab",
+        "mud-bomb",
+        "gunk-shot",
+        "coil",
+        "acid-spray",
+        "belch"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "arbok",
+      "display_name": "Arbok",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 95,
+        "defense": 69,
+        "sp_attack": 65,
+        "sp_defense": 79,
+        "speed": 80
+      },
+      "moves": [
+        "slam",
+        "wrap",
+        "poison-sting",
+        "leer",
+        "bite",
+        "acid",
+        "toxic",
+        "screech",
+        "haze",
+        "glare",
+        "sludge-bomb",
+        "crunch",
+        "stockpile",
+        "spit-up",
+        "swallow",
+        "gastro-acid",
+        "sucker-punch",
+        "poison-jab",
+        "thunder-fang",
+        "ice-fang",
+        "fire-fang",
+        "mud-bomb",
+        "gunk-shot",
+        "coil",
+        "acid-spray",
+        "belch"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "pikachu",
+      "display_name": "Pikachu",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 55,
+        "defense": 40,
+        "sp_attack": 50,
+        "sp_defense": 50,
+        "speed": 90
+      },
+      "moves": [
+        "slam",
+        "double-kick",
+        "tail-whip",
+        "growl",
+        "thunder-shock",
+        "thunderbolt",
+        "thunder-wave",
+        "thunder",
+        "agility",
+        "quick-attack",
+        "double-team",
+        "light-screen",
+        "swift",
+        "sweet-kiss",
+        "charm",
+        "spark",
+        "iron-tail",
+        "feint",
+        "nasty-plot",
+        "discharge",
+        "electro-ball",
+        "wild-charge",
+        "play-nice",
+        "nuzzle"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "raichu",
+      "display_name": "Raichu",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 90,
+        "defense": 55,
+        "sp_attack": 90,
+        "sp_defense": 80,
+        "speed": 110
+      },
+      "moves": [
+        "thunder-punch",
+        "slam",
+        "tail-whip",
+        "growl",
+        "thunder-shock",
+        "thunderbolt",
+        "thunder-wave",
+        "thunder",
+        "agility",
+        "quick-attack",
+        "double-team",
+        "light-screen",
+        "swift",
+        "sweet-kiss",
+        "charm",
+        "spark",
+        "encore",
+        "iron-tail",
+        "fake-out",
+        "feint",
+        "nasty-plot",
+        "discharge",
+        "electro-ball",
+        "play-nice",
+        "nuzzle"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "sandshrew",
+      "display_name": "Sandshrew",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 75,
+        "defense": 85,
+        "sp_attack": 20,
+        "sp_defense": 30,
+        "speed": 40
+      },
+      "moves": [
+        "scratch",
+        "swords-dance",
+        "sand-attack",
+        "poison-sting",
+        "earthquake",
+        "dig",
+        "agility",
+        "defense-curl",
+        "swift",
+        "fury-swipes",
+        "slash",
+        "protect",
+        "sandstorm",
+        "rollout",
+        "fury-cutter",
+        "magnitude",
+        "rapid-spin",
+        "sand-tomb",
+        "gyro-ball",
+        "bulldoze"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "sandslash",
+      "display_name": "Sandslash",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "hp": 75,
+        "attack": 100,
+        "defense": 110,
+        "sp_attack": 45,
+        "sp_defense": 55,
+        "speed": 65
+      },
+      "moves": [
+        "scratch",
+        "swords-dance",
+        "sand-attack",
+        "poison-sting",
+        "counter",
+        "earthquake",
+        "dig",
+        "agility",
+        "defense-curl",
+        "swift",
+        "fury-swipes",
+        "slash",
+        "protect",
+        "sandstorm",
+        "rollout",
+        "fury-cutter",
+        "magnitude",
+        "rapid-spin",
+        "crush-claw",
+        "sand-tomb",
+        "gyro-ball",
+        "bulldoze"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "nidoran-f",
+      "display_name": "Nidoran-f",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 55,
+        "attack": 47,
+        "defense": 52,
+        "sp_attack": 40,
+        "sp_defense": 40,
+        "speed": 41
+      },
+      "moves": [
+        "scratch",
+        "double-kick",
+        "tackle",
+        "tail-whip",
+        "poison-sting",
+        "bite",
+        "growl",
+        "toxic",
+        "fury-swipes",
+        "super-fang",
+        "crunch",
+        "flatter",
+        "helping-hand",
+        "poison-fang",
+        "toxic-spikes",
+        "earth-power",
+        "captivate"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "nidorina",
+      "display_name": "Nidorina",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 70,
+        "attack": 62,
+        "defense": 67,
+        "sp_attack": 55,
+        "sp_defense": 55,
+        "speed": 56
+      },
+      "moves": [
+        "scratch",
+        "double-kick",
+        "tackle",
+        "tail-whip",
+        "poison-sting",
+        "bite",
+        "growl",
+        "toxic",
+        "fury-swipes",
+        "super-fang",
+        "crunch",
+        "flatter",
+        "helping-hand",
+        "poison-fang",
+        "toxic-spikes",
+        "earth-power",
+        "captivate"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "nidoqueen",
+      "display_name": "Nidoqueen",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
+      "types": [
+        "poison",
+        "ground"
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 92,
+        "defense": 87,
+        "sp_attack": 75,
+        "sp_defense": 85,
+        "speed": 76
+      },
+      "moves": [
+        "scratch",
+        "double-kick",
+        "tackle",
+        "body-slam",
+        "tail-whip",
+        "poison-sting",
+        "bite",
+        "growl",
+        "supersonic",
+        "counter",
+        "toxic",
+        "fury-swipes",
+        "crunch",
+        "flatter",
+        "helping-hand",
+        "superpower",
+        "toxic-spikes",
+        "earth-power",
+        "sludge-wave",
+        "chip-away"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "nidoran-m",
+      "display_name": "Nidoran-m",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 46,
+        "attack": 57,
+        "defense": 40,
+        "sp_attack": 40,
+        "sp_defense": 40,
+        "speed": 50
+      },
+      "moves": [
+        "double-kick",
+        "horn-attack",
+        "fury-attack",
+        "horn-drill",
+        "tackle",
+        "poison-sting",
+        "leer",
+        "peck",
+        "toxic",
+        "focus-energy",
+        "flatter",
+        "helping-hand",
+        "toxic-spikes",
+        "poison-jab",
+        "earth-power",
+        "captivate"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "nidorino",
+      "display_name": "Nidorino",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 61,
+        "attack": 72,
+        "defense": 57,
+        "sp_attack": 55,
+        "sp_defense": 55,
+        "speed": 65
+      },
+      "moves": [
+        "double-kick",
+        "horn-attack",
+        "fury-attack",
+        "horn-drill",
+        "tackle",
+        "poison-sting",
+        "leer",
+        "peck",
+        "toxic",
+        "focus-energy",
+        "flatter",
+        "helping-hand",
+        "toxic-spikes",
+        "poison-jab",
+        "earth-power",
+        "captivate"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "nidoking",
+      "display_name": "Nidoking",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
+      "types": [
+        "poison",
+        "ground"
+      ],
+      "stats": {
+        "hp": 81,
+        "attack": 102,
+        "defense": 77,
+        "sp_attack": 85,
+        "sp_defense": 75,
+        "speed": 85
+      },
+      "moves": [
+        "double-kick",
+        "horn-attack",
+        "fury-attack",
+        "tackle",
+        "thrash",
+        "poison-sting",
+        "leer",
+        "supersonic",
+        "peck",
+        "counter",
+        "toxic",
+        "focus-energy",
+        "megahorn",
+        "flatter",
+        "helping-hand",
+        "toxic-spikes",
+        "poison-jab",
+        "earth-power",
+        "sludge-wave",
+        "chip-away"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "clefairy",
+      "display_name": "Clefairy",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
+      "types": [
+        "fairy"
+      ],
+      "stats": {
+        "hp": 70,
+        "attack": 45,
+        "defense": 48,
+        "sp_attack": 60,
+        "sp_defense": 65,
+        "speed": 35
+      },
+      "moves": [
+        "pound",
+        "double-slap",
+        "tackle",
+        "body-slam",
+        "double-edge",
+        "growl",
+        "sing",
+        "psychic",
+        "minimize",
+        "defense-curl",
+        "light-screen",
+        "metronome",
+        "amnesia",
+        "splash",
+        "sweet-kiss",
+        "charm",
+        "encore",
+        "moonlight",
+        "follow-me",
+        "meteor-mash",
+        "cosmic-power",
+        "calm-mind",
+        "gravity",
+        "wake-up-slap",
+        "healing-wish",
+        "lucky-chant",
+        "copycat",
+        "after-you",
+        "stored-power",
+        "bestow",
+        "disarming-voice",
+        "draining-kiss",
+        "fairy-wind",
+        "moonblast",
+        "baby-doll-eyes",
+        "spotlight",
+        "life-dew"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "clefable",
+      "display_name": "Clefable",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
+      "types": [
+        "fairy"
+      ],
+      "stats": {
+        "hp": 95,
+        "attack": 70,
+        "defense": 73,
+        "sp_attack": 95,
+        "sp_defense": 90,
+        "speed": 60
+      },
+      "moves": [
+        "pound",
+        "double-slap",
+        "tackle",
+        "double-edge",
+        "growl",
+        "sing",
+        "psychic",
+        "minimize",
+        "defense-curl",
+        "metronome",
+        "splash",
+        "sweet-kiss",
+        "charm",
+        "encore",
+        "moonlight",
+        "follow-me",
+        "meteor-mash",
+        "cosmic-power",
+        "calm-mind",
+        "gravity",
+        "healing-wish",
+        "copycat",
+        "after-you",
+        "stored-power",
+        "disarming-voice",
+        "draining-kiss",
+        "fairy-wind",
+        "moonblast",
+        "baby-doll-eyes",
+        "spotlight",
+        "life-dew"
+      ]
+    },
+    {
+      "id": 37,
+      "name": "vulpix",
+      "display_name": "Vulpix",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 38,
+        "attack": 41,
+        "defense": 40,
+        "sp_attack": 50,
+        "sp_defense": 65,
+        "speed": 65
+      },
+      "moves": [
+        "tackle",
+        "tail-whip",
+        "roar",
+        "disable",
+        "ember",
+        "flamethrower",
+        "fire-spin",
+        "quick-attack",
+        "confuse-ray",
+        "fire-blast",
+        "flame-wheel",
+        "spite",
+        "feint-attack",
+        "safeguard",
+        "will-o-wisp",
+        "imprison",
+        "grudge",
+        "extrasensory",
+        "payback",
+        "nasty-plot",
+        "captivate",
+        "flame-burst",
+        "hex",
+        "incinerate",
+        "inferno",
+        "baby-doll-eyes"
+      ]
+    },
+    {
+      "id": 38,
+      "name": "ninetales",
+      "display_name": "Ninetales",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 73,
+        "attack": 76,
+        "defense": 75,
+        "sp_attack": 81,
+        "sp_defense": 100,
+        "speed": 100
+      },
+      "moves": [
+        "tackle",
+        "tail-whip",
+        "roar",
+        "disable",
+        "ember",
+        "flamethrower",
+        "fire-spin",
+        "hypnosis",
+        "quick-attack",
+        "confuse-ray",
+        "fire-blast",
+        "flame-wheel",
+        "spite",
+        "safeguard",
+        "will-o-wisp",
+        "imprison",
+        "grudge",
+        "extrasensory",
+        "nasty-plot",
+        "hex",
+        "incinerate",
+        "inferno"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "jigglypuff",
+      "display_name": "Jigglypuff",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
+      "types": [
+        "normal",
+        "fairy"
+      ],
+      "stats": {
+        "hp": 115,
+        "attack": 45,
+        "defense": 20,
+        "sp_attack": 45,
+        "sp_defense": 25,
+        "speed": 20
+      },
+      "moves": [
+        "pound",
+        "double-slap",
+        "body-slam",
+        "double-edge",
+        "sing",
+        "disable",
+        "mimic",
+        "defense-curl",
+        "bide",
+        "rest",
+        "sweet-kiss",
+        "charm",
+        "rollout",
+        "stockpile",
+        "spit-up",
+        "swallow",
+        "hyper-voice",
+        "covet",
+        "wake-up-slap",
+        "gyro-ball",
+        "copycat",
+        "round",
+        "echoed-voice",
+        "disarming-voice",
+        "play-rough",
+        "play-nice"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "wigglytuff",
+      "display_name": "Wigglytuff",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
+      "types": [
+        "normal",
+        "fairy"
+      ],
+      "stats": {
+        "hp": 140,
+        "attack": 70,
+        "defense": 45,
+        "sp_attack": 85,
+        "sp_defense": 50,
+        "speed": 45
+      },
+      "moves": [
+        "pound",
+        "double-slap",
+        "body-slam",
+        "double-edge",
+        "sing",
+        "disable",
+        "mimic",
+        "minimize",
+        "defense-curl",
+        "bide",
+        "rest",
+        "sweet-kiss",
+        "charm",
+        "stockpile",
+        "spit-up",
+        "swallow",
+        "hyper-voice",
+        "covet",
+        "gyro-ball",
+        "copycat",
+        "round",
+        "echoed-voice",
+        "disarming-voice",
+        "play-rough"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "zubat",
+      "display_name": "Zubat",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png",
+      "types": [
+        "poison",
+        "flying"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 45,
+        "defense": 35,
+        "sp_attack": 30,
+        "sp_defense": 40,
+        "speed": 55
+      },
+      "moves": [
+        "gust",
+        "wing-attack",
+        "bite",
+        "supersonic",
+        "absorb",
+        "toxic",
+        "hypnosis",
+        "confuse-ray",
+        "haze",
+        "swift",
+        "leech-life",
+        "mean-look",
+        "poison-fang",
+        "astonish",
+        "air-cutter",
+        "air-slash",
+        "cross-poison",
+        "venoshock",
+        "quick-guard",
+        "acrobatics"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "golbat",
+      "display_name": "Golbat",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png",
+      "types": [
+        "poison",
+        "flying"
+      ],
+      "stats": {
+        "hp": 75,
+        "attack": 80,
+        "defense": 70,
+        "sp_attack": 65,
+        "sp_defense": 75,
+        "speed": 90
+      },
+      "moves": [
+        "gust",
+        "wing-attack",
+        "whirlwind",
+        "bite",
+        "supersonic",
+        "absorb",
+        "toxic",
+        "hypnosis",
+        "quick-attack",
+        "screech",
+        "confuse-ray",
+        "haze",
+        "swift",
+        "leech-life",
+        "mean-look",
+        "crunch",
+        "poison-fang",
+        "astonish",
+        "air-cutter",
+        "air-slash",
+        "cross-poison",
+        "venoshock",
+        "quick-guard",
+        "acrobatics"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "oddish",
+      "display_name": "Oddish",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 50,
+        "defense": 55,
+        "sp_attack": 75,
+        "sp_defense": 65,
+        "speed": 30
+      },
+      "moves": [
+        "acid",
+        "absorb",
+        "mega-drain",
+        "growth",
+        "razor-leaf",
+        "solar-beam",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "petal-dance",
+        "toxic",
+        "giga-drain",
+        "sweet-scent",
+        "moonlight",
+        "natural-gift",
+        "lucky-chant",
+        "grassy-terrain",
+        "moonblast"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "gloom",
+      "display_name": "Gloom",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 65,
+        "defense": 70,
+        "sp_attack": 85,
+        "sp_defense": 75,
+        "speed": 40
+      },
+      "moves": [
+        "acid",
+        "absorb",
+        "mega-drain",
+        "growth",
+        "razor-leaf",
+        "solar-beam",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "petal-dance",
+        "toxic",
+        "giga-drain",
+        "sweet-scent",
+        "moonlight",
+        "natural-gift",
+        "lucky-chant",
+        "petal-blizzard",
+        "grassy-terrain",
+        "moonblast"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "vileplume",
+      "display_name": "Vileplume",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 75,
+        "attack": 80,
+        "defense": 85,
+        "sp_attack": 110,
+        "sp_defense": 90,
+        "speed": 50
+      },
+      "moves": [
+        "acid",
+        "absorb",
+        "mega-drain",
+        "growth",
+        "solar-beam",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "petal-dance",
+        "toxic",
+        "giga-drain",
+        "sweet-scent",
+        "moonlight",
+        "aromatherapy",
+        "petal-blizzard",
+        "grassy-terrain",
+        "moonblast"
+      ]
+    },
+    {
+      "id": 46,
+      "name": "paras",
+      "display_name": "Paras",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png",
+      "types": [
+        "bug",
+        "grass"
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 70,
+        "defense": 55,
+        "sp_attack": 45,
+        "sp_defense": 55,
+        "speed": 25
+      },
+      "moves": [
+        "scratch",
+        "absorb",
+        "growth",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "leech-life",
+        "spore",
+        "fury-swipes",
+        "slash",
+        "giga-drain",
+        "fury-cutter",
+        "aromatherapy",
+        "x-scissor",
+        "energy-ball",
+        "venoshock",
+        "rage-powder"
+      ]
+    },
+    {
+      "id": 47,
+      "name": "parasect",
+      "display_name": "Parasect",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png",
+      "types": [
+        "bug",
+        "grass"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 95,
+        "defense": 80,
+        "sp_attack": 60,
+        "sp_defense": 80,
+        "speed": 30
+      },
+      "moves": [
+        "scratch",
+        "absorb",
+        "leech-seed",
+        "growth",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "screech",
+        "leech-life",
+        "spore",
+        "fury-swipes",
+        "slash",
+        "giga-drain",
+        "fury-cutter",
+        "aromatherapy",
+        "x-scissor",
+        "energy-ball",
+        "cross-poison",
+        "venoshock",
+        "rage-powder"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "venonat",
+      "display_name": "Venonat",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 55,
+        "defense": 50,
+        "sp_attack": 40,
+        "sp_defense": 55,
+        "speed": 45
+      },
+      "moves": [
+        "tackle",
+        "supersonic",
+        "disable",
+        "psybeam",
+        "mega-drain",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "confusion",
+        "psychic",
+        "leech-life",
+        "foresight",
+        "poison-fang",
+        "signal-beam",
+        "bug-buzz",
+        "zen-headbutt",
+        "struggle-bug"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "venomoth",
+      "display_name": "Venomoth",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "stats": {
+        "hp": 70,
+        "attack": 65,
+        "defense": 60,
+        "sp_attack": 90,
+        "sp_defense": 75,
+        "speed": 90
+      },
+      "moves": [
+        "gust",
+        "whirlwind",
+        "tackle",
+        "supersonic",
+        "disable",
+        "psybeam",
+        "mega-drain",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "confusion",
+        "psychic",
+        "agility",
+        "screech",
+        "leech-life",
+        "foresight",
+        "poison-fang",
+        "silver-wind",
+        "signal-beam",
+        "air-slash",
+        "bug-buzz",
+        "zen-headbutt",
+        "quiver-dance",
+        "struggle-bug"
+      ]
+    },
+    {
+      "id": 50,
+      "name": "diglett",
+      "display_name": "Diglett",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "hp": 10,
+        "attack": 55,
+        "defense": 25,
+        "sp_attack": 35,
+        "sp_defense": 45,
+        "speed": 95
+      },
+      "moves": [
+        "scratch",
+        "sand-attack",
+        "growl",
+        "earthquake",
+        "fissure",
+        "dig",
+        "agility",
+        "fury-swipes",
+        "slash",
+        "mud-slap",
+        "sandstorm",
+        "magnitude",
+        "astonish",
+        "sucker-punch",
+        "earth-power",
+        "mud-bomb",
+        "bulldoze"
+      ]
+    },
+    {
+      "id": 51,
+      "name": "dugtrio",
+      "display_name": "Dugtrio",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 100,
+        "defense": 50,
+        "sp_attack": 50,
+        "sp_defense": 70,
+        "speed": 120
+      },
+      "moves": [
+        "scratch",
+        "sand-attack",
+        "growl",
+        "earthquake",
+        "fissure",
+        "dig",
+        "agility",
+        "screech",
+        "fury-swipes",
+        "tri-attack",
+        "slash",
+        "mud-slap",
+        "sandstorm",
+        "magnitude",
+        "astonish",
+        "sand-tomb",
+        "sucker-punch",
+        "night-slash",
+        "earth-power",
+        "mud-bomb",
+        "bulldoze",
+        "rototiller"
+      ]
+    },
+    {
+      "id": 52,
+      "name": "meowth",
+      "display_name": "Meowth",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 45,
+        "defense": 35,
+        "sp_attack": 40,
+        "sp_defense": 40,
+        "speed": 90
+      },
+      "moves": [
+        "pay-day",
+        "scratch",
+        "bite",
+        "growl",
+        "screech",
+        "fury-swipes",
+        "slash",
+        "feint-attack",
+        "swagger",
+        "fake-out",
+        "taunt",
+        "feint",
+        "assurance",
+        "night-slash",
+        "nasty-plot",
+        "captivate",
+        "play-rough"
+      ]
+    },
+    {
+      "id": 53,
+      "name": "persian",
+      "display_name": "Persian",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 70,
+        "defense": 60,
+        "sp_attack": 65,
+        "sp_defense": 65,
+        "speed": 115
+      },
+      "moves": [
+        "pay-day",
+        "scratch",
+        "bite",
+        "growl",
+        "hypnosis",
+        "screech",
+        "swift",
+        "amnesia",
+        "fury-swipes",
+        "slash",
+        "feint-attack",
+        "swagger",
+        "fake-out",
+        "taunt",
+        "feint",
+        "assurance",
+        "night-slash",
+        "power-gem",
+        "switcheroo",
+        "nasty-plot",
+        "captivate",
+        "play-rough"
+      ]
+    },
+    {
+      "id": 54,
+      "name": "psyduck",
+      "display_name": "Psyduck",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 52,
+        "defense": 48,
+        "sp_attack": 65,
+        "sp_defense": 50,
+        "speed": 55
+      },
+      "moves": [
+        "scratch",
+        "tail-whip",
+        "disable",
+        "water-gun",
+        "hydro-pump",
+        "surf",
+        "psybeam",
+        "confusion",
+        "hypnosis",
+        "screech",
+        "amnesia",
+        "bubble",
+        "fury-swipes",
+        "psych-up",
+        "water-sport",
+        "water-pulse",
+        "aqua-tail",
+        "zen-headbutt",
+        "wonder-room",
+        "soak"
+      ]
+    },
+    {
+      "id": 55,
+      "name": "golduck",
+      "display_name": "Golduck",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 82,
+        "defense": 78,
+        "sp_attack": 95,
+        "sp_defense": 80,
+        "speed": 85
+      },
+      "moves": [
+        "scratch",
+        "tail-whip",
+        "disable",
+        "water-gun",
+        "hydro-pump",
+        "surf",
+        "psybeam",
+        "confusion",
+        "hypnosis",
+        "screech",
+        "amnesia",
+        "bubble",
+        "fury-swipes",
+        "encore",
+        "psych-up",
+        "yawn",
+        "water-sport",
+        "water-pulse",
+        "me-first",
+        "aqua-tail",
+        "zen-headbutt",
+        "aqua-jet",
+        "wonder-room",
+        "soak"
+      ]
+    },
+    {
+      "id": 56,
+      "name": "mankey",
+      "display_name": "Mankey",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 80,
+        "defense": 35,
+        "sp_attack": 35,
+        "sp_defense": 45,
+        "speed": 70
+      },
+      "moves": [
+        "karate-chop",
+        "scratch",
+        "thrash",
+        "leer",
+        "low-kick",
+        "seismic-toss",
+        "screech",
+        "focus-energy",
+        "skull-bash",
+        "fury-swipes",
+        "mud-slap",
+        "outrage",
+        "swagger",
+        "pursuit",
+        "cross-chop",
+        "taunt",
+        "covet",
+        "u-turn",
+        "close-combat",
+        "assurance",
+        "punishment",
+        "retaliate",
+        "final-gambit",
+        "stomping-tantrum"
+      ]
+    },
+    {
+      "id": 57,
+      "name": "primeape",
+      "display_name": "Primeape",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 105,
+        "defense": 60,
+        "sp_attack": 60,
+        "sp_defense": 70,
+        "speed": 95
+      },
+      "moves": [
+        "karate-chop",
+        "scratch",
+        "thrash",
+        "leer",
+        "low-kick",
+        "counter",
+        "seismic-toss",
+        "rage",
+        "screech",
+        "focus-energy",
+        "skull-bash",
+        "fury-swipes",
+        "mud-slap",
+        "outrage",
+        "swagger",
+        "encore",
+        "pursuit",
+        "cross-chop",
+        "taunt",
+        "covet",
+        "u-turn",
+        "close-combat",
+        "assurance",
+        "fling",
+        "punishment",
+        "retaliate",
+        "final-gambit",
+        "stomping-tantrum",
+        "rage-fist"
+      ]
+    },
+    {
+      "id": 58,
+      "name": "growlithe",
+      "display_name": "Growlithe",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 55,
+        "attack": 70,
+        "defense": 45,
+        "sp_attack": 70,
+        "sp_defense": 50,
+        "speed": 60
+      },
+      "moves": [
+        "take-down",
+        "leer",
+        "bite",
+        "roar",
+        "ember",
+        "flamethrower",
+        "agility",
+        "flame-wheel",
+        "reversal",
+        "outrage",
+        "crunch",
+        "heat-wave",
+        "helping-hand",
+        "odor-sleuth",
+        "howl",
+        "flare-blitz",
+        "fire-fang",
+        "flame-burst",
+        "retaliate",
+        "play-rough"
+      ]
+    },
+    {
+      "id": 59,
+      "name": "arcanine",
+      "display_name": "Arcanine",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 110,
+        "defense": 80,
+        "sp_attack": 100,
+        "sp_defense": 80,
+        "speed": 95
+      },
+      "moves": [
+        "take-down",
+        "double-edge",
+        "leer",
+        "bite",
+        "roar",
+        "ember",
+        "flamethrower",
+        "agility",
+        "flame-wheel",
+        "reversal",
+        "crunch",
+        "extreme-speed",
+        "helping-hand",
+        "odor-sleuth",
+        "howl",
+        "flare-blitz",
+        "thunder-fang",
+        "fire-fang",
+        "retaliate",
+        "play-rough",
+        "burn-up"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "poliwag",
+      "display_name": "Poliwag",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 50,
+        "defense": 40,
+        "sp_attack": 40,
+        "sp_defense": 40,
+        "speed": 90
+      },
+      "moves": [
+        "pound",
+        "double-slap",
+        "body-slam",
+        "double-edge",
+        "water-gun",
+        "hydro-pump",
+        "bubble-beam",
+        "low-kick",
+        "hypnosis",
+        "amnesia",
+        "bubble",
+        "belly-drum",
+        "rain-dance",
+        "mud-shot",
+        "water-sport",
+        "wake-up-slap",
+        "earth-power",
+        "mud-bomb"
+      ]
+    },
+    {
+      "id": 61,
+      "name": "poliwhirl",
+      "display_name": "Poliwhirl",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 65,
+        "defense": 65,
+        "sp_attack": 50,
+        "sp_defense": 50,
+        "speed": 90
+      },
+      "moves": [
+        "pound",
+        "double-slap",
+        "body-slam",
+        "double-edge",
+        "water-gun",
+        "hydro-pump",
+        "bubble-beam",
+        "low-kick",
+        "hypnosis",
+        "amnesia",
+        "bubble",
+        "belly-drum",
+        "rain-dance",
+        "mud-shot",
+        "water-sport",
+        "wake-up-slap",
+        "earth-power",
+        "mud-bomb"
+      ]
+    },
+    {
+      "id": 62,
+      "name": "poliwrath",
+      "display_name": "Poliwrath",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png",
+      "types": [
+        "water",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 95,
+        "defense": 95,
+        "sp_attack": 70,
+        "sp_defense": 90,
+        "speed": 70
+      },
+      "moves": [
+        "pound",
+        "double-slap",
+        "body-slam",
+        "double-edge",
+        "mist",
+        "water-gun",
+        "hydro-pump",
+        "bubble-beam",
+        "submission",
+        "hypnosis",
+        "haze",
+        "bubble",
+        "mind-reader",
+        "belly-drum",
+        "dynamic-punch",
+        "rain-dance",
+        "superpower",
+        "bulk-up",
+        "mud-shot",
+        "earth-power",
+        "circle-throw"
+      ]
+    },
+    {
+      "id": 63,
+      "name": "abra",
+      "display_name": "Abra",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 25,
+        "attack": 20,
+        "defense": 15,
+        "sp_attack": 105,
+        "sp_defense": 55,
+        "speed": 90
+      },
+      "moves": [
+        "teleport"
+      ]
+    },
+    {
+      "id": 64,
+      "name": "kadabra",
+      "display_name": "Kadabra",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 35,
+        "defense": 30,
+        "sp_attack": 120,
+        "sp_defense": 70,
+        "speed": 105
+      },
+      "moves": [
+        "disable",
+        "psybeam",
+        "confusion",
+        "psychic",
+        "hypnosis",
+        "teleport",
+        "night-shade",
+        "recover",
+        "reflect",
+        "kinesis",
+        "flash",
+        "substitute",
+        "future-sight",
+        "trick",
+        "role-play",
+        "calm-mind",
+        "miracle-eye",
+        "psycho-cut",
+        "zen-headbutt",
+        "psyshock",
+        "telekinesis",
+        "ally-switch"
+      ]
+    },
+    {
+      "id": 65,
+      "name": "alakazam",
+      "display_name": "Alakazam",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 55,
+        "attack": 50,
+        "defense": 45,
+        "sp_attack": 135,
+        "sp_defense": 95,
+        "speed": 120
+      },
+      "moves": [
+        "disable",
+        "psybeam",
+        "confusion",
+        "psychic",
+        "hypnosis",
+        "teleport",
+        "night-shade",
+        "recover",
+        "barrier",
+        "reflect",
+        "kinesis",
+        "flash",
+        "substitute",
+        "encore",
+        "future-sight",
+        "trick",
+        "role-play",
+        "calm-mind",
+        "miracle-eye",
+        "psycho-cut",
+        "zen-headbutt",
+        "psyshock",
+        "telekinesis",
+        "ally-switch"
+      ]
+    },
+    {
+      "id": 66,
+      "name": "machop",
+      "display_name": "Machop",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 70,
+        "attack": 80,
+        "defense": 50,
+        "sp_attack": 35,
+        "sp_defense": 35,
+        "speed": 35
+      },
+      "moves": [
+        "karate-chop",
+        "tackle",
+        "double-edge",
+        "leer",
+        "submission",
+        "low-kick",
+        "seismic-toss",
+        "strength",
+        "focus-energy",
+        "bide",
+        "mach-punch",
+        "scary-face",
+        "foresight",
+        "dynamic-punch",
+        "vital-throw",
+        "cross-chop",
+        "rock-smash",
+        "superpower",
+        "revenge",
+        "brick-break",
+        "knock-off",
+        "bulk-up",
+        "wake-up-slap",
+        "close-combat",
+        "bullet-punch",
+        "double-hit",
+        "low-sweep",
+        "dual-chop"
+      ]
+    },
+    {
+      "id": 67,
+      "name": "machoke",
+      "display_name": "Machoke",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 100,
+        "defense": 70,
+        "sp_attack": 50,
+        "sp_defense": 60,
+        "speed": 45
+      },
+      "moves": [
+        "karate-chop",
+        "tackle",
+        "double-edge",
+        "leer",
+        "submission",
+        "low-kick",
+        "seismic-toss",
+        "strength",
+        "focus-energy",
+        "bide",
+        "mach-punch",
+        "scary-face",
+        "foresight",
+        "dynamic-punch",
+        "vital-throw",
+        "cross-chop",
+        "rock-smash",
+        "superpower",
+        "revenge",
+        "brick-break",
+        "knock-off",
+        "bulk-up",
+        "wake-up-slap",
+        "close-combat",
+        "bullet-punch",
+        "double-hit",
+        "low-sweep",
+        "dual-chop"
+      ]
+    },
+    {
+      "id": 68,
+      "name": "machamp",
+      "display_name": "Machamp",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 130,
+        "defense": 80,
+        "sp_attack": 65,
+        "sp_defense": 85,
+        "speed": 55
+      },
+      "moves": [
+        "karate-chop",
+        "tackle",
+        "double-edge",
+        "leer",
+        "submission",
+        "low-kick",
+        "counter",
+        "seismic-toss",
+        "strength",
+        "focus-energy",
+        "bide",
+        "mach-punch",
+        "scary-face",
+        "foresight",
+        "dynamic-punch",
+        "encore",
+        "vital-throw",
+        "cross-chop",
+        "rock-smash",
+        "superpower",
+        "revenge",
+        "brick-break",
+        "knock-off",
+        "bulk-up",
+        "wake-up-slap",
+        "close-combat",
+        "drain-punch",
+        "bullet-punch",
+        "double-hit",
+        "wide-guard",
+        "low-sweep",
+        "dual-chop"
+      ]
+    },
+    {
+      "id": 69,
+      "name": "bellsprout",
+      "display_name": "Bellsprout",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 75,
+        "defense": 35,
+        "sp_attack": 70,
+        "sp_defense": 30,
+        "speed": 40
+      },
+      "moves": [
+        "slam",
+        "vine-whip",
+        "wrap",
+        "acid",
+        "growth",
+        "razor-leaf",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "sweet-scent",
+        "knock-off",
+        "wring-out",
+        "gastro-acid",
+        "poison-jab",
+        "power-whip"
+      ]
+    },
+    {
+      "id": 70,
+      "name": "weepinbell",
+      "display_name": "Weepinbell",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 90,
+        "defense": 50,
+        "sp_attack": 85,
+        "sp_defense": 45,
+        "speed": 55
+      },
+      "moves": [
+        "slam",
+        "vine-whip",
+        "wrap",
+        "acid",
+        "growth",
+        "razor-leaf",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "sweet-scent",
+        "knock-off",
+        "wring-out",
+        "gastro-acid",
+        "poison-jab",
+        "power-whip"
+      ]
+    },
+    {
+      "id": 71,
+      "name": "victreebel",
+      "display_name": "Victreebel",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 105,
+        "defense": 65,
+        "sp_attack": 100,
+        "sp_defense": 70,
+        "speed": 70
+      },
+      "moves": [
+        "swords-dance",
+        "slam",
+        "vine-whip",
+        "wrap",
+        "acid",
+        "growth",
+        "razor-leaf",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "leech-life",
+        "sweet-scent",
+        "stockpile",
+        "spit-up",
+        "swallow",
+        "knock-off",
+        "leaf-blade",
+        "gastro-acid",
+        "sucker-punch",
+        "poison-jab",
+        "leaf-storm",
+        "power-whip",
+        "clear-smog",
+        "leaf-tornado"
+      ]
+    },
+    {
+      "id": 72,
+      "name": "tentacool",
+      "display_name": "Tentacool",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png",
+      "types": [
+        "water",
+        "poison"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 40,
+        "defense": 35,
+        "sp_attack": 50,
+        "sp_defense": 100,
+        "speed": 70
+      },
+      "moves": [
+        "wrap",
+        "poison-sting",
+        "supersonic",
+        "acid",
+        "water-gun",
+        "hydro-pump",
+        "surf",
+        "bubble-beam",
+        "screech",
+        "barrier",
+        "constrict",
+        "bubble",
+        "acid-armor",
+        "water-pulse",
+        "brine",
+        "wring-out",
+        "toxic-spikes",
+        "poison-jab",
+        "sludge-wave",
+        "acid-spray",
+        "hex"
+      ]
+    },
+    {
+      "id": 73,
+      "name": "tentacruel",
+      "display_name": "Tentacruel",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
+      "types": [
+        "water",
+        "poison"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 70,
+        "defense": 65,
+        "sp_attack": 80,
+        "sp_defense": 120,
+        "speed": 100
+      },
+      "moves": [
+        "wrap",
+        "poison-sting",
+        "supersonic",
+        "acid",
+        "water-gun",
+        "hydro-pump",
+        "surf",
+        "bubble-beam",
+        "screech",
+        "barrier",
+        "haze",
+        "constrict",
+        "bubble",
+        "acid-armor",
+        "mirror-coat",
+        "water-pulse",
+        "brine",
+        "wring-out",
+        "toxic-spikes",
+        "poison-jab",
+        "sludge-wave",
+        "acid-spray",
+        "hex",
+        "reflect-type"
+      ]
+    },
+    {
+      "id": 74,
+      "name": "geodude",
+      "display_name": "Geodude",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 80,
+        "defense": 100,
+        "sp_attack": 30,
+        "sp_defense": 30,
+        "speed": 20
+      },
+      "moves": [
+        "sand-attack",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "rock-throw",
+        "earthquake",
+        "harden",
+        "defense-curl",
+        "bide",
+        "self-destruct",
+        "explosion",
+        "rock-slide",
+        "mud-slap",
+        "sandstorm",
+        "rollout",
+        "magnitude",
+        "mud-sport",
+        "iron-defense",
+        "rock-blast",
+        "rock-polish",
+        "stone-edge",
+        "stealth-rock",
+        "smack-down",
+        "bulldoze"
+      ]
+    },
+    {
+      "id": 75,
+      "name": "graveler",
+      "display_name": "Graveler",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "stats": {
+        "hp": 55,
+        "attack": 95,
+        "defense": 115,
+        "sp_attack": 45,
+        "sp_defense": 45,
+        "speed": 35
+      },
+      "moves": [
+        "sand-attack",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "rock-throw",
+        "earthquake",
+        "harden",
+        "defense-curl",
+        "bide",
+        "self-destruct",
+        "explosion",
+        "rock-slide",
+        "mud-slap",
+        "sandstorm",
+        "rollout",
+        "magnitude",
+        "mud-sport",
+        "iron-defense",
+        "rock-blast",
+        "rock-polish",
+        "stone-edge",
+        "stealth-rock",
+        "smack-down",
+        "bulldoze"
+      ]
+    },
+    {
+      "id": 76,
+      "name": "golem",
+      "display_name": "Golem",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 120,
+        "defense": 130,
+        "sp_attack": 55,
+        "sp_defense": 65,
+        "speed": 45
+      },
+      "moves": [
+        "mega-punch",
+        "sand-attack",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "rock-throw",
+        "earthquake",
+        "harden",
+        "defense-curl",
+        "bide",
+        "self-destruct",
+        "explosion",
+        "rock-slide",
+        "mud-slap",
+        "sandstorm",
+        "rollout",
+        "magnitude",
+        "mud-sport",
+        "iron-defense",
+        "rock-blast",
+        "rock-polish",
+        "stone-edge",
+        "stealth-rock",
+        "smack-down",
+        "heavy-slam",
+        "bulldoze",
+        "steamroller"
+      ]
+    },
+    {
+      "id": 77,
+      "name": "ponyta",
+      "display_name": "Ponyta",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 85,
+        "defense": 55,
+        "sp_attack": 65,
+        "sp_defense": 65,
+        "speed": 90
+      },
+      "moves": [
+        "stomp",
+        "double-kick",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "tail-whip",
+        "growl",
+        "ember",
+        "fire-spin",
+        "hypnosis",
+        "agility",
+        "quick-attack",
+        "fire-blast",
+        "flame-wheel",
+        "bounce",
+        "flare-blitz",
+        "double-hit",
+        "flame-charge",
+        "inferno"
+      ]
+    },
+    {
+      "id": 78,
+      "name": "rapidash",
+      "display_name": "Rapidash",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 100,
+        "defense": 70,
+        "sp_attack": 80,
+        "sp_defense": 80,
+        "speed": 105
+      },
+      "moves": [
+        "stomp",
+        "double-kick",
+        "fury-attack",
+        "horn-drill",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "tail-whip",
+        "growl",
+        "ember",
+        "fire-spin",
+        "hypnosis",
+        "agility",
+        "quick-attack",
+        "fire-blast",
+        "flame-wheel",
+        "megahorn",
+        "bounce",
+        "flare-blitz",
+        "poison-jab",
+        "double-hit",
+        "flame-charge",
+        "inferno",
+        "smart-strike"
+      ]
+    },
+    {
+      "id": 79,
+      "name": "slowpoke",
+      "display_name": "Slowpoke",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png",
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 65,
+        "defense": 65,
+        "sp_attack": 40,
+        "sp_defense": 40,
+        "speed": 15
+      },
+      "moves": [
+        "headbutt",
+        "tackle",
+        "growl",
+        "disable",
+        "water-gun",
+        "surf",
+        "confusion",
+        "psychic",
+        "amnesia",
+        "rest",
+        "curse",
+        "rain-dance",
+        "psych-up",
+        "yawn",
+        "slack-off",
+        "water-pulse",
+        "zen-headbutt",
+        "heal-pulse"
+      ]
+    },
+    {
+      "id": 80,
+      "name": "slowbro",
+      "display_name": "Slowbro",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png",
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 95,
+        "attack": 75,
+        "defense": 110,
+        "sp_attack": 100,
+        "sp_defense": 80,
+        "speed": 30
+      },
+      "moves": [
+        "stomp",
+        "headbutt",
+        "tackle",
+        "growl",
+        "disable",
+        "water-gun",
+        "surf",
+        "confusion",
+        "psychic",
+        "withdraw",
+        "amnesia",
+        "rest",
+        "curse",
+        "rain-dance",
+        "psych-up",
+        "yawn",
+        "slack-off",
+        "water-pulse",
+        "zen-headbutt",
+        "heal-pulse"
+      ]
+    },
+    {
+      "id": 81,
+      "name": "magnemite",
+      "display_name": "Magnemite",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png",
+      "types": [
+        "electric",
+        "steel"
+      ],
+      "stats": {
+        "hp": 25,
+        "attack": 35,
+        "defense": 70,
+        "sp_attack": 95,
+        "sp_defense": 55,
+        "speed": 45
+      },
+      "moves": [
+        "tackle",
+        "supersonic",
+        "sonic-boom",
+        "thunder-shock",
+        "thunderbolt",
+        "thunder-wave",
+        "thunder",
+        "screech",
+        "light-screen",
+        "swift",
+        "zap-cannon",
+        "lock-on",
+        "spark",
+        "metal-sound",
+        "gyro-ball",
+        "magnet-rise",
+        "mirror-shot",
+        "flash-cannon",
+        "discharge",
+        "magnet-bomb",
+        "electro-ball"
+      ]
+    },
+    {
+      "id": 82,
+      "name": "magneton",
+      "display_name": "Magneton",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png",
+      "types": [
+        "electric",
+        "steel"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 60,
+        "defense": 95,
+        "sp_attack": 120,
+        "sp_defense": 70,
+        "speed": 70
+      },
+      "moves": [
+        "tackle",
+        "supersonic",
+        "sonic-boom",
+        "thunder-shock",
+        "thunderbolt",
+        "thunder-wave",
+        "thunder",
+        "screech",
+        "light-screen",
+        "swift",
+        "tri-attack",
+        "zap-cannon",
+        "lock-on",
+        "spark",
+        "metal-sound",
+        "gyro-ball",
+        "magnet-rise",
+        "mirror-shot",
+        "flash-cannon",
+        "discharge",
+        "magnet-bomb",
+        "electro-ball",
+        "electric-terrain"
+      ]
+    },
+    {
+      "id": 83,
+      "name": "farfetchd",
+      "display_name": "Farfetchd",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "hp": 52,
+        "attack": 90,
+        "defense": 55,
+        "sp_attack": 58,
+        "sp_defense": 62,
+        "speed": 60
+      },
+      "moves": [
+        "swords-dance",
+        "cut",
+        "sand-attack",
+        "fury-attack",
+        "leer",
+        "peck",
+        "razor-leaf",
+        "agility",
+        "quick-attack",
+        "focus-energy",
+        "mirror-move",
+        "sky-attack",
+        "slash",
+        "false-swipe",
+        "fury-cutter",
+        "knock-off",
+        "air-cutter",
+        "aerial-ace",
+        "leaf-blade",
+        "feint",
+        "poison-jab",
+        "night-slash",
+        "air-slash",
+        "brave-bird",
+        "acrobatics"
+      ]
+    },
+    {
+      "id": 84,
+      "name": "doduo",
+      "display_name": "Doduo",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 85,
+        "defense": 45,
+        "sp_attack": 35,
+        "sp_defense": 35,
+        "speed": 75
+      },
+      "moves": [
+        "swords-dance",
+        "wing-attack",
+        "jump-kick",
+        "fury-attack",
+        "thrash",
+        "leer",
+        "growl",
+        "peck",
+        "drill-peck",
+        "agility",
+        "quick-attack",
+        "rage",
+        "tri-attack",
+        "pursuit",
+        "uproar",
+        "endeavor",
+        "pluck",
+        "acupressure",
+        "double-hit",
+        "lunge"
+      ]
+    },
+    {
+      "id": 85,
+      "name": "dodrio",
+      "display_name": "Dodrio",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 110,
+        "defense": 70,
+        "sp_attack": 60,
+        "sp_defense": 60,
+        "speed": 110
+      },
+      "moves": [
+        "swords-dance",
+        "wing-attack",
+        "jump-kick",
+        "fury-attack",
+        "thrash",
+        "leer",
+        "growl",
+        "supersonic",
+        "peck",
+        "drill-peck",
+        "agility",
+        "quick-attack",
+        "rage",
+        "mirror-move",
+        "tri-attack",
+        "pursuit",
+        "uproar",
+        "endeavor",
+        "pluck",
+        "acupressure",
+        "double-hit",
+        "lunge"
+      ]
+    },
+    {
+      "id": 86,
+      "name": "seel",
+      "display_name": "Seel",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 45,
+        "defense": 55,
+        "sp_attack": 45,
+        "sp_defense": 70,
+        "speed": 45
+      },
+      "moves": [
+        "headbutt",
+        "take-down",
+        "double-edge",
+        "growl",
+        "water-gun",
+        "ice-beam",
+        "aurora-beam",
+        "waterfall",
+        "rest",
+        "icy-wind",
+        "charm",
+        "safeguard",
+        "encore",
+        "hail",
+        "dive",
+        "water-sport",
+        "brine",
+        "aqua-ring",
+        "aqua-tail",
+        "ice-shard",
+        "aqua-jet",
+        "snowscape"
+      ]
+    },
+    {
+      "id": 87,
+      "name": "dewgong",
+      "display_name": "Dewgong",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
+      "types": [
+        "water",
+        "ice"
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 70,
+        "defense": 80,
+        "sp_attack": 70,
+        "sp_defense": 95,
+        "speed": 70
+      },
+      "moves": [
+        "headbutt",
+        "horn-drill",
+        "take-down",
+        "double-edge",
+        "growl",
+        "water-gun",
+        "ice-beam",
+        "bubble-beam",
+        "aurora-beam",
+        "waterfall",
+        "rest",
+        "icy-wind",
+        "safeguard",
+        "encore",
+        "fake-out",
+        "hail",
+        "dive",
+        "signal-beam",
+        "sheer-cold",
+        "brine",
+        "aqua-ring",
+        "aqua-tail",
+        "ice-shard",
+        "aqua-jet",
+        "snowscape"
+      ]
+    },
+    {
+      "id": 88,
+      "name": "grimer",
+      "display_name": "Grimer",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 80,
+        "defense": 50,
+        "sp_attack": 40,
+        "sp_defense": 50,
+        "speed": 25
+      },
+      "moves": [
+        "pound",
+        "disable",
+        "toxic",
+        "screech",
+        "harden",
+        "minimize",
+        "smog",
+        "sludge",
+        "poison-gas",
+        "acid-armor",
+        "sludge-bomb",
+        "mud-slap",
+        "memento",
+        "mud-shot",
+        "fling",
+        "mud-bomb",
+        "gunk-shot",
+        "sludge-wave",
+        "belch"
+      ]
+    },
+    {
+      "id": 89,
+      "name": "muk",
+      "display_name": "Muk",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 105,
+        "attack": 105,
+        "defense": 75,
+        "sp_attack": 65,
+        "sp_defense": 100,
+        "speed": 50
+      },
+      "moves": [
+        "pound",
+        "disable",
+        "toxic",
+        "screech",
+        "harden",
+        "minimize",
+        "haze",
+        "smog",
+        "sludge",
+        "poison-gas",
+        "acid-armor",
+        "sludge-bomb",
+        "mud-slap",
+        "memento",
+        "mud-shot",
+        "fling",
+        "mud-bomb",
+        "gunk-shot",
+        "sludge-wave",
+        "belch",
+        "moonblast",
+        "venom-drench"
+      ]
+    },
+    {
+      "id": 90,
+      "name": "shellder",
+      "display_name": "Shellder",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 30,
+        "attack": 65,
+        "defense": 100,
+        "sp_attack": 45,
+        "sp_defense": 25,
+        "speed": 40
+      },
+      "moves": [
+        "tackle",
+        "leer",
+        "supersonic",
+        "water-gun",
+        "hydro-pump",
+        "ice-beam",
+        "aurora-beam",
+        "withdraw",
+        "clamp",
+        "protect",
+        "whirlpool",
+        "icicle-spear",
+        "iron-defense",
+        "brine",
+        "ice-shard",
+        "shell-smash",
+        "razor-shell"
+      ]
+    },
+    {
+      "id": 91,
+      "name": "cloyster",
+      "display_name": "Cloyster",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png",
+      "types": [
+        "water",
+        "ice"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 95,
+        "defense": 180,
+        "sp_attack": 85,
+        "sp_defense": 45,
+        "speed": 70
+      },
+      "moves": [
+        "tackle",
+        "twineedle",
+        "leer",
+        "supersonic",
+        "water-gun",
+        "hydro-pump",
+        "ice-beam",
+        "aurora-beam",
+        "withdraw",
+        "barrier",
+        "clamp",
+        "spike-cannon",
+        "protect",
+        "spikes",
+        "whirlpool",
+        "icicle-spear",
+        "iron-defense",
+        "toxic-spikes",
+        "ice-shard",
+        "shell-smash",
+        "razor-shell",
+        "icicle-crash"
+      ]
+    },
+    {
+      "id": 92,
+      "name": "gastly",
+      "display_name": "Gastly",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png",
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "stats": {
+        "hp": 30,
+        "attack": 35,
+        "defense": 30,
+        "sp_attack": 100,
+        "sp_defense": 35,
+        "speed": 80
+      },
+      "moves": [
+        "toxic",
+        "hypnosis",
+        "night-shade",
+        "confuse-ray",
+        "lick",
+        "smog",
+        "dream-eater",
+        "poison-gas",
+        "nightmare",
+        "curse",
+        "spite",
+        "destiny-bond",
+        "mean-look",
+        "shadow-ball",
+        "will-o-wisp",
+        "astonish",
+        "payback",
+        "sucker-punch",
+        "dark-pulse",
+        "venoshock",
+        "hex"
+      ]
+    },
+    {
+      "id": 93,
+      "name": "haunter",
+      "display_name": "Haunter",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 50,
+        "defense": 45,
+        "sp_attack": 115,
+        "sp_defense": 55,
+        "speed": 95
+      },
+      "moves": [
+        "toxic",
+        "hypnosis",
+        "night-shade",
+        "confuse-ray",
+        "lick",
+        "smog",
+        "dream-eater",
+        "poison-gas",
+        "nightmare",
+        "curse",
+        "spite",
+        "destiny-bond",
+        "mean-look",
+        "shadow-ball",
+        "will-o-wisp",
+        "astonish",
+        "shadow-punch",
+        "payback",
+        "sucker-punch",
+        "dark-pulse",
+        "venoshock",
+        "hex"
+      ]
+    },
+    {
+      "id": 94,
+      "name": "gengar",
+      "display_name": "Gengar",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 65,
+        "defense": 60,
+        "sp_attack": 130,
+        "sp_defense": 75,
+        "speed": 110
+      },
+      "moves": [
+        "disable",
+        "toxic",
+        "hypnosis",
+        "night-shade",
+        "confuse-ray",
+        "haze",
+        "lick",
+        "smog",
+        "dream-eater",
+        "poison-gas",
+        "nightmare",
+        "curse",
+        "spite",
+        "destiny-bond",
+        "perish-song",
+        "mean-look",
+        "shadow-ball",
+        "will-o-wisp",
+        "astonish",
+        "shadow-punch",
+        "payback",
+        "sucker-punch",
+        "dark-pulse",
+        "venoshock",
+        "hex",
+        "reflect-type"
+      ]
+    },
+    {
+      "id": 95,
+      "name": "onix",
+      "display_name": "Onix",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 45,
+        "defense": 160,
+        "sp_attack": 30,
+        "sp_defense": 45,
+        "speed": 70
+      },
+      "moves": [
+        "bind",
+        "slam",
+        "tackle",
+        "double-edge",
+        "rock-throw",
+        "earthquake",
+        "dig",
+        "rage",
+        "screech",
+        "harden",
+        "rock-slide",
+        "curse",
+        "sandstorm",
+        "rollout",
+        "dragon-breath",
+        "iron-tail",
+        "mud-sport",
+        "rock-tomb",
+        "sand-tomb",
+        "gyro-ball",
+        "rock-polish",
+        "stone-edge",
+        "stealth-rock",
+        "smack-down",
+        "bulldoze",
+        "high-horsepower"
+      ]
+    },
+    {
+      "id": 96,
+      "name": "drowzee",
+      "display_name": "Drowzee",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 48,
+        "defense": 45,
+        "sp_attack": 43,
+        "sp_defense": 90,
+        "speed": 42
+      },
+      "moves": [
+        "pound",
+        "headbutt",
+        "disable",
+        "psybeam",
+        "confusion",
+        "psychic",
+        "hypnosis",
+        "meditate",
+        "dream-eater",
+        "poison-gas",
+        "mind-reader",
+        "swagger",
+        "psych-up",
+        "future-sight",
+        "wake-up-slap",
+        "nasty-plot",
+        "zen-headbutt",
+        "psyshock",
+        "synchronoise"
+      ]
+    },
+    {
+      "id": 97,
+      "name": "hypno",
+      "display_name": "Hypno",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 85,
+        "attack": 73,
+        "defense": 70,
+        "sp_attack": 73,
+        "sp_defense": 115,
+        "speed": 67
+      },
+      "moves": [
+        "pound",
+        "headbutt",
+        "disable",
+        "psybeam",
+        "confusion",
+        "psychic",
+        "hypnosis",
+        "meditate",
+        "barrier",
+        "dream-eater",
+        "poison-gas",
+        "mind-reader",
+        "nightmare",
+        "swagger",
+        "psych-up",
+        "future-sight",
+        "wake-up-slap",
+        "switcheroo",
+        "nasty-plot",
+        "zen-headbutt",
+        "psyshock",
+        "synchronoise"
+      ]
+    },
+    {
+      "id": 98,
+      "name": "krabby",
+      "display_name": "Krabby",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 30,
+        "attack": 105,
+        "defense": 90,
+        "sp_attack": 25,
+        "sp_defense": 25,
+        "speed": 50
+      },
+      "moves": [
+        "vice-grip",
+        "guillotine",
+        "swords-dance",
+        "slam",
+        "stomp",
+        "leer",
+        "water-gun",
+        "bubble-beam",
+        "harden",
+        "bubble",
+        "crabhammer",
+        "flail",
+        "protect",
+        "metal-claw",
+        "mud-sport",
+        "mud-shot",
+        "brine",
+        "razor-shell"
+      ]
+    },
+    {
+      "id": 99,
+      "name": "kingler",
+      "display_name": "Kingler",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 55,
+        "attack": 130,
+        "defense": 115,
+        "sp_attack": 50,
+        "sp_defense": 50,
+        "speed": 75
+      },
+      "moves": [
+        "vice-grip",
+        "guillotine",
+        "swords-dance",
+        "slam",
+        "stomp",
+        "leer",
+        "water-gun",
+        "bubble-beam",
+        "agility",
+        "harden",
+        "amnesia",
+        "bubble",
+        "crabhammer",
+        "flail",
+        "protect",
+        "metal-claw",
+        "mud-sport",
+        "mud-shot",
+        "hammer-arm",
+        "brine",
+        "wide-guard",
+        "razor-shell"
+      ]
+    },
+    {
+      "id": 100,
+      "name": "voltorb",
+      "display_name": "Voltorb",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 30,
+        "defense": 50,
+        "sp_attack": 55,
+        "sp_defense": 55,
+        "speed": 100
+      },
+      "moves": [
+        "tackle",
+        "sonic-boom",
+        "thunder-shock",
+        "thunderbolt",
+        "screech",
+        "light-screen",
+        "self-destruct",
+        "swift",
+        "explosion",
+        "rollout",
+        "spark",
+        "mirror-coat",
+        "charge",
+        "gyro-ball",
+        "magnet-rise",
+        "discharge",
+        "charge-beam",
+        "electro-ball",
+        "eerie-impulse"
+      ]
+    },
+    {
+      "id": 101,
+      "name": "electrode",
+      "display_name": "Electrode",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 50,
+        "defense": 70,
+        "sp_attack": 80,
+        "sp_defense": 80,
+        "speed": 150
+      },
+      "moves": [
+        "tackle",
+        "sonic-boom",
+        "thunder-shock",
+        "thunderbolt",
+        "screech",
+        "light-screen",
+        "self-destruct",
+        "swift",
+        "explosion",
+        "rollout",
+        "spark",
+        "mirror-coat",
+        "charge",
+        "gyro-ball",
+        "magnet-rise",
+        "discharge",
+        "charge-beam",
+        "electro-ball",
+        "eerie-impulse",
+        "magnetic-flux"
+      ]
+    },
+    {
+      "id": 102,
+      "name": "exeggcute",
+      "display_name": "Exeggcute",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png",
+      "types": [
+        "grass",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 40,
+        "defense": 80,
+        "sp_attack": 60,
+        "sp_defense": 45,
+        "speed": 40
+      },
+      "moves": [
+        "psybeam",
+        "absorb",
+        "mega-drain",
+        "leech-seed",
+        "solar-beam",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "confusion",
+        "psychic",
+        "hypnosis",
+        "reflect",
+        "barrage",
+        "giga-drain",
+        "synthesis",
+        "uproar",
+        "extrasensory",
+        "bullet-seed",
+        "natural-gift",
+        "worry-seed",
+        "bestow"
+      ]
+    },
+    {
+      "id": 103,
+      "name": "exeggutor",
+      "display_name": "Exeggutor",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png",
+      "types": [
+        "grass",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 95,
+        "attack": 95,
+        "defense": 85,
+        "sp_attack": 125,
+        "sp_defense": 75,
+        "speed": 55
+      },
+      "moves": [
+        "stomp",
+        "absorb",
+        "mega-drain",
+        "leech-seed",
+        "solar-beam",
+        "stun-spore",
+        "confusion",
+        "hypnosis",
+        "reflect",
+        "egg-bomb",
+        "barrage",
+        "giga-drain",
+        "synthesis",
+        "uproar",
+        "extrasensory",
+        "bullet-seed",
+        "worry-seed",
+        "seed-bomb",
+        "leaf-storm",
+        "power-whip",
+        "wood-hammer",
+        "psyshock"
+      ]
+    },
+    {
+      "id": 104,
+      "name": "cubone",
+      "display_name": "Cubone",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 50,
+        "defense": 95,
+        "sp_attack": 40,
+        "sp_defense": 50,
+        "speed": 35
+      },
+      "moves": [
+        "headbutt",
+        "thrash",
+        "double-edge",
+        "tail-whip",
+        "leer",
+        "growl",
+        "rage",
+        "focus-energy",
+        "bone-club",
+        "bonemerang",
+        "mud-slap",
+        "bone-rush",
+        "false-swipe",
+        "endeavor",
+        "fling",
+        "retaliate",
+        "stomping-tantrum"
+      ]
+    },
+    {
+      "id": 105,
+      "name": "marowak",
+      "display_name": "Marowak",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png",
+      "types": [
+        "ground"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 80,
+        "defense": 110,
+        "sp_attack": 50,
+        "sp_defense": 80,
+        "speed": 45
+      },
+      "moves": [
+        "swords-dance",
+        "headbutt",
+        "thrash",
+        "double-edge",
+        "tail-whip",
+        "leer",
+        "growl",
+        "rage",
+        "screech",
+        "focus-energy",
+        "bone-club",
+        "bonemerang",
+        "mud-slap",
+        "bone-rush",
+        "false-swipe",
+        "endeavor",
+        "fling",
+        "retaliate",
+        "stomping-tantrum"
+      ]
+    },
+    {
+      "id": 106,
+      "name": "hitmonlee",
+      "display_name": "Hitmonlee",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 120,
+        "defense": 53,
+        "sp_attack": 35,
+        "sp_defense": 110,
+        "speed": 87
+      },
+      "moves": [
+        "double-kick",
+        "mega-kick",
+        "jump-kick",
+        "rolling-kick",
+        "tackle",
+        "low-kick",
+        "meditate",
+        "focus-energy",
+        "high-jump-kick",
+        "mind-reader",
+        "reversal",
+        "foresight",
+        "endure",
+        "fake-out",
+        "facade",
+        "helping-hand",
+        "revenge",
+        "brick-break",
+        "blaze-kick",
+        "feint",
+        "close-combat",
+        "sucker-punch",
+        "wide-guard",
+        "low-sweep",
+        "axe-kick"
+      ]
+    },
+    {
+      "id": 107,
+      "name": "hitmonchan",
+      "display_name": "Hitmonchan",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png",
+      "types": [
+        "fighting"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 105,
+        "defense": 79,
+        "sp_attack": 35,
+        "sp_defense": 110,
+        "speed": 76
+      },
+      "moves": [
+        "comet-punch",
+        "mega-punch",
+        "fire-punch",
+        "ice-punch",
+        "thunder-punch",
+        "tackle",
+        "leer",
+        "counter",
+        "agility",
+        "focus-energy",
+        "swift",
+        "dizzy-punch",
+        "mach-punch",
+        "detect",
+        "pursuit",
+        "fake-out",
+        "focus-punch",
+        "helping-hand",
+        "revenge",
+        "sky-uppercut",
+        "feint",
+        "close-combat",
+        "drain-punch",
+        "vacuum-wave",
+        "bullet-punch",
+        "quick-guard",
+        "power-up-punch"
+      ]
+    },
+    {
+      "id": 108,
+      "name": "lickitung",
+      "display_name": "Lickitung",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 55,
+        "defense": 75,
+        "sp_attack": 60,
+        "sp_defense": 75,
+        "speed": 30
+      },
+      "moves": [
+        "bind",
+        "slam",
+        "stomp",
+        "tackle",
+        "wrap",
+        "thrash",
+        "double-edge",
+        "supersonic",
+        "disable",
+        "acid",
+        "screech",
+        "defense-curl",
+        "lick",
+        "rest",
+        "belly-drum",
+        "rollout",
+        "knock-off",
+        "refresh",
+        "wring-out",
+        "me-first",
+        "giga-impact",
+        "zen-headbutt",
+        "power-whip",
+        "chip-away",
+        "bulldoze"
+      ]
+    },
+    {
+      "id": 109,
+      "name": "koffing",
+      "display_name": "Koffing",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 65,
+        "defense": 95,
+        "sp_attack": 60,
+        "sp_defense": 45,
+        "speed": 35
+      },
+      "moves": [
+        "tackle",
+        "toxic",
+        "smokescreen",
+        "haze",
+        "self-destruct",
+        "smog",
+        "sludge",
+        "poison-gas",
+        "explosion",
+        "sludge-bomb",
+        "destiny-bond",
+        "memento",
+        "gyro-ball",
+        "assurance",
+        "clear-smog",
+        "belch"
+      ]
+    },
+    {
+      "id": 110,
+      "name": "weezing",
+      "display_name": "Weezing",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
+      "types": [
+        "poison"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 90,
+        "defense": 120,
+        "sp_attack": 85,
+        "sp_defense": 70,
+        "speed": 60
+      },
+      "moves": [
+        "tackle",
+        "psybeam",
+        "toxic",
+        "screech",
+        "smokescreen",
+        "haze",
+        "self-destruct",
+        "smog",
+        "sludge",
+        "poison-gas",
+        "explosion",
+        "sludge-bomb",
+        "destiny-bond",
+        "heat-wave",
+        "memento",
+        "gyro-ball",
+        "assurance",
+        "double-hit",
+        "clear-smog",
+        "belch"
+      ]
+    },
+    {
+      "id": 111,
+      "name": "rhyhorn",
+      "display_name": "Rhyhorn",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png",
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 85,
+        "defense": 95,
+        "sp_attack": 30,
+        "sp_defense": 30,
+        "speed": 25
+      },
+      "moves": [
+        "stomp",
+        "sand-attack",
+        "horn-attack",
+        "fury-attack",
+        "horn-drill",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "tail-whip",
+        "leer",
+        "rock-throw",
+        "earthquake",
+        "rock-slide",
+        "scary-face",
+        "megahorn",
+        "rock-smash",
+        "rock-blast",
+        "giga-impact",
+        "stone-edge",
+        "stealth-rock",
+        "smack-down",
+        "chip-away",
+        "bulldoze",
+        "drill-run",
+        "high-horsepower"
+      ]
+    },
+    {
+      "id": 112,
+      "name": "rhydon",
+      "display_name": "Rhydon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "stats": {
+        "hp": 105,
+        "attack": 130,
+        "defense": 120,
+        "sp_attack": 45,
+        "sp_defense": 45,
+        "speed": 40
+      },
+      "moves": [
+        "stomp",
+        "sand-attack",
+        "horn-attack",
+        "fury-attack",
+        "horn-drill",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "tail-whip",
+        "leer",
+        "counter",
+        "rock-throw",
+        "earthquake",
+        "rock-slide",
+        "scary-face",
+        "megahorn",
+        "crunch",
+        "rock-smash",
+        "rock-blast",
+        "hammer-arm",
+        "giga-impact",
+        "stone-edge",
+        "stealth-rock",
+        "smack-down",
+        "chip-away",
+        "bulldoze",
+        "drill-run",
+        "high-horsepower"
+      ]
+    },
+    {
+      "id": 113,
+      "name": "chansey",
+      "display_name": "Chansey",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 250,
+        "attack": 5,
+        "defense": 5,
+        "sp_attack": 35,
+        "sp_defense": 105,
+        "speed": 50
+      },
+      "moves": [
+        "pound",
+        "double-slap",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "tail-whip",
+        "growl",
+        "sing",
+        "minimize",
+        "defense-curl",
+        "light-screen",
+        "egg-bomb",
+        "soft-boiled",
+        "sweet-kiss",
+        "charm",
+        "helping-hand",
+        "refresh",
+        "covet",
+        "calm-mind",
+        "healing-wish",
+        "fling",
+        "copycat",
+        "last-resort",
+        "echoed-voice",
+        "heal-pulse",
+        "bestow",
+        "disarming-voice",
+        "draining-kiss",
+        "fairy-wind",
+        "baby-doll-eyes",
+        "life-dew"
+      ]
+    },
+    {
+      "id": 114,
+      "name": "tangela",
+      "display_name": "Tangela",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 55,
+        "defense": 115,
+        "sp_attack": 100,
+        "sp_defense": 40,
+        "speed": 60
+      },
+      "moves": [
+        "bind",
+        "slam",
+        "vine-whip",
+        "absorb",
+        "mega-drain",
+        "leech-seed",
+        "growth",
+        "poison-powder",
+        "stun-spore",
+        "sleep-powder",
+        "confusion",
+        "constrict",
+        "amnesia",
+        "giga-drain",
+        "ancient-power",
+        "ingrain",
+        "knock-off",
+        "tickle",
+        "natural-gift",
+        "wring-out",
+        "energy-ball",
+        "power-whip",
+        "double-hit",
+        "acid-spray",
+        "grassy-terrain"
+      ]
+    },
+    {
+      "id": 115,
+      "name": "kangaskhan",
+      "display_name": "Kangaskhan",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 105,
+        "attack": 95,
+        "defense": 80,
+        "sp_attack": 40,
+        "sp_defense": 80,
+        "speed": 90
+      },
+      "moves": [
+        "pound",
+        "comet-punch",
+        "mega-punch",
+        "stomp",
+        "headbutt",
+        "tail-whip",
+        "leer",
+        "bite",
+        "growl",
+        "rage",
+        "focus-energy",
+        "dizzy-punch",
+        "reversal",
+        "outrage",
+        "endure",
+        "crunch",
+        "fake-out",
+        "last-resort",
+        "sucker-punch",
+        "double-hit",
+        "chip-away"
+      ]
+    },
+    {
+      "id": 116,
+      "name": "horsea",
+      "display_name": "Horsea",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 30,
+        "attack": 40,
+        "defense": 70,
+        "sp_attack": 70,
+        "sp_defense": 25,
+        "speed": 60
+      },
+      "moves": [
+        "leer",
+        "water-gun",
+        "hydro-pump",
+        "bubble-beam",
+        "agility",
+        "smokescreen",
+        "focus-energy",
+        "waterfall",
+        "bubble",
+        "dragon-breath",
+        "twister",
+        "rain-dance",
+        "dragon-dance",
+        "water-pulse",
+        "brine",
+        "dragon-pulse",
+        "laser-focus"
+      ]
+    },
+    {
+      "id": 117,
+      "name": "seadra",
+      "display_name": "Seadra",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 55,
+        "attack": 65,
+        "defense": 95,
+        "sp_attack": 95,
+        "sp_defense": 45,
+        "speed": 85
+      },
+      "moves": [
+        "leer",
+        "disable",
+        "water-gun",
+        "hydro-pump",
+        "bubble-beam",
+        "agility",
+        "smokescreen",
+        "focus-energy",
+        "waterfall",
+        "bubble",
+        "dragon-breath",
+        "twister",
+        "rain-dance",
+        "dragon-dance",
+        "water-pulse",
+        "brine",
+        "dragon-pulse",
+        "clear-smog",
+        "laser-focus"
+      ]
+    },
+    {
+      "id": 118,
+      "name": "goldeen",
+      "display_name": "Goldeen",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 67,
+        "defense": 60,
+        "sp_attack": 35,
+        "sp_defense": 50,
+        "speed": 63
+      },
+      "moves": [
+        "horn-attack",
+        "fury-attack",
+        "horn-drill",
+        "tail-whip",
+        "supersonic",
+        "peck",
+        "agility",
+        "quick-attack",
+        "waterfall",
+        "flail",
+        "megahorn",
+        "water-sport",
+        "water-pulse",
+        "aqua-ring",
+        "soak"
+      ]
+    },
+    {
+      "id": 119,
+      "name": "seaking",
+      "display_name": "Seaking",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 92,
+        "defense": 65,
+        "sp_attack": 65,
+        "sp_defense": 80,
+        "speed": 68
+      },
+      "moves": [
+        "horn-attack",
+        "fury-attack",
+        "horn-drill",
+        "tail-whip",
+        "supersonic",
+        "psybeam",
+        "peck",
+        "agility",
+        "quick-attack",
+        "waterfall",
+        "skull-bash",
+        "flail",
+        "megahorn",
+        "water-sport",
+        "water-pulse",
+        "aqua-ring",
+        "poison-jab",
+        "soak"
+      ]
+    },
+    {
+      "id": 120,
+      "name": "staryu",
+      "display_name": "Staryu",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 30,
+        "attack": 45,
+        "defense": 55,
+        "sp_attack": 70,
+        "sp_defense": 55,
+        "speed": 85
+      },
+      "moves": [
+        "tackle",
+        "water-gun",
+        "hydro-pump",
+        "surf",
+        "psybeam",
+        "bubble-beam",
+        "psychic",
+        "recover",
+        "harden",
+        "minimize",
+        "confuse-ray",
+        "light-screen",
+        "swift",
+        "psywave",
+        "rapid-spin",
+        "camouflage",
+        "cosmic-power",
+        "gyro-ball",
+        "brine",
+        "power-gem",
+        "reflect-type"
+      ]
+    },
+    {
+      "id": 121,
+      "name": "starmie",
+      "display_name": "Starmie",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 75,
+        "defense": 85,
+        "sp_attack": 100,
+        "sp_defense": 85,
+        "speed": 115
+      },
+      "moves": [
+        "tackle",
+        "water-gun",
+        "hydro-pump",
+        "surf",
+        "psybeam",
+        "bubble-beam",
+        "psychic",
+        "recover",
+        "harden",
+        "minimize",
+        "confuse-ray",
+        "light-screen",
+        "swift",
+        "psywave",
+        "rapid-spin",
+        "cosmic-power",
+        "brine",
+        "power-gem",
+        "spotlight"
+      ]
+    },
+    {
+      "id": 122,
+      "name": "mr-mime",
+      "display_name": "Mr-mime",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 45,
+        "defense": 65,
+        "sp_attack": 100,
+        "sp_defense": 120,
+        "speed": 90
+      },
+      "moves": [
+        "pound",
+        "double-slap",
+        "psybeam",
+        "confusion",
+        "psychic",
+        "hypnosis",
+        "meditate",
+        "mimic",
+        "barrier",
+        "light-screen",
+        "reflect",
+        "psywave",
+        "substitute",
+        "protect",
+        "safeguard",
+        "baton-pass",
+        "encore",
+        "trick",
+        "role-play",
+        "recycle",
+        "teeter-dance",
+        "iron-defense",
+        "magical-leaf",
+        "calm-mind",
+        "copycat",
+        "power-swap",
+        "guard-swap",
+        "sucker-punch",
+        "zen-headbutt",
+        "wide-guard",
+        "quick-guard",
+        "misty-terrain",
+        "dazzling-gleam"
+      ]
+    },
+    {
+      "id": 123,
+      "name": "scyther",
+      "display_name": "Scyther",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "stats": {
+        "hp": 70,
+        "attack": 110,
+        "defense": 80,
+        "sp_attack": 55,
+        "sp_defense": 80,
+        "speed": 105
+      },
+      "moves": [
+        "razor-wind",
+        "swords-dance",
+        "wing-attack",
+        "leer",
+        "agility",
+        "quick-attack",
+        "double-team",
+        "focus-energy",
+        "slash",
+        "false-swipe",
+        "fury-cutter",
+        "pursuit",
+        "silver-wind",
+        "aerial-ace",
+        "feint",
+        "close-combat",
+        "night-slash",
+        "air-slash",
+        "x-scissor",
+        "vacuum-wave",
+        "double-hit",
+        "laser-focus"
+      ]
+    },
+    {
+      "id": 124,
+      "name": "jynx",
+      "display_name": "Jynx",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png",
+      "types": [
+        "ice",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 50,
+        "defense": 35,
+        "sp_attack": 115,
+        "sp_defense": 95,
+        "speed": 95
+      },
+      "moves": [
+        "pound",
+        "double-slap",
+        "ice-punch",
+        "body-slam",
+        "thrash",
+        "sing",
+        "blizzard",
+        "confusion",
+        "psychic",
+        "screech",
+        "lick",
+        "lovely-kiss",
+        "powder-snow",
+        "sweet-kiss",
+        "perish-song",
+        "mean-look",
+        "fake-tears",
+        "covet",
+        "wake-up-slap",
+        "wring-out",
+        "copycat",
+        "avalanche",
+        "heart-stamp",
+        "draining-kiss"
+      ]
+    },
+    {
+      "id": 125,
+      "name": "electabuzz",
+      "display_name": "Electabuzz",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 83,
+        "defense": 57,
+        "sp_attack": 95,
+        "sp_defense": 85,
+        "speed": 105
+      },
+      "moves": [
+        "thunder-punch",
+        "leer",
+        "low-kick",
+        "thunder-shock",
+        "thunderbolt",
+        "thunder-wave",
+        "thunder",
+        "quick-attack",
+        "screech",
+        "light-screen",
+        "swift",
+        "spark",
+        "charge",
+        "shock-wave",
+        "giga-impact",
+        "discharge",
+        "electro-ball"
+      ]
+    },
+    {
+      "id": 126,
+      "name": "magmar",
+      "display_name": "Magmar",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 95,
+        "defense": 57,
+        "sp_attack": 100,
+        "sp_defense": 85,
+        "speed": 93
+      },
+      "moves": [
+        "fire-punch",
+        "tackle",
+        "leer",
+        "ember",
+        "flamethrower",
+        "hyper-beam",
+        "low-kick",
+        "fire-spin",
+        "smokescreen",
+        "confuse-ray",
+        "smog",
+        "fire-blast",
+        "poison-gas",
+        "flame-wheel",
+        "scary-face",
+        "feint-attack",
+        "sunny-day",
+        "lava-plume",
+        "flame-burst",
+        "clear-smog"
+      ]
+    },
+    {
+      "id": 127,
+      "name": "pinsir",
+      "display_name": "Pinsir",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png",
+      "types": [
+        "bug"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 125,
+        "defense": 100,
+        "sp_attack": 55,
+        "sp_defense": 70,
+        "speed": 85
+      },
+      "moves": [
+        "vice-grip",
+        "guillotine",
+        "swords-dance",
+        "bind",
+        "thrash",
+        "submission",
+        "seismic-toss",
+        "strength",
+        "harden",
+        "focus-energy",
+        "slash",
+        "vital-throw",
+        "superpower",
+        "revenge",
+        "brick-break",
+        "x-scissor",
+        "bug-bite",
+        "double-hit",
+        "storm-throw"
+      ]
+    },
+    {
+      "id": 128,
+      "name": "tauros",
+      "display_name": "Tauros",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 75,
+        "attack": 100,
+        "defense": 95,
+        "sp_attack": 40,
+        "sp_defense": 70,
+        "speed": 110
+      },
+      "moves": [
+        "stomp",
+        "horn-attack",
+        "tackle",
+        "take-down",
+        "thrash",
+        "double-edge",
+        "tail-whip",
+        "leer",
+        "rage",
+        "focus-energy",
+        "rest",
+        "scary-face",
+        "outrage",
+        "swagger",
+        "pursuit",
+        "payback",
+        "assurance",
+        "giga-impact",
+        "zen-headbutt",
+        "work-up",
+        "raging-bull"
+      ]
+    },
+    {
+      "id": 129,
+      "name": "magikarp",
+      "display_name": "Magikarp",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 20,
+        "attack": 10,
+        "defense": 55,
+        "sp_attack": 15,
+        "sp_defense": 20,
+        "speed": 80
+      },
+      "moves": [
+        "tackle",
+        "splash",
+        "flail"
+      ]
+    },
+    {
+      "id": 130,
+      "name": "gyarados",
+      "display_name": "Gyarados",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
+      "types": [
+        "water",
+        "flying"
+      ],
+      "stats": {
+        "hp": 95,
+        "attack": 125,
+        "defense": 79,
+        "sp_attack": 60,
+        "sp_defense": 100,
+        "speed": 81
+      },
+      "moves": [
+        "bind",
+        "tackle",
+        "thrash",
+        "leer",
+        "bite",
+        "hydro-pump",
+        "hyper-beam",
+        "dragon-rage",
+        "rage",
+        "focus-energy",
+        "waterfall",
+        "splash",
+        "flail",
+        "scary-face",
+        "outrage",
+        "twister",
+        "rain-dance",
+        "crunch",
+        "whirlpool",
+        "dragon-dance",
+        "water-pulse",
+        "brine",
+        "aqua-tail",
+        "ice-fang",
+        "dragon-tail",
+        "hurricane"
+      ]
+    },
+    {
+      "id": 131,
+      "name": "lapras",
+      "display_name": "Lapras",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
+      "types": [
+        "water",
+        "ice"
+      ],
+      "stats": {
+        "hp": 130,
+        "attack": 85,
+        "defense": 80,
+        "sp_attack": 85,
+        "sp_defense": 95,
+        "speed": 60
+      },
+      "moves": [
+        "body-slam",
+        "growl",
+        "sing",
+        "mist",
+        "water-gun",
+        "hydro-pump",
+        "surf",
+        "ice-beam",
+        "blizzard",
+        "confuse-ray",
+        "perish-song",
+        "safeguard",
+        "rain-dance",
+        "sheer-cold",
+        "water-pulse",
+        "brine",
+        "dragon-pulse",
+        "ice-shard",
+        "life-dew"
+      ]
+    },
+    {
+      "id": 132,
+      "name": "ditto",
+      "display_name": "Ditto",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 48,
+        "attack": 48,
+        "defense": 48,
+        "sp_attack": 48,
+        "sp_defense": 48,
+        "speed": 48
+      },
+      "moves": [
+        "transform"
+      ]
+    },
+    {
+      "id": 133,
+      "name": "eevee",
+      "display_name": "Eevee",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 55,
+        "attack": 55,
+        "defense": 50,
+        "sp_attack": 45,
+        "sp_defense": 65,
+        "speed": 55
+      },
+      "moves": [
+        "double-kick",
+        "sand-attack",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "tail-whip",
+        "bite",
+        "growl",
+        "quick-attack",
+        "mimic",
+        "focus-energy",
+        "swift",
+        "charm",
+        "baton-pass",
+        "helping-hand",
+        "refresh",
+        "covet",
+        "calm-mind",
+        "trump-card",
+        "copycat",
+        "last-resort",
+        "baby-doll-eyes"
+      ]
+    },
+    {
+      "id": 134,
+      "name": "vaporeon",
+      "display_name": "Vaporeon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 130,
+        "attack": 65,
+        "defense": 60,
+        "sp_attack": 110,
+        "sp_defense": 95,
+        "speed": 65
+      },
+      "moves": [
+        "double-kick",
+        "sand-attack",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "tail-whip",
+        "bite",
+        "growl",
+        "mist",
+        "water-gun",
+        "hydro-pump",
+        "aurora-beam",
+        "quick-attack",
+        "mimic",
+        "haze",
+        "swift",
+        "bubble",
+        "acid-armor",
+        "charm",
+        "baton-pass",
+        "helping-hand",
+        "yawn",
+        "muddy-water",
+        "covet",
+        "calm-mind",
+        "water-pulse",
+        "copycat",
+        "last-resort",
+        "aqua-ring",
+        "aqua-tail",
+        "baby-doll-eyes"
+      ]
+    },
+    {
+      "id": 135,
+      "name": "jolteon",
+      "display_name": "Jolteon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
+      "types": [
+        "electric"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 65,
+        "defense": 60,
+        "sp_attack": 110,
+        "sp_defense": 95,
+        "speed": 130
+      },
+      "moves": [
+        "double-kick",
+        "sand-attack",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "tail-whip",
+        "pin-missile",
+        "bite",
+        "growl",
+        "thunder-shock",
+        "thunderbolt",
+        "thunder-wave",
+        "thunder",
+        "agility",
+        "quick-attack",
+        "mimic",
+        "swift",
+        "charm",
+        "baton-pass",
+        "helping-hand",
+        "yawn",
+        "covet",
+        "calm-mind",
+        "copycat",
+        "last-resort",
+        "thunder-fang",
+        "discharge",
+        "baby-doll-eyes"
+      ]
+    },
+    {
+      "id": 136,
+      "name": "flareon",
+      "display_name": "Flareon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png",
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 130,
+        "defense": 60,
+        "sp_attack": 95,
+        "sp_defense": 110,
+        "speed": 65
+      },
+      "moves": [
+        "double-kick",
+        "sand-attack",
+        "tackle",
+        "take-down",
+        "double-edge",
+        "tail-whip",
+        "leer",
+        "bite",
+        "growl",
+        "ember",
+        "flamethrower",
+        "fire-spin",
+        "quick-attack",
+        "rage",
+        "mimic",
+        "focus-energy",
+        "smog",
+        "fire-blast",
+        "swift",
+        "scary-face",
+        "charm",
+        "baton-pass",
+        "helping-hand",
+        "yawn",
+        "covet",
+        "calm-mind",
+        "copycat",
+        "last-resort",
+        "flare-blitz",
+        "fire-fang",
+        "lava-plume",
+        "baby-doll-eyes"
+      ]
+    },
+    {
+      "id": 137,
+      "name": "porygon",
+      "display_name": "Porygon",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 60,
+        "defense": 70,
+        "sp_attack": 85,
+        "sp_defense": 75,
+        "speed": 40
+      },
+      "moves": [
+        "tackle",
+        "double-edge",
+        "psybeam",
+        "hyper-beam",
+        "thunder-shock",
+        "thunderbolt",
+        "thunder-wave",
+        "agility",
+        "recover",
+        "barrier",
+        "sharpen",
+        "conversion",
+        "tri-attack",
+        "conversion-2",
+        "zap-cannon",
+        "lock-on",
+        "spark",
+        "magic-coat",
+        "recycle",
+        "signal-beam",
+        "magnet-rise",
+        "discharge"
+      ]
+    },
+    {
+      "id": 138,
+      "name": "omanyte",
+      "display_name": "Omanyte",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png",
+      "types": [
+        "rock",
+        "water"
+      ],
+      "stats": {
+        "hp": 35,
+        "attack": 40,
+        "defense": 100,
+        "sp_attack": 90,
+        "sp_defense": 55,
+        "speed": 35
+      },
+      "moves": [
+        "bind",
+        "sand-attack",
+        "horn-attack",
+        "leer",
+        "bite",
+        "water-gun",
+        "hydro-pump",
+        "surf",
+        "rock-throw",
+        "withdraw",
+        "spike-cannon",
+        "constrict",
+        "rock-slide",
+        "protect",
+        "rollout",
+        "ancient-power",
+        "tickle",
+        "mud-shot",
+        "rock-blast",
+        "brine",
+        "shell-smash"
+      ]
+    },
+    {
+      "id": 139,
+      "name": "omastar",
+      "display_name": "Omastar",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png",
+      "types": [
+        "rock",
+        "water"
+      ],
+      "stats": {
+        "hp": 70,
+        "attack": 60,
+        "defense": 125,
+        "sp_attack": 115,
+        "sp_defense": 70,
+        "speed": 55
+      },
+      "moves": [
+        "bind",
+        "sand-attack",
+        "horn-attack",
+        "leer",
+        "bite",
+        "supersonic",
+        "water-gun",
+        "hydro-pump",
+        "surf",
+        "rock-throw",
+        "withdraw",
+        "bide",
+        "spike-cannon",
+        "constrict",
+        "rock-slide",
+        "protect",
+        "rollout",
+        "crunch",
+        "ancient-power",
+        "tickle",
+        "mud-shot",
+        "rock-blast",
+        "brine",
+        "shell-smash"
+      ]
+    },
+    {
+      "id": 140,
+      "name": "kabuto",
+      "display_name": "Kabuto",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png",
+      "types": [
+        "rock",
+        "water"
+      ],
+      "stats": {
+        "hp": 30,
+        "attack": 80,
+        "defense": 90,
+        "sp_attack": 55,
+        "sp_defense": 45,
+        "speed": 55
+      },
+      "moves": [
+        "scratch",
+        "sand-attack",
+        "leer",
+        "hydro-pump",
+        "absorb",
+        "mega-drain",
+        "rock-throw",
+        "harden",
+        "leech-life",
+        "rock-slide",
+        "slash",
+        "protect",
+        "endure",
+        "ancient-power",
+        "metal-sound",
+        "mud-shot",
+        "brine",
+        "wring-out",
+        "stone-edge",
+        "aqua-jet",
+        "liquidation"
+      ]
+    },
+    {
+      "id": 141,
+      "name": "kabutops",
+      "display_name": "Kabutops",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png",
+      "types": [
+        "rock",
+        "water"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 115,
+        "defense": 105,
+        "sp_attack": 65,
+        "sp_defense": 70,
+        "speed": 80
+      },
+      "moves": [
+        "scratch",
+        "swords-dance",
+        "sand-attack",
+        "leer",
+        "hydro-pump",
+        "absorb",
+        "mega-drain",
+        "rock-throw",
+        "screech",
+        "harden",
+        "confuse-ray",
+        "leech-life",
+        "rock-slide",
+        "slash",
+        "protect",
+        "endure",
+        "fury-cutter",
+        "ancient-power",
+        "metal-sound",
+        "mud-shot",
+        "brine",
+        "feint",
+        "wring-out",
+        "night-slash",
+        "stone-edge",
+        "aqua-jet",
+        "liquidation"
+      ]
+    },
+    {
+      "id": 142,
+      "name": "aerodactyl",
+      "display_name": "Aerodactyl",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
+      "types": [
+        "rock",
+        "flying"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 105,
+        "defense": 65,
+        "sp_attack": 60,
+        "sp_defense": 75,
+        "speed": 130
+      },
+      "moves": [
+        "wing-attack",
+        "fly",
+        "take-down",
+        "bite",
+        "roar",
+        "supersonic",
+        "hyper-beam",
+        "rock-throw",
+        "agility",
+        "rock-slide",
+        "scary-face",
+        "crunch",
+        "ancient-power",
+        "giga-impact",
+        "thunder-fang",
+        "ice-fang",
+        "fire-fang",
+        "iron-head",
+        "stone-edge",
+        "sky-drop"
+      ]
+    },
+    {
+      "id": 143,
+      "name": "snorlax",
+      "display_name": "Snorlax",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+      "types": [
+        "normal"
+      ],
+      "stats": {
+        "hp": 160,
+        "attack": 110,
+        "defense": 65,
+        "sp_attack": 65,
+        "sp_defense": 110,
+        "speed": 30
+      },
+      "moves": [
+        "headbutt",
+        "tackle",
+        "body-slam",
+        "double-edge",
+        "bite",
+        "hyper-beam",
+        "screech",
+        "harden",
+        "defense-curl",
+        "metronome",
+        "lick",
+        "amnesia",
+        "rest",
+        "snore",
+        "flail",
+        "belly-drum",
+        "rollout",
+        "sleep-talk",
+        "crunch",
+        "stockpile",
+        "swallow",
+        "superpower",
+        "recycle",
+        "yawn",
+        "block",
+        "covet",
+        "hammer-arm",
+        "fling",
+        "last-resort",
+        "giga-impact",
+        "zen-headbutt",
+        "heavy-slam",
+        "chip-away",
+        "bulldoze",
+        "belch",
+        "high-horsepower"
+      ]
+    },
+    {
+      "id": 144,
+      "name": "articuno",
+      "display_name": "Articuno",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+      "types": [
+        "ice",
+        "flying"
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 85,
+        "defense": 100,
+        "sp_attack": 95,
+        "sp_defense": 125,
+        "speed": 85
+      },
+      "moves": [
+        "gust",
+        "leer",
+        "mist",
+        "ice-beam",
+        "blizzard",
+        "peck",
+        "agility",
+        "haze",
+        "reflect",
+        "sky-attack",
+        "mind-reader",
+        "powder-snow",
+        "mirror-coat",
+        "ancient-power",
+        "hail",
+        "sheer-cold",
+        "roost",
+        "tailwind",
+        "ice-shard",
+        "hurricane",
+        "freeze-dry",
+        "snowscape"
+      ]
+    },
+    {
+      "id": 145,
+      "name": "zapdos",
+      "display_name": "Zapdos",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+      "types": [
+        "electric",
+        "flying"
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 90,
+        "defense": 85,
+        "sp_attack": 125,
+        "sp_defense": 90,
+        "speed": 100
+      },
+      "moves": [
+        "leer",
+        "peck",
+        "drill-peck",
+        "thunder-shock",
+        "thunderbolt",
+        "thunder-wave",
+        "thunder",
+        "agility",
+        "light-screen",
+        "sky-attack",
+        "zap-cannon",
+        "detect",
+        "rain-dance",
+        "ancient-power",
+        "charge",
+        "roost",
+        "pluck",
+        "discharge",
+        "magnetic-flux"
+      ]
+    },
+    {
+      "id": 146,
+      "name": "moltres",
+      "display_name": "Moltres",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "stats": {
+        "hp": 90,
+        "attack": 100,
+        "defense": 90,
+        "sp_attack": 125,
+        "sp_defense": 85,
+        "speed": 90
+      },
+      "moves": [
+        "gust",
+        "wing-attack",
+        "leer",
+        "ember",
+        "flamethrower",
+        "peck",
+        "solar-beam",
+        "fire-spin",
+        "agility",
+        "sky-attack",
+        "endure",
+        "safeguard",
+        "sunny-day",
+        "ancient-power",
+        "heat-wave",
+        "overheat",
+        "roost",
+        "air-slash",
+        "incinerate",
+        "hurricane",
+        "burn-up"
+      ]
+    },
+    {
+      "id": 147,
+      "name": "dratini",
+      "display_name": "Dratini",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
+      "types": [
+        "dragon"
+      ],
+      "stats": {
+        "hp": 41,
+        "attack": 64,
+        "defense": 45,
+        "sp_attack": 50,
+        "sp_defense": 50,
+        "speed": 50
+      },
+      "moves": [
+        "slam",
+        "wrap",
+        "leer",
+        "hyper-beam",
+        "dragon-rage",
+        "thunder-wave",
+        "agility",
+        "outrage",
+        "safeguard",
+        "twister",
+        "rain-dance",
+        "dragon-dance",
+        "aqua-tail",
+        "dragon-rush",
+        "dragon-tail"
+      ]
+    },
+    {
+      "id": 148,
+      "name": "dragonair",
+      "display_name": "Dragonair",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
+      "types": [
+        "dragon"
+      ],
+      "stats": {
+        "hp": 61,
+        "attack": 84,
+        "defense": 65,
+        "sp_attack": 70,
+        "sp_defense": 70,
+        "speed": 70
+      },
+      "moves": [
+        "slam",
+        "wrap",
+        "leer",
+        "hyper-beam",
+        "dragon-rage",
+        "thunder-wave",
+        "agility",
+        "outrage",
+        "safeguard",
+        "twister",
+        "rain-dance",
+        "dragon-dance",
+        "aqua-tail",
+        "dragon-rush",
+        "dragon-tail"
+      ]
+    },
+    {
+      "id": 149,
+      "name": "dragonite",
+      "display_name": "Dragonite",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "stats": {
+        "hp": 91,
+        "attack": 134,
+        "defense": 95,
+        "sp_attack": 100,
+        "sp_defense": 100,
+        "speed": 80
+      },
+      "moves": [
+        "fire-punch",
+        "thunder-punch",
+        "wing-attack",
+        "slam",
+        "wrap",
+        "leer",
+        "mist",
+        "hyper-beam",
+        "dragon-rage",
+        "thunder-wave",
+        "agility",
+        "outrage",
+        "safeguard",
+        "twister",
+        "rain-dance",
+        "extreme-speed",
+        "dragon-dance",
+        "roost",
+        "aqua-tail",
+        "dragon-rush",
+        "aqua-jet",
+        "dragon-tail",
+        "hurricane"
+      ]
+    },
+    {
+      "id": 150,
+      "name": "mewtwo",
+      "display_name": "Mewtwo",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 106,
+        "attack": 110,
+        "defense": 90,
+        "sp_attack": 154,
+        "sp_defense": 90,
+        "speed": 130
+      },
+      "moves": [
+        "disable",
+        "mist",
+        "psybeam",
+        "confusion",
+        "psychic",
+        "agility",
+        "teleport",
+        "recover",
+        "confuse-ray",
+        "barrier",
+        "swift",
+        "amnesia",
+        "psywave",
+        "safeguard",
+        "psych-up",
+        "ancient-power",
+        "future-sight",
+        "calm-mind",
+        "miracle-eye",
+        "me-first",
+        "power-swap",
+        "guard-swap",
+        "aura-sphere",
+        "psycho-cut",
+        "psystrike",
+        "laser-focus",
+        "life-dew"
+      ]
+    },
+    {
+      "id": 151,
+      "name": "mew",
+      "display_name": "Mew",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
+      "types": [
+        "psychic"
+      ],
+      "stats": {
+        "hp": 100,
+        "attack": 100,
+        "defense": 100,
+        "sp_attack": 100,
+        "sp_defense": 100,
+        "speed": 100
+      },
+      "moves": [
+        "pound",
+        "mega-punch",
+        "confusion",
+        "psychic",
+        "mimic",
+        "barrier",
+        "metronome",
+        "swift",
+        "amnesia",
+        "transform",
+        "psywave",
+        "baton-pass",
+        "ancient-power",
+        "imprison",
+        "me-first",
+        "aura-sphere",
+        "nasty-plot",
+        "reflect-type",
+        "life-dew"
+      ]
+    }
+  ]
+}
