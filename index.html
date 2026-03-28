@@ -4,27 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PKM Infinite Fights</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background: radial-gradient(ellipse at center, #1a1a2e 0%, #0f0f1a 100%);
       min-height: 100vh;
       font-family: 'Press Start 2P', monospace;
+      color: #fff;
     }
 
-    .sprite {
-      image-rendering: pixelated;
-      image-rendering: crisp-edges;
-      filter: drop-shadow(0 0 10px rgba(255,215,0,0.25));
-      transition: transform 0.3s ease;
+    /* ── Start screen overlay ───────────────────────────────────────────── */
+    #start-screen {
+      position: fixed; inset: 0;
+      background: radial-gradient(ellipse at center, #1a1a2e 0%, #0f0f1a 100%);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 32px; z-index: 100; padding: 24px;
     }
-    .sprite:hover { transform: scale(1.05); }
 
-    /* Type badges */
+    @keyframes titleFloat {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+    #start-title { animation: titleFloat 3s ease-in-out infinite; text-align: center; }
+
+    /* ── Game screen ────────────────────────────────────────────────────── */
+    #game-screen {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 16px 12px;
+      gap: 16px;
+    }
+
+    /* ── Type badges ────────────────────────────────────────────────────── */
     .type-normal    { background:#A8A878; }
     .type-fire      { background:#F08030; }
     .type-water     { background:#6890F0; }
@@ -44,6 +61,7 @@
     .type-steel     { background:#B8B8D0; color:#333; }
     .type-fairy     { background:#EE99AC; color:#333; }
 
+    /* ── Animations ─────────────────────────────────────────────────────── */
     @keyframes fadeIn {
       from { opacity:0; transform:translateY(12px); }
       to   { opacity:1; transform:translateY(0); }
@@ -70,7 +88,43 @@
     }
     .streak-bump { animation: streakBump 0.35s ease forwards; }
 
-    /* Autocomplete */
+    @keyframes pulse {
+      0%,100% { opacity:1; }
+      50%     { opacity:0.4; }
+    }
+    .animate-pulse { animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
+
+    /* ── Arena ──────────────────────────────────────────────────────────── */
+    .arena {
+      display: flex; flex-direction: row;
+      align-items: stretch; justify-content: center;
+      gap: 10px; width: 100%; max-width: 900px;
+    }
+
+    .pkm-card {
+      background: #111827; border: 1px solid #374151;
+      border-radius: 16px; padding: 14px;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 10px;
+      width: 100%;          /* fill the column wrapper, not flex-sized */
+      min-height: 360px;    /* always same height regardless of content */
+      will-change: transform, opacity;
+    }
+
+    .vs-col {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 10px; flex-shrink: 0; width: 80px;
+    }
+
+    /* ── Stat bars ──────────────────────────────────────────────────────── */
+    .stat-row  { display:flex; align-items:center; gap:6px; width:100%; }
+    .stat-label{ font-size:7px; color:#9ca3af; width:28px; text-align:right; flex-shrink:0; }
+    .stat-bar-bg{ flex:1; background:#1f2937; border-radius:999px; height:5px; min-width:0; }
+    .stat-bar  { height:5px; border-radius:999px; }
+    .stat-val  { font-size:7px; color:#d1d5db; width:22px; text-align:right; flex-shrink:0; }
+
+    /* ── Autocomplete ───────────────────────────────────────────────────── */
     .dropdown {
       position:absolute; top:100%; left:0; right:0;
       background:#1f2937; border:1px solid #374151;
@@ -80,173 +134,313 @@
     .dropdown-item {
       padding:8px 12px; cursor:pointer; font-size:11px;
       color:#d1d5db; display:flex; align-items:center;
-      gap:8px; transition:background 0.15s;
-      font-family: sans-serif;
+      gap:8px; transition:background 0.15s; font-family:sans-serif;
     }
-    .dropdown-item:hover, .dropdown-item.active { background:#374151; color:#fff; }
-    .dropdown-item img { width:28px; height:28px; image-rendering:pixelated; }
+    .dropdown-item:hover,.dropdown-item.active{ background:#374151; color:#fff; }
+    .dropdown-item img{ width:28px; height:28px; image-rendering:pixelated; }
 
-    /* Arena layout — always side by side */
-    .arena {
-      display: flex;
-      flex-direction: row;
-      align-items: stretch;
-      justify-content: center;
-      gap: 12px;
-      width: 100%;
-      max-width: 900px;
+    /* ── Sprite ─────────────────────────────────────────────────────────── */
+    .sprite {
+      image-rendering:pixelated; image-rendering:crisp-edges;
+      filter:drop-shadow(0 0 10px rgba(255,215,0,0.25));
+      transition:transform 0.3s ease;
     }
+    .sprite:hover{ transform:scale(1.05); }
 
-    .pkm-card {
-      background: #111827;
-      border: 1px solid #374151;
-      border-radius: 16px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      /* Shrink on small screens but keep side-by-side */
-      flex: 1 1 0;
-      min-width: 0;
-      max-width: 280px;
+    /* ── Buttons ────────────────────────────────────────────────────────── */
+    .btn {
+      font-family:'Press Start 2P',monospace;
+      border:none; border-radius:12px;
+      cursor:pointer; transition:all 0.2s;
     }
+    .btn:active{ transform:scale(0.96); }
+    .btn:disabled{ cursor:not-allowed; }
 
-    .vs-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      flex-shrink: 0;
-      width: 90px;
+    .btn-primary {
+      background:#ef4444; color:#fff;
+      font-size:11px; padding:12px 28px;
     }
+    .btn-primary:hover:not(:disabled){ background:#dc2626; }
 
-    /* Stat bars */
-    .stat-row { display:flex; align-items:center; gap:6px; width:100%; }
-    .stat-label { font-size:7px; color:#9ca3af; width:28px; text-align:right; flex-shrink:0; }
-    .stat-bar-bg { flex:1; background:#1f2937; border-radius:999px; height:5px; min-width:0; }
-    .stat-bar { height:5px; border-radius:999px; }
-    .stat-val { font-size:7px; color:#d1d5db; width:22px; text-align:right; flex-shrink:0; }
+    .btn-secondary {
+      background:#374151; color:#d1d5db;
+      font-size:10px; padding:10px 18px;
+    }
+    .btn-secondary:hover:not(:disabled){ background:#4b5563; }
 
-    .btn:active { transform:scale(0.96); }
+    .btn-start {
+      background:#facc15; color:#111;
+      font-size:13px; padding:16px 40px;
+      border-radius:14px;
+    }
+    .btn-start:hover{ background:#fbbf24; }
 
-    /* Card transition — JS sets these inline, CSS just handles the easing */
-    .pkm-card { will-change: transform, opacity; }
+    .btn-restart {
+      background:transparent; color:#6b7280;
+      font-size:8px; padding:6px 12px;
+      border:1px solid #374151; border-radius:8px;
+    }
+    .btn-restart:hover{ color:#d1d5db; border-color:#6b7280; }
+
+    .btn-rules {
+      background:transparent; color:#6b7280;
+      font-size:8px; padding:6px 14px;
+      border:1px solid #374151; border-radius:8px;
+    }
+    .btn-rules:hover{ color:#facc15; border-color:#facc15; }
+
+    .btn-newgame {
+      background:#facc15; color:#111;
+      font-size:11px; padding:12px 28px;
+    }
+    .btn-newgame:hover{ background:#fbbf24; }
+
+    .arrow-btn {
+      background:none; border:none; cursor:pointer;
+      color:#facc15; font-size:20px; line-height:1;
+      padding:6px 4px; flex-shrink:0;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+    .arrow-btn:hover { transform: scale(1.3); }
+    .arrow-btn:disabled { opacity:0; pointer-events:none; }
   </style>
 </head>
 
-<body style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start; min-height:100vh; padding:24px 12px; gap:18px;">
+<body>
 
-  <!-- Title -->
-  <h1 style="font-size:clamp(12px,3vw,20px); color:#facc15; text-align:center; line-height:1.8; letter-spacing:2px;">
-    PKM INFINITE <span style="color:#f87171;">FIGHTS</span>
-  </h1>
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <!-- START SCREEN                                                        -->
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <div id="start-screen">
 
-  <!-- Result + Streak row -->
-  <div style="display:flex; align-items:center; justify-content:center; gap:24px; min-height:40px;">
-
-    <!-- Result text -->
-    <div id="result-banner" style="display:none;">
-      <p id="result-text" style="font-size:clamp(10px,2.5vw,18px); text-align:center;"></p>
+    <div id="start-title">
+      <h1 style="font-size:clamp(16px,4vw,28px); color:#facc15; line-height:1.8; letter-spacing:2px;">
+        PKM INFINITE<br/><span style="color:#f87171;">FIGHTS</span>
+      </h1>
     </div>
 
-    <!-- Streak counter (always visible) -->
-    <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
-      <span style="font-size:7px; color:#6b7280; letter-spacing:1px;">STREAK</span>
-      <div style="display:flex; align-items:center; gap:6px;">
-        <span style="font-size:7px; color:#facc15;">🔥</span>
-        <span id="streak-count" style="font-size:clamp(14px,3vw,22px); color:#facc15;">0</span>
-      </div>
-    </div>
+    <p style="font-size:8px; color:#6b7280; text-align:center; line-height:2; max-width:280px;">
+      A random Pokémon challenges you.<br/>
+      Pick one that can beat it —<br/>
+      then it becomes the next defender.
+    </p>
 
+    <button class="btn btn-start" onclick="startGame()">▶ START GAME</button>
+
+    <p id="start-error" style="display:none; font-size:8px; color:#f87171; text-align:center; max-width:280px; line-height:1.8;"></p>
   </div>
 
-  <!-- Arena: always row layout -->
-  <div class="arena">
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <!-- GAME SCREEN                                                         -->
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <div id="game-screen">
 
-    <!-- LEFT: Enemy Pokemon -->
-    <div id="card-left" class="pkm-card">
-      <!-- Loading skeleton -->
-      <div id="loading-1" style="display:flex; flex-direction:column; align-items:center; gap:12px;">
-        <div style="width:80px;height:80px;border-radius:50%;background:#1f2937;"></div>
-        <div style="width:70px;height:10px;border-radius:6px;background:#1f2937;"></div>
-      </div>
-      <!-- Content -->
-      <div id="content-1" style="display:none; flex-direction:column; align-items:center; gap:10px; width:100%;">
-        <p id="id-1" style="font-size:8px;color:#4b5563;align-self:flex-start;">#000</p>
-        <img id="sprite-1" class="sprite" style="width:80px;height:80px;" src="" alt="" />
-        <h2 id="name-1" style="font-size:clamp(8px,2vw,11px);color:#fff;text-align:center;letter-spacing:2px;"></h2>
-        <div id="types-1" style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;"></div>
-        <div id="stats-1" style="width:100%;display:flex;flex-direction:column;gap:4px;"></div>
+    <!-- Top bar: centered title + restart pinned right -->
+    <div style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center; width:100%; max-width:900px;">
+      <div></div>
+      <h1 style="font-size:clamp(9px,2vw,14px); color:#facc15; letter-spacing:1px; line-height:1.6; text-align:center; white-space:nowrap;">
+        PKM INFINITE <span style="color:#f87171;">FIGHTS</span>
+      </h1>
+      <div style="display:flex; justify-content:flex-end;">
+        <button class="btn btn-restart" onclick="restartGame()">↺ RESTART</button>
       </div>
     </div>
 
-    <!-- MIDDLE: VS + category -->
-    <div class="vs-col">
-      <span class="vs-text" style="font-family:'Press Start 2P',monospace; font-size:clamp(18px,4vw,32px); color:#ef4444;">VS</span>
-      <div id="category-badge"
-           style="font-size:7px; color:#fde68a; text-align:center; background:#1f2937;
-                  border:1px solid rgba(234,179,8,0.3); border-radius:10px;
-                  padding:8px 10px; line-height:1.8; white-space:pre-line;">—</div>
+    <!-- Result + Streak -->
+    <div style="display:flex; align-items:center; justify-content:center; gap:28px; min-height:36px;">
+      <div id="result-banner" style="display:none;">
+        <p id="result-text" style="font-size:clamp(10px,2.5vw,18px); text-align:center;"></p>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
+        <span style="font-size:7px; color:#6b7280; letter-spacing:1px;">STREAK</span>
+        <div style="display:flex; align-items:center; gap:5px;">
+          <span style="font-size:7px;">🔥</span>
+          <span id="streak-count" style="font-size:clamp(14px,3vw,22px); color:#facc15;">0</span>
+        </div>
+      </div>
     </div>
 
-    <!-- RIGHT: Player input card -->
-    <div id="card-right" class="pkm-card">
-      <p style="font-size:7px; color:#6b7280; letter-spacing:1px;">YOUR POKEMON</p>
+    <!-- Arena -->
+    <div class="arena" style="align-items:flex-start;">
 
-      <!-- Search input -->
-      <div style="position:relative; width:100%;">
-        <input
-          id="pkm-input"
-          type="text"
-          placeholder="Search..."
-          autocomplete="off"
-          style="width:100%; background:#1f2937; border:1px solid #4b5563;
-                 border-radius:10px; padding:8px 10px; color:#fff; font-size:12px;
-                 outline:none; font-family:sans-serif;"
-          oninput="onSearch()"
-          onkeydown="onKeyDown(event)"
-          onfocus="openDropdown()"
-        />
-        <div id="dropdown" class="dropdown" style="display:none;"></div>
+      <!-- LEFT column: spacer + card (same width as right) -->
+      <div style="flex:1 1 0; max-width:260px; display:flex; flex-direction:column; gap:8px;">
+        <div style="height:36px; flex-shrink:0;"></div><!-- matches search bar height -->
+        <div id="card-left" class="pkm-card">
+          <div id="loading-1" style="display:flex; flex-direction:column; align-items:center; gap:12px;">
+            <div class="animate-pulse" style="width:80px;height:80px;border-radius:50%;background:#1f2937;"></div>
+            <div class="animate-pulse" style="width:70px;height:10px;border-radius:6px;background:#1f2937;"></div>
+          </div>
+          <div id="content-1" style="display:none; flex-direction:column; align-items:center; gap:8px; width:100%;">
+            <p id="id-1" style="font-size:8px;color:#4b5563;align-self:flex-start;">#000</p>
+            <img id="sprite-1" class="sprite" style="width:80px;height:80px;" src="" alt="" />
+            <h2 id="name-1" style="font-size:clamp(8px,2vw,11px);color:#fff;text-align:center;letter-spacing:2px;"></h2>
+            <div id="types-1" style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;"></div>
+            <div id="stats-1" style="width:100%;display:flex;flex-direction:column;gap:3px;"></div>
+          </div>
+        </div>
       </div>
 
-      <!-- Player Pokemon preview -->
-      <div id="player-preview" style="display:none; flex-direction:column; align-items:center; gap:8px; width:100%;">
-        <img id="player-sprite" class="sprite" style="width:80px;height:80px;" src="" alt="" />
-        <h2 id="player-name" style="font-size:clamp(8px,2vw,11px);color:#fff;text-align:center;letter-spacing:2px;"></h2>
-        <div id="player-types" style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;"></div>
-        <div id="player-stats" style="width:100%;display:flex;flex-direction:column;gap:4px;"></div>
+      <!-- MIDDLE: VS + category -->
+      <div class="vs-col" style="padding-top:44px;">
+        <span class="vs-text" style="font-size:clamp(18px,4vw,32px); color:#ef4444;">VS</span>
+        <div id="category-badge"
+             style="font-size:7px; color:#fde68a; text-align:center; background:#1f2937;
+                    border:1px solid rgba(234,179,8,0.3); border-radius:10px;
+                    padding:8px 8px; line-height:1.8; white-space:pre-line;">—</div>
       </div>
 
-      <p id="player-hint" style="font-size:7px;color:#374151;">type to search</p>
+      <!-- RIGHT column: search above, arrows flanking the card -->
+      <div style="flex:1 1 0; max-width:260px; display:flex; flex-direction:column; gap:8px;">
+
+        <!-- Search input -->
+        <div style="position:relative; width:100%;">
+          <input id="pkm-input" type="text" placeholder="Search Pokémon..." autocomplete="off"
+            style="width:100%; background:#1f2937; border:1px solid #4b5563;
+                   border-radius:10px; padding:8px 10px; color:#fff; font-size:12px;
+                   outline:none; font-family:sans-serif; height:36px;"
+            oninput="onSearch()" onkeydown="onKeyDown(event)" onfocus="openDropdown()" />
+          <div id="dropdown" class="dropdown" style="display:none;"></div>
+        </div>
+
+        <!-- Card with arrows floating absolutely outside — card fills full column width -->
+        <div style="position:relative;">
+          <!-- ◀ sits just outside the left edge -->
+          <button id="arrow-prev" class="arrow-btn" onclick="browsePrev()" disabled
+                  style="position:absolute; right:calc(100% + 4px); top:50%; transform:translateY(-50%);">◀</button>
+
+          <div id="card-right" class="pkm-card">
+            <div id="player-preview" style="display:none; flex-direction:column; align-items:center; gap:8px; width:100%;">
+              <p id="player-id" style="font-size:8px;color:#4b5563;align-self:flex-start;">#000</p>
+              <img id="player-sprite" class="sprite" style="width:80px;height:80px;" src="" alt="" />
+              <h2 id="player-name" style="font-size:clamp(8px,2vw,11px);color:#fff;text-align:center;letter-spacing:2px;"></h2>
+              <div id="player-types" style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;"></div>
+              <div id="player-stats" style="width:100%;display:flex;flex-direction:column;gap:3px;"></div>
+            </div>
+            <p id="player-hint" style="font-size:7px;color:#374151; padding:32px 0; text-align:center;">↑ search or use ◀ ▶</p>
+          </div>
+
+          <!-- ▶ sits just outside the right edge -->
+          <button id="arrow-next" class="arrow-btn" onclick="browseNext()" disabled
+                  style="position:absolute; left:calc(100% + 4px); top:50%; transform:translateY(-50%);">▶</button>
+        </div>
+      </div>
+
     </div>
 
+    <!-- Action buttons -->
+    <div id="battle-controls" style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+      <button id="battle-btn" class="btn btn-primary" onclick="doBattle()" disabled style="opacity:0.4;">
+        BATTLE!
+      </button>
+      <button id="next-btn" class="btn btn-secondary" onclick="doNextRound()" disabled style="opacity:0.4;">
+        NEXT ROUND →
+      </button>
+    </div>
+
+    <!-- New game button (shown only after loss) -->
+    <div id="newgame-controls" style="display:none;">
+      <button class="btn btn-newgame" onclick="startGame()">▶ NEW GAME</button>
+    </div>
+
+    <!-- Rules + Eliminated buttons -->
+    <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+      <button class="btn btn-rules" onclick="toggleRules()">? RULES</button>
+      <button class="btn btn-rules" onclick="openEliminated()">✕ ELIMINATED</button>
+    </div>
+
+    <!-- In-game error -->
+    <p id="game-error" style="display:none; font-size:9px; color:#f87171; text-align:center; max-width:300px; line-height:1.8;"></p>
+
+  </div><!-- end game-screen -->
+
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <!-- RULES MODAL                                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <div id="rules-overlay" onclick="closeRules(event)"
+       style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7);
+              align-items:center; justify-content:center; z-index:200; padding:24px;">
+    <div id="rules-box"
+         style="background:#111827; border:1px solid #374151; border-radius:20px;
+                padding:32px; max-width:380px; width:100%; display:flex;
+                flex-direction:column; gap:20px;">
+
+      <h2 style="font-size:13px; color:#facc15; text-align:center; letter-spacing:2px;">HOW TO PLAY</h2>
+
+      <div style="display:flex; flex-direction:column; gap:14px;">
+
+        <div style="display:flex; gap:12px; align-items:flex-start;">
+          <span style="font-size:16px; flex-shrink:0;">⚔️</span>
+          <p style="font-size:8px; color:#d1d5db; line-height:2;">
+            A random Pokémon appears on the left. You must find a Pokémon that beats it in the shown stat category.
+          </p>
+        </div>
+
+        <div style="display:flex; gap:12px; align-items:flex-start;">
+          <span style="font-size:16px; flex-shrink:0;">🏆</span>
+          <p style="font-size:8px; color:#d1d5db; line-height:2;">
+            If your Pokémon wins, it becomes the new defender next round. Keep winning to build your streak!
+          </p>
+        </div>
+
+        <div style="display:flex; gap:12px; align-items:flex-start;">
+          <span style="font-size:16px; flex-shrink:0;">💀</span>
+          <p style="font-size:8px; color:#d1d5db; line-height:2;">
+            If you lose, the enemy Pokémon stays and defends again. Your streak resets to 0.
+          </p>
+        </div>
+
+        <div style="display:flex; gap:12px; align-items:flex-start;">
+          <span style="font-size:16px; flex-shrink:0;">🚫</span>
+          <p style="font-size:8px; color:#d1d5db; line-height:2;">
+            No Pokémon can be used twice. Once a Pokémon has fought, it disappears from the search list forever.
+          </p>
+        </div>
+
+        <div style="display:flex; gap:12px; align-items:flex-start;">
+          <span style="font-size:16px; flex-shrink:0;">🔥</span>
+          <p style="font-size:8px; color:#d1d5db; line-height:2;">
+            Goal: get the highest streak possible before running out of Pokémon or losing.
+          </p>
+        </div>
+
+      </div>
+
+      <button class="btn btn-secondary" onclick="closeRulesBtn()" style="align-self:center; margin-top:4px;">
+        GOT IT ✓
+      </button>
+    </div>
   </div>
 
-  <!-- Buttons -->
-  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
-    <button id="battle-btn" onclick="doBattle()" disabled
-            class="btn"
-            style="font-family:'Press Start 2P',monospace; font-size:11px;
-                   background:#ef4444; color:#fff; border:none; cursor:pointer;
-                   padding:12px 28px; border-radius:12px; transition:all 0.2s;
-                   opacity:0.4;">
-      BATTLE!
-    </button>
-    <button id="next-btn" onclick="skipToNewRound()" disabled
-            class="btn"
-            style="font-family:'Press Start 2P',monospace; font-size:10px;
-                   background:#374151; color:#6b7280; border:none; cursor:not-allowed;
-                   padding:10px 18px; border-radius:12px; transition:all 0.2s;
-                   opacity:0.4;">
-      NEXT ROUND
-    </button>
-  </div>
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <!-- ELIMINATED MODAL                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <div id="elim-overlay" onclick="closeEliminated(event)"
+       style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75);
+              align-items:center; justify-content:center; z-index:200; padding:24px;">
+    <div style="background:#111827; border:1px solid #374151; border-radius:20px;
+                padding:24px; max-width:480px; width:100%; max-height:80vh;
+                display:flex; flex-direction:column; gap:16px;">
 
-  <!-- Error -->
-  <p id="error-msg" style="display:none; font-size:9px; color:#f87171; text-align:center; max-width:300px; line-height:1.8;"></p>
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <h2 style="font-size:11px; color:#f87171; letter-spacing:2px;">✕ ELIMINATED</h2>
+        <button class="btn btn-secondary" onclick="document.getElementById('elim-overlay').style.display='none'"
+                style="font-size:8px; padding:6px 12px;">CLOSE</button>
+      </div>
+
+      <p id="elim-empty" style="font-size:8px; color:#4b5563; text-align:center; padding:20px 0;">
+        No Pokémon eliminated yet.
+      </p>
+
+      <!-- Scrollable grid -->
+      <div id="elim-grid"
+           style="display:none; overflow-y:auto; max-height:52vh;
+                  display:grid; grid-template-columns: repeat(auto-fill, minmax(72px,1fr));
+                  gap:10px; padding:4px;">
+      </div>
+
+    </div>
+  </div>
 
   <script>
     // ── State ────────────────────────────────────────────────────────────
@@ -256,10 +450,10 @@
     let currentCategory = null;
     let dropdownIndex   = -1;
     let streak          = 0;
-    let usedIds         = new Set(); // Pokemon that can no longer be picked
-    let lastWinner      = null;      // The Pokemon that won the last battle
-    let battleDone      = false;     // Has the current round been fought?
-    let roundTimeout    = null;      // Handle for the auto-advance timer
+    let usedIds         = new Set();
+    let lastWinner      = null;
+    let battleDone      = false;
+    let browseIndex     = 0;  // position in available-pokemon-sorted-by-id list
 
     const CATEGORIES = [
       { key: 'attack',    label: 'HIGHER\nATTACK STAT' },
@@ -268,73 +462,98 @@
     ];
 
     const STAT_COLORS = {
-      hp:         '#22c55e',
-      attack:     '#ef4444',
-      defense:    '#3b82f6',
-      sp_attack:  '#a855f7',
-      sp_defense: '#06b6d4',
-      speed:      '#eab308',
+      hp:'#22c55e', attack:'#ef4444', defense:'#3b82f6',
+      sp_attack:'#a855f7', sp_defense:'#06b6d4', speed:'#eab308',
     };
-    const STAT_LABELS = { hp:'HP', attack:'ATK', defense:'DEF', sp_attack:'SpA', sp_defense:'SpD', speed:'SPD' };
+    const STAT_LABELS = {
+      hp:'HP', attack:'ATK', defense:'DEF',
+      sp_attack:'SpA', sp_defense:'SpD', speed:'SPD',
+    };
 
-    // ── Init ─────────────────────────────────────────────────────────────
+    // ── Load data on page open (but don't start game yet) ─────────────────
     async function init() {
       try {
         const res = await fetch('./pkm/pokemon.json');
         if (!res.ok) throw new Error(`Could not load pokemon.json (${res.status})`);
         const json = await res.json();
         pokemonData = json.pokemon;
-        newRound();
-      } catch (err) { showError(err.message); }
+      } catch (err) {
+        document.getElementById('start-error').textContent = `⚠ ${err.message}`;
+        document.getElementById('start-error').style.display = '';
+      }
     }
 
-    // ── Returns only categories where at least one available Pokemon can win ──
-    function getValidCategories(enemy, available) {
-      return CATEGORIES.filter(cat =>
-        available.some(p => p.stats[cat.key] > enemy.stats[cat.key])
-      );
+    // ── Start / Restart ───────────────────────────────────────────────────
+    function startGame() {
+      if (!pokemonData.length) return;
+      document.getElementById('start-screen').style.display = 'none';
+      document.getElementById('game-screen').style.display  = 'flex';
+      resetState();
+      newRound();
     }
 
-    // ── New round ────────────────────────────────────────────────────────
-    function newRound() {
+    function restartGame() {
+      document.getElementById('game-screen').style.display  = 'none';
+      document.getElementById('start-screen').style.display = 'flex';
+      resetState();
+    }
+
+    function resetState() {
+      streak      = 0;
+      usedIds     = new Set();
+      lastWinner  = null;
+      battleDone  = false;
+      browseIndex = 0;
+      document.getElementById('streak-count').textContent    = '0';
       document.getElementById('result-banner').style.display = 'none';
+      document.getElementById('game-error').style.display    = 'none';
+      document.getElementById('arrow-prev').disabled         = true;
+      document.getElementById('arrow-next').disabled         = true;
+      document.getElementById('battle-controls').style.display  = 'flex';
+      document.getElementById('newgame-controls').style.display = 'none';
+      resetCardStyles();
+    }
+
+    // ── New round ─────────────────────────────────────────────────────────
+    function newRound() {
       battleDone = false;
+      document.getElementById('result-banner').style.display = 'none';
 
       // Reset player side
       document.getElementById('pkm-input').value = '';
       document.getElementById('player-preview').style.display = 'none';
       document.getElementById('player-hint').style.display = '';
       playerPokemon = null;
+      browseIndex   = 0;
       setBattleBtn(false);
       setNextBtn(false);
+      updateArrows();
 
-      // Enemy: use last winner if there is one, otherwise pick random unused
+      // Enemy: winner carries over, else pick fresh random
       if (lastWinner) {
         enemyPokemon = lastWinner;
-        lastWinner = null;
+        lastWinner   = null;
       } else {
         const available = pokemonData.filter(p => !usedIds.has(p.id));
-        if (available.length === 0) {
-          showError('All 151 Pokémon have been used! Refresh to start over.');
+        if (!available.length) {
+          showGameError('All 151 Pokémon used! Restarting…');
+          setTimeout(restartGame, 2000);
           return;
         }
         enemyPokemon = available[Math.floor(Math.random() * available.length)];
       }
-
-      // Mark enemy as used so it can't be chosen by the player
       usedIds.add(enemyPokemon.id);
 
-      // Pick a category that is actually winnable with the remaining Pokemon.
-      // If the winner carried over and is unbeatable in all categories, swap to
-      // a different random enemy and try once more.
+      // Pick a category that is actually beatable
       let challengers = pokemonData.filter(p => !usedIds.has(p.id));
       let validCats   = getValidCategories(enemyPokemon, challengers);
 
-      if (validCats.length === 0) {
-        // Current enemy is unbeatable — retire them and pick a fresh one
+      if (!validCats.length) {
+        // Enemy unbeatable — swap to a different one
         const fallback = pokemonData.filter(p => !usedIds.has(p.id));
-        if (fallback.length === 0) {
-          showError('All 151 Pokémon have been used! Refresh to start over.');
+        if (!fallback.length) {
+          showGameError('All 151 Pokémon used! Restarting…');
+          setTimeout(restartGame, 2000);
           return;
         }
         enemyPokemon = fallback[Math.floor(Math.random() * fallback.length)];
@@ -345,28 +564,115 @@
 
       currentCategory = validCats[Math.floor(Math.random() * validCats.length)];
       document.getElementById('category-badge').textContent = currentCategory.label;
-
       displayEnemy(enemyPokemon);
     }
 
-    function setBattleBtn(enabled) {
-      const btn = document.getElementById('battle-btn');
-      btn.disabled = !enabled;
-      btn.style.opacity = enabled ? '1' : '0.4';
-      btn.style.cursor  = enabled ? 'pointer' : 'not-allowed';
+    function getValidCategories(enemy, available) {
+      return CATEGORIES.filter(cat =>
+        available.some(p => p.stats[cat.key] > enemy.stats[cat.key])
+      );
     }
 
-    // ── Display helpers ──────────────────────────────────────────────────
+    // ── Battle ────────────────────────────────────────────────────────────
+    function doBattle() {
+      if (!playerPokemon || !enemyPokemon || !currentCategory || battleDone) return;
+
+      // Reveal player stats
+      document.getElementById('player-types').style.visibility = 'visible';
+      document.getElementById('player-stats').style.visibility = 'visible';
+
+      const ps = playerPokemon.stats[currentCategory.key];
+      const es = enemyPokemon.stats[currentCategory.key];
+
+      const banner = document.getElementById('result-banner');
+      const text   = document.getElementById('result-text');
+      banner.style.display = '';
+      text.classList.remove('result-pop');
+      void text.offsetWidth;
+      text.classList.add('result-pop');
+
+      if (ps > es) {
+        text.textContent = '🏆 YOU WON!';
+        text.style.color = '#4ade80';
+        streak++;
+        lastWinner = playerPokemon;
+        usedIds.add(playerPokemon.id);
+      } else if (ps === es) {
+        text.textContent = "🤝 IT'S A TIE!";
+        text.style.color = '#facc15';
+        usedIds.add(playerPokemon.id);
+        lastWinner = enemyPokemon;
+        usedIds.delete(enemyPokemon.id);
+      } else {
+        text.textContent = '💀 YOU LOSE!';
+        text.style.color = '#f87171';
+        streak = 0;
+        lastWinner = enemyPokemon;
+        usedIds.add(playerPokemon.id);
+        usedIds.delete(enemyPokemon.id);
+        // Replace battle controls with new game button
+        document.getElementById('battle-controls').style.display  = 'none';
+        document.getElementById('newgame-controls').style.display = 'block';
+      }
+
+      battleDone = true;
+      updateStreak();
+      setBattleBtn(false);
+      if (ps > es || ps === es) setNextBtn(true);
+    }
+
+    // ── Next round (manual, triggered by button) ──────────────────────────
+    function doNextRound() {
+      if (!battleDone) return;
+      setNextBtn(false);
+      animateTransition(lastWinner && lastWinner.id === playerPokemon?.id);
+      setTimeout(() => {
+        resetCardStyles();
+        newRound();
+      }, 600);
+    }
+
+    // ── Card animation ────────────────────────────────────────────────────
+    function animateTransition(playerWon) {
+      const leftCard  = document.getElementById('card-left');
+      const rightCard = document.getElementById('card-right');
+
+      if (playerWon) {
+        const lr = leftCard.getBoundingClientRect();
+        const rr = rightCard.getBoundingClientRect();
+        leftCard.style.transition  = 'opacity 0.25s ease';
+        leftCard.style.opacity     = '0';
+        rightCard.style.transition = 'transform 0.55s cubic-bezier(0.4,0,0.2,1)';
+        rightCard.style.transform  = `translate(${lr.left - rr.left}px, ${lr.top - rr.top}px)`;
+      } else {
+        rightCard.style.transition = 'transform 0.4s ease-in, opacity 0.4s ease';
+        rightCard.style.transform  = 'translateX(60px)';
+        rightCard.style.opacity    = '0';
+      }
+    }
+
+    function resetCardStyles() {
+      ['card-left', 'card-right'].forEach(id => {
+        const el = document.getElementById(id);
+        el.style.transition = 'none';
+        el.style.transform  = '';
+        el.style.opacity    = '';
+        void el.offsetWidth;
+        el.style.transition = '';
+      });
+    }
+
+    // ── Display helpers ───────────────────────────────────────────────────
     function displayEnemy(pkm) {
-      document.getElementById('loading-1').style.display = 'flex';
-      document.getElementById('content-1').style.display = 'none';
+      document.getElementById('loading-1').style.display  = 'flex';
+      document.getElementById('content-1').style.display  = 'none';
       const img = document.getElementById('sprite-1');
       img.src = pkm.sprite; img.alt = pkm.display_name;
       img.onload = () => {
-        document.getElementById('id-1').textContent = `#${String(pkm.id).padStart(3,'0')}`;
-        document.getElementById('name-1').textContent = pkm.display_name;
-        document.getElementById('types-1').innerHTML  = renderTypes(pkm.types);
-        document.getElementById('stats-1').innerHTML  = renderStats(pkm.stats);
+        document.getElementById('id-1').textContent        = `#${String(pkm.id).padStart(3,'0')}`;
+        document.getElementById('name-1').textContent      = pkm.display_name;
+        document.getElementById('types-1').innerHTML       = renderTypes(pkm.types);
+        document.getElementById('stats-1').innerHTML       = renderStats(pkm.stats);
         document.getElementById('loading-1').style.display = 'none';
         document.getElementById('content-1').style.display = 'flex';
       };
@@ -378,13 +684,13 @@
       const img = document.getElementById('player-sprite');
       img.src = pkm.sprite; img.alt = pkm.display_name;
       img.onload = () => {
-        document.getElementById('player-name').textContent   = pkm.display_name;
-        // Pre-render but keep hidden until battle is pressed
-        document.getElementById('player-types').innerHTML    = renderTypes(pkm.types);
-        document.getElementById('player-stats').innerHTML    = renderStats(pkm.stats);
-        document.getElementById('player-types').style.visibility = 'hidden';
-        document.getElementById('player-stats').style.visibility = 'hidden';
-        document.getElementById('player-hint').style.display = 'none';
+        document.getElementById('player-id').textContent             = `#${String(pkm.id).padStart(3,'0')}`;
+        document.getElementById('player-name').textContent          = pkm.display_name;
+        document.getElementById('player-types').innerHTML           = renderTypes(pkm.types);
+        document.getElementById('player-stats').innerHTML           = renderStats(pkm.stats);
+        document.getElementById('player-types').style.visibility   = 'hidden';
+        document.getElementById('player-stats').style.visibility   = 'hidden';
+        document.getElementById('player-hint').style.display       = 'none';
         preview.style.display = 'flex';
         preview.classList.add('fade-in');
         setBattleBtn(true);
@@ -409,114 +715,17 @@
       `).join('');
     }
 
-    // ── Battle ───────────────────────────────────────────────────────────
-    function doBattle() {
-      if (!playerPokemon || !enemyPokemon || !currentCategory || battleDone) return;
-
-      // Reveal the player's stats now
-      document.getElementById('player-types').style.visibility = 'visible';
-      document.getElementById('player-stats').style.visibility = 'visible';
-
-      const ps = playerPokemon.stats[currentCategory.key];
-      const es = enemyPokemon.stats[currentCategory.key];
-
-      const banner = document.getElementById('result-banner');
-      const text   = document.getElementById('result-text');
-
-      banner.style.display = '';
-      text.className = 'result-pop';
-      void text.offsetWidth;
-
-      if (ps > es) {
-        // Player wins — their Pokemon becomes the next enemy
-        text.textContent = '🏆 YOU WON!';
-        text.style.color = '#4ade80';
-        streak++;
-        lastWinner = playerPokemon;
-        // Retire both: enemy is already in usedIds, now add player's choice too
-        usedIds.add(playerPokemon.id);
-      } else if (ps === es) {
-        text.textContent = "🤝 IT'S A TIE!";
-        text.style.color = '#facc15';
-        // Tie: enemy keeps defending, player's pick is retired but enemy stays
-        usedIds.add(playerPokemon.id);
-        lastWinner = enemyPokemon;
-        // Remove enemy from usedIds temporarily so it can be re-used as defender
-        usedIds.delete(enemyPokemon.id);
-      } else {
-        // Enemy wins — enemy keeps defending next round
-        text.textContent = '💀 YOU LOSE!';
-        text.style.color = '#f87171';
-        streak = 0;
-        lastWinner = enemyPokemon;
-        // Retire player's pick, enemy stays (remove from usedIds so it re-enters as defender)
-        usedIds.add(playerPokemon.id);
-        usedIds.delete(enemyPokemon.id);
-      }
-
-      battleDone = true;
-      updateStreak();
-      setBattleBtn(false);
-      setNextBtn(true);
-
-      // Animate the winning card sliding over, then auto-advance
-      animateTransition(ps > es);
-      roundTimeout = setTimeout(() => {
-        resetCardStyles();
-        newRound();
-      }, 1200);
+    // ── Button helpers ────────────────────────────────────────────────────
+    function setBattleBtn(on) {
+      const b = document.getElementById('battle-btn');
+      b.disabled      = !on;
+      b.style.opacity = on ? '1' : '0.4';
     }
 
-    // ── Card slide animation ──────────────────────────────────────────────
-    function animateTransition(playerWon) {
-      const leftCard  = document.getElementById('card-left');
-      const rightCard = document.getElementById('card-right');
-
-      if (playerWon) {
-        // Slide right card into the left card's position
-        const lr = leftCard.getBoundingClientRect();
-        const rr = rightCard.getBoundingClientRect();
-        const dx = lr.left - rr.left;
-        const dy = lr.top  - rr.top;
-
-        leftCard.style.transition  = 'opacity 0.25s ease';
-        leftCard.style.opacity     = '0';
-
-        rightCard.style.transition = 'transform 0.55s cubic-bezier(0.4,0,0.2,1)';
-        rightCard.style.transform  = `translate(${dx}px, ${dy}px)`;
-      } else {
-        // Enemy wins or tie — slide player card off to the right and fade
-        rightCard.style.transition = 'transform 0.4s ease-in, opacity 0.4s ease';
-        rightCard.style.transform  = 'translateX(60px)';
-        rightCard.style.opacity    = '0';
-      }
-    }
-
-    function resetCardStyles() {
-      ['card-left','card-right'].forEach(id => {
-        const el = document.getElementById(id);
-        el.style.transition = 'none';
-        el.style.transform  = '';
-        el.style.opacity    = '';
-        // Force reflow so the removal of transform is instant (no flash)
-        void el.offsetWidth;
-        el.style.transition = '';
-      });
-    }
-
-    function skipToNewRound() {
-      if (roundTimeout) { clearTimeout(roundTimeout); roundTimeout = null; }
-      resetCardStyles();
-      setNextBtn(false);
-      newRound();
-    }
-
-    function setNextBtn(enabled) {
-      const btn = document.getElementById('next-btn');
-      btn.disabled    = !enabled;
-      btn.style.opacity = enabled ? '1' : '0.4';
-      btn.style.cursor  = enabled ? 'pointer' : 'not-allowed';
-      btn.style.color   = enabled ? '#d1d5db' : '#6b7280';
+    function setNextBtn(on) {
+      const b = document.getElementById('next-btn');
+      b.disabled      = !on;
+      b.style.opacity = on ? '1' : '0.4';
     }
 
     function updateStreak() {
@@ -527,26 +736,22 @@
       if (streak > 0) el.classList.add('streak-bump');
     }
 
-    // ── Autocomplete ─────────────────────────────────────────────────────
+    // ── Autocomplete ──────────────────────────────────────────────────────
     function getMatches(query) {
-      // Always exclude already-used Pokemon from search results
       const available = pokemonData.filter(p => !usedIds.has(p.id));
-      if (!query) return available.slice(0, 20);
+      if (!query) return available; // show all when empty
       const q = query.toLowerCase();
       return available.filter(p =>
         p.name.includes(q) || p.display_name.toLowerCase().includes(q)
-      ).slice(0, 20);
+      );
     }
 
-    function onSearch() { dropdownIndex = -1; openDropdown(); }
+    function onSearch()   { dropdownIndex = -1; openDropdown(); }
 
     function openDropdown() {
-      const query   = document.getElementById('pkm-input').value;
-      const matches = getMatches(query);
-      const dd      = document.getElementById('dropdown');
-
+      const matches = getMatches(document.getElementById('pkm-input').value);
+      const dd = document.getElementById('dropdown');
       if (!matches.length) { dd.style.display = 'none'; return; }
-
       dd.innerHTML = matches.map((p, i) => `
         <div class="dropdown-item" data-index="${i}" onmousedown="selectPokemon('${p.name}')">
           <img src="${p.sprite}" alt="${p.display_name}" />
@@ -554,7 +759,6 @@
           <span style="margin-left:auto;font-size:9px;color:#6b7280;">#${String(p.id).padStart(3,'0')}</span>
         </div>
       `).join('');
-
       dd._matches = matches;
       dd.style.display = '';
     }
@@ -562,9 +766,9 @@
     function onKeyDown(e) {
       const dd    = document.getElementById('dropdown');
       const items = dd.querySelectorAll('.dropdown-item');
-      if (e.key === 'ArrowDown') { e.preventDefault(); dropdownIndex = Math.min(dropdownIndex+1, items.length-1); highlightItem(items); }
-      else if (e.key === 'ArrowUp') { e.preventDefault(); dropdownIndex = Math.max(dropdownIndex-1, 0); highlightItem(items); }
-      else if (e.key === 'Enter' && dropdownIndex >= 0 && dd._matches) selectPokemon(dd._matches[dropdownIndex].name);
+      if      (e.key === 'ArrowDown')  { e.preventDefault(); dropdownIndex = Math.min(dropdownIndex+1, items.length-1); highlightItem(items); }
+      else if (e.key === 'ArrowUp')    { e.preventDefault(); dropdownIndex = Math.max(dropdownIndex-1, 0); highlightItem(items); }
+      else if (e.key === 'Enter'  && dropdownIndex >= 0 && dd._matches) selectPokemon(dd._matches[dropdownIndex].name);
       else if (e.key === 'Escape') closeDropdown();
     }
 
@@ -578,7 +782,37 @@
       playerPokemon = pkm;
       document.getElementById('pkm-input').value = pkm.display_name;
       closeDropdown();
+      // Sync browseIndex to selected pokemon's position in sorted available list
+      const sorted = availableSorted();
+      browseIndex = sorted.findIndex(p => p.id === pkm.id);
+      if (browseIndex < 0) browseIndex = 0;
+      updateArrows();
       displayPlayer(pkm);
+    }
+
+    // ── Browse by Pokédex number ──────────────────────────────────────────
+    function availableSorted() {
+      return pokemonData.filter(p => !usedIds.has(p.id)).sort((a, b) => a.id - b.id);
+    }
+
+    function updateArrows() {
+      const len = availableSorted().length;
+      document.getElementById('arrow-prev').disabled = browseIndex <= 0;
+      document.getElementById('arrow-next').disabled = browseIndex >= len - 1;
+    }
+
+    function browsePrev() {
+      const sorted = availableSorted();
+      if (browseIndex <= 0) return;
+      browseIndex--;
+      selectPokemon(sorted[browseIndex].name);
+    }
+
+    function browseNext() {
+      const sorted = availableSorted();
+      if (browseIndex >= sorted.length - 1) return;
+      browseIndex++;
+      selectPokemon(sorted[browseIndex].name);
     }
 
     function closeDropdown() { document.getElementById('dropdown').style.display = 'none'; }
@@ -587,10 +821,64 @@
       if (!e.target.closest('#pkm-input') && !e.target.closest('#dropdown')) closeDropdown();
     });
 
-    function showError(msg) {
-      const el = document.getElementById('error-msg');
+    function showGameError(msg) {
+      const el = document.getElementById('game-error');
       el.textContent = `⚠ ${msg}`;
       el.style.display = '';
+    }
+
+    // ── Rules modal ───────────────────────────────────────────────────────
+    function toggleRules() {
+      const overlay = document.getElementById('rules-overlay');
+      const isOpen  = overlay.style.display === 'flex';
+      overlay.style.display = isOpen ? 'none' : 'flex';
+    }
+
+    function closeRules(e) {
+      // Only close when clicking the dark backdrop, not the box itself
+      if (e.target === document.getElementById('rules-overlay')) {
+        document.getElementById('rules-overlay').style.display = 'none';
+      }
+    }
+
+    function closeRulesBtn() {
+      document.getElementById('rules-overlay').style.display = 'none';
+    }
+
+    // ── Eliminated modal ──────────────────────────────────────────────────
+    function openEliminated() {
+      // All pokemon in usedIds (including the current active defender)
+      const eliminated = pokemonData
+        .filter(p => usedIds.has(p.id))
+        .sort((a, b) => a.id - b.id);
+
+      const emptyEl = document.getElementById('elim-empty');
+      const gridEl  = document.getElementById('elim-grid');
+
+      if (eliminated.length === 0) {
+        emptyEl.style.display = '';
+        gridEl.style.display  = 'none';
+      } else {
+        emptyEl.style.display = 'none';
+        gridEl.style.display  = 'grid';
+        gridEl.innerHTML = eliminated.map(p => `
+          <div style="display:flex; flex-direction:column; align-items:center; gap:4px; opacity:0.7;">
+            <img src="${p.sprite}" alt="${p.display_name}"
+                 style="width:56px;height:56px;image-rendering:pixelated;filter:grayscale(100%);" />
+            <span style="font-size:6px; color:#6b7280; text-align:center; line-height:1.4;">
+              ${p.display_name}
+            </span>
+          </div>
+        `).join('');
+      }
+
+      document.getElementById('elim-overlay').style.display = 'flex';
+    }
+
+    function closeEliminated(e) {
+      if (e.target === document.getElementById('elim-overlay')) {
+        document.getElementById('elim-overlay').style.display = 'none';
+      }
     }
 
     init();
