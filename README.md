@@ -19,10 +19,11 @@ A browser-based Pokémon stat-battle game. A random Pokémon defends, and you pi
 
 ## Local Development
 
-# Serve locally
-python3 -m http.server 8000
-# → open http://localhost:8000
+1. open Terminal
 ```
+python3 -m http.server 8000
+```
+ → open http://localhost:8000
 ## Future Plans
 
 - Add more Pokémon from all generations
