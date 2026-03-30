@@ -19,10 +19,6 @@ A browser-based Pokémon stat-battle game. A random Pokémon defends, and you pi
 
 ## Local Development
 
-```bash
-# Fetch Pokémon data (only needed once)
-python3 fetch_pokemon.py
-
 # Serve locally
 python3 -m http.server 8000
 # → open http://localhost:8000
