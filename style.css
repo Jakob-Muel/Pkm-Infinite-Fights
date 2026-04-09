@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #0f0f1a 100%);
+  min-height: 100vh;
+  font-family: 'Press Start 2P', monospace;
+  color: #fff;
+}
+
+/* ── Auth screen ────────────────────────────────────────────────────── */
+#auth-screen {
+  position: fixed; inset: 0;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #0f0f1a 100%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 24px; z-index: 150; padding: 24px;
+}
+
+/* Shared text input style used in auth forms */
+.auth-input {
+  width: 100%;
+  background: #1f2937;
+  border: 1px solid #4b5563;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 12px;
+  outline: none;
+  font-family: sans-serif;
+}
+.auth-input:focus { border-color: #facc15; }
+
+/* Login / Sign Up tab buttons */
+.auth-tab {
+  background: transparent; color: #6b7280;
+  font-size: 9px; padding: 8px 20px;
+  border: 1px solid #374151;
+  font-family: 'Press Start 2P', monospace;
+  cursor: pointer; transition: all 0.2s;
+}
+.auth-tab.active { color: #facc15; border-color: #facc15; background: rgba(250,204,21,0.08); }
+.auth-tab:first-child { border-radius: 10px 0 0 10px; border-right: none; }
+.auth-tab:last-child  { border-radius: 0 10px 10px 0; }
+
+/* ── Modal overlay (username + leaderboard share this) ──────────────── */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 250; padding: 24px;
+}
+.modal-box {
+  background: #111827; border: 1px solid #374151;
+  border-radius: 20px; padding: 32px;
+  max-width: 400px; width: 100%;
+  display: flex; flex-direction: column; gap: 20px;
+}
+
+/* ── Leaderboard table ──────────────────────────────────────────────── */
+.lb-table { width: 100%; border-collapse: collapse; }
+.lb-table th { font-size: 7px; color: #6b7280; padding: 6px 10px; text-align: left; border-bottom: 1px solid #374151; letter-spacing: 1px; }
+.lb-table td { font-size: 9px; padding: 10px 10px; border-bottom: 1px solid #1f2937; color: #d1d5db; font-family: sans-serif; }
+.lb-rank  { font-family: 'Press Start 2P', monospace !important; font-size: 8px !important; width: 44px; }
+.lb-score { font-family: 'Press Start 2P', monospace !important; font-size: 9px !important; color: #facc15 !important; text-align: right !important; }
+.lb-table tr:first-child td { color: #fff; }
+
+/* ── Start screen overlay ───────────────────────────────────────────── */
+#start-screen {
+  position: fixed; inset: 0;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #0f0f1a 100%);
+  display: none; /* hidden until auth check completes */
+  flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 28px; z-index: 100; padding: 24px;
+}
+
+@keyframes titleFloat {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+#start-title { animation: titleFloat 3s ease-in-out infinite; text-align: center; }
+
+/* ── Game screen ────────────────────────────────────────────────────── */
+#game-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px 12px;
+  gap: 16px;
+}
+
+/* ── Type badges ────────────────────────────────────────────────────── */
+.type-normal    { background:#A8A878; }
+.type-fire      { background:#F08030; }
+.type-water     { background:#6890F0; }
+.type-electric  { background:#F8D030; color:#333; }
+.type-grass     { background:#78C850; }
+.type-ice       { background:#98D8D8; color:#333; }
+.type-fighting  { background:#C03028; }
+.type-poison    { background:#A040A0; }
+.type-ground    { background:#E0C068; color:#333; }
+.type-flying    { background:#A890F0; }
+.type-psychic   { background:#F85888; }
+.type-bug       { background:#A8B820; }
+.type-rock      { background:#B8A038; }
+.type-ghost     { background:#705898; }
+.type-dragon    { background:#7038F8; }
+.type-dark      { background:#705848; }
+.type-steel     { background:#B8B8D0; color:#333; }
+.type-fairy     { background:#EE99AC; color:#333; }
+
+/* ── Animations ─────────────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(12px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.fade-in { animation: fadeIn 0.4s ease forwards; }
+
+@keyframes vsPulse {
+  0%,100% { text-shadow: 0 0 10px #ff4444, 0 0 30px #ff4444; }
+  50%     { text-shadow: 0 0 20px #ff8800, 0 0 60px #ff8800; }
+}
+.vs-text { animation: vsPulse 2s ease-in-out infinite; }
+
+@keyframes resultPop {
+  0%  { transform:scale(0.7); opacity:0; }
+  60% { transform:scale(1.1); }
+  100%{ transform:scale(1);   opacity:1; }
+}
+.result-pop { animation: resultPop 0.4s ease forwards; }
+
+@keyframes streakBump {
+  0%  { transform:scale(1); }
+  40% { transform:scale(1.4); }
+  100%{ transform:scale(1); }
+}
+.streak-bump { animation: streakBump 0.35s ease forwards; }
+
+@keyframes pulse {
+  0%,100% { opacity:1; }
+  50%     { opacity:0.4; }
+}
+.animate-pulse { animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
+
+/* ── Arena ──────────────────────────────────────────────────────────── */
+.arena {
+  display: flex; flex-direction: row;
+  align-items: stretch; justify-content: center;
+  gap: 10px; width: 100%; max-width: 900px;
+}
+
+.pkm-card {
+  background: #111827; border: 1px solid #374151;
+  border-radius: 16px; padding: 14px;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 10px;
+  width: 100%;
+  min-height: 360px;
+  will-change: transform, opacity;
+}
+
+.vs-col {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 10px; flex-shrink: 0; width: 80px;
+}
+
+/* ── Stat bars ──────────────────────────────────────────────────────── */
+.stat-row  { display:flex; align-items:center; gap:6px; width:100%; }
+.stat-label{ font-size:7px; color:#9ca3af; width:28px; text-align:right; flex-shrink:0; }
+.stat-bar-bg{ flex:1; background:#1f2937; border-radius:999px; height:5px; min-width:0; }
+.stat-bar  { height:5px; border-radius:999px; }
+.stat-val  { font-size:7px; color:#d1d5db; width:22px; text-align:right; flex-shrink:0; }
+
+/* ── Autocomplete ───────────────────────────────────────────────────── */
+.dropdown {
+  position:absolute; top:100%; left:0; right:0;
+  background:#1f2937; border:1px solid #374151;
+  border-top:none; border-radius:0 0 10px 10px;
+  max-height:200px; overflow-y:auto; z-index:50;
+}
+.dropdown-item {
+  padding:8px 12px; cursor:pointer; font-size:11px;
+  color:#d1d5db; display:flex; align-items:center;
+  gap:8px; transition:background 0.15s; font-family:sans-serif;
+}
+.dropdown-item:hover,.dropdown-item.active{ background:#374151; color:#fff; }
+.dropdown-item img{ width:28px; height:28px; image-rendering:pixelated; }
+
+/* ── Sprite ─────────────────────────────────────────────────────────── */
+.sprite {
+  image-rendering:pixelated; image-rendering:crisp-edges;
+  filter:drop-shadow(0 0 10px rgba(255,215,0,0.25));
+  transition:transform 0.3s ease;
+}
+.sprite:hover{ transform:scale(1.05); }
+
+/* ── Buttons ────────────────────────────────────────────────────────── */
+.btn {
+  font-family:'Press Start 2P',monospace;
+  border:none; border-radius:12px;
+  cursor:pointer; transition:all 0.2s;
+}
+.btn:active{ transform:scale(0.96); }
+.btn:disabled{ cursor:not-allowed; }
+
+.btn-primary {
+  background:#ef4444; color:#fff;
+  font-size:11px; padding:12px 28px;
+}
+.btn-primary:hover:not(:disabled){ background:#dc2626; }
+
+.btn-secondary {
+  background:#374151; color:#d1d5db;
+  font-size:10px; padding:10px 18px;
+}
+.btn-secondary:hover:not(:disabled){ background:#4b5563; }
+
+.btn-start {
+  background:#facc15; color:#111;
+  font-size:13px; padding:16px 40px;
+  border-radius:14px;
+}
+.btn-start:hover{ background:#fbbf24; }
+
+.btn-restart {
+  background:transparent; color:#6b7280;
+  font-size:8px; padding:6px 12px;
+  border:1px solid #374151; border-radius:8px;
+}
+.btn-restart:hover{ color:#d1d5db; border-color:#6b7280; }
+
+.lang-btn {
+  background: transparent; color: #6b7280;
+  font-size: 8px; padding: 5px 10px;
+  border: 1px solid #374151; border-radius: 8px;
+  font-family: 'Press Start 2P', monospace;
+  cursor: pointer; transition: all 0.2s;
+}
+.lang-btn:hover { color: #d1d5db; border-color: #6b7280; }
+.lang-btn.active { color: #facc15; border-color: #facc15; }
+
+.btn-rules {
+  background:transparent; color:#6b7280;
+  font-size:8px; padding:6px 14px;
+  border:1px solid #374151; border-radius:8px;
+}
+.btn-rules:hover{ color:#facc15; border-color:#facc15; }
+
+.btn-newgame {
+  background:#facc15; color:#111;
+  font-size:11px; padding:12px 28px;
+}
+.btn-newgame:hover{ background:#fbbf24; }
+
+/* card-wrapper is the positioning parent for the desktop arrows */
+.card-wrapper { position: relative; }
+
+/* Desktop: arrow-row is centred vertically on the card; each arrow sticks outside */
+.arrow-row {
+  position: absolute;
+  top: 50%; left: 0; right: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.arrow-row .arrow-btn {
+  position: absolute;
+  pointer-events: auto;
+}
+#arrow-prev { right: calc(100% + 4px); }
+#arrow-next { left:  calc(100% + 4px); }
+
+.arrow-btn {
+  background:none; border:none; cursor:pointer;
+  color:#facc15; font-size:20px; line-height:1;
+  padding:6px 4px; flex-shrink:0;
+  transition: transform 0.15s, opacity 0.15s;
+}
+.arrow-btn:hover { transform: scale(1.3); }
+.arrow-btn:disabled { opacity:0; pointer-events:none; }
+
+/* ── Mobile tweaks ──────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  /* Hide icon/prefix characters on small screens to save button space */
+  .btn-icon { display: none; }
+
+  /* Stable card height on mobile — matches the loaded content height so the
+     card never jumps in size when a Pokémon is selected or switched */
+  .pkm-card { min-height: 300px; }
+
+  /* Arrows sit below the card (static flow), centred, with a little breathing room */
+  .arrow-row {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 10px;
+    pointer-events: auto;
+  }
+  .arrow-row .arrow-btn {
+    position: static;
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  /* No hover animation on touch screens */
+  .arrow-btn:hover { transform: none; }
+}
