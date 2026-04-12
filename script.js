@@ -36,7 +36,7 @@ function showAuthTab(tab) {
   document.getElementById('tab-signup').classList.toggle('active', !isLogin);
   // Show/hide the "confirm password" field
   document.getElementById('confirm-wrap').style.display = isLogin ? 'none' : '';
-  document.getElementById('auth-submit-btn').textContent = isLogin ? 'LOGIN' : 'SIGN UP';
+  document.getElementById('auth-submit-btn').textContent = isLogin ? t('auth.tab.login') : t('auth.tab.signup');
   document.getElementById('auth-error').textContent = '';
 }
 
@@ -48,7 +48,7 @@ async function submitAuth() {
   errEl.textContent = '';
 
   if (!email || !password) {
-    errEl.textContent = 'Please fill in all fields.';
+    errEl.textContent = t('auth.err.empty');
     return;
   }
 
@@ -63,8 +63,8 @@ async function submitAuth() {
     } else {
       const confirm = document.getElementById('auth-confirm').value;
       if (password !== confirm) {
-        errEl.textContent = 'Passwords do not match.';
-        btn.textContent = 'SIGN UP';
+        errEl.textContent = t('auth.err.mismatch');
+        btn.textContent = t('auth.tab.signup');
         btn.disabled    = false;
         return;
       }
@@ -73,7 +73,7 @@ async function submitAuth() {
 
     if (error) {
       errEl.textContent = error.message;
-      btn.textContent = currentAuthTab === 'login' ? 'LOGIN' : 'SIGN UP';
+      btn.textContent = currentAuthTab === 'login' ? t('auth.tab.login') : t('auth.tab.signup');
       btn.disabled    = false;
       return;
     }
@@ -82,7 +82,7 @@ async function submitAuth() {
     if (data?.session) {
       currentUser = data.session.user;
       await loadProfile(currentUser.id);
-      btn.textContent = currentAuthTab === 'login' ? 'LOGIN' : 'SIGN UP';
+      btn.textContent = currentAuthTab === 'login' ? t('auth.tab.login') : t('auth.tab.signup');
       btn.disabled    = false;
       if (!currentProfile) {
         showUsernameModal();
@@ -92,14 +92,14 @@ async function submitAuth() {
       }
     } else {
       // signUp without email confirmation enabled returns no session
-      errEl.textContent = 'Check your email to confirm your account.';
-      btn.textContent = 'SIGN UP';
+      errEl.textContent = t('auth.err.email_confirm');
+      btn.textContent = t('auth.tab.signup');
       btn.disabled    = false;
     }
   } catch (err) {
     // Catch unexpected errors (network failures, etc.) and show them
-    errEl.textContent = err.message || 'Something went wrong. Please try again.';
-    btn.textContent = currentAuthTab === 'login' ? 'LOGIN' : 'SIGN UP';
+    errEl.textContent = err.message || t('auth.err.generic');
+    btn.textContent = currentAuthTab === 'login' ? t('auth.tab.login') : t('auth.tab.signup');
     btn.disabled    = false;
   }
 }
@@ -179,8 +179,8 @@ async function saveUsername() {
   const errEl = document.getElementById('username-error');
   errEl.textContent = '';
 
-  if (val.length < 2)  { errEl.textContent = 'Minimum 2 characters.'; return; }
-  if (val.length > 16) { errEl.textContent = 'Maximum 16 characters.'; return; }
+  if (val.length < 2)  { errEl.textContent = t('username.err.min'); return; }
+  if (val.length > 16) { errEl.textContent = t('username.err.max'); return; }
 
   const { error } = await sb
     .from('profiles')
@@ -189,7 +189,7 @@ async function saveUsername() {
   if (error) {
     // Error code 23505 = unique constraint violation (username taken)
     errEl.textContent = error.code === '23505'
-      ? 'That username is already taken.'
+      ? t('username.err.taken')
       : error.message;
     return;
   }
@@ -205,24 +205,24 @@ function updateStartScreenUser() {
   const el = document.getElementById('start-user-info');
   if (currentProfile) {
     el.innerHTML = `
-      <span style="font-size:7px; color:#6b7280; letter-spacing:1px;">PLAYING AS</span>
+      <span style="font-size:7px; color:#6b7280; letter-spacing:1px;">${t('user.playing_as')}</span>
       <span style="font-size:11px; color:#facc15;">${currentProfile.username}</span>
       <button onclick="handleSignOut()"
               style="background:none; border:none; color:#4b5563; font-size:7px;
                      font-family:'Press Start 2P',monospace; cursor:pointer;
                      text-decoration:underline; margin-top:2px;">
-        logout
+        ${t('user.logout')}
       </button>
     `;
   } else {
     // Guest
     el.innerHTML = `
-      <span style="font-size:7px; color:#4b5563;">guest — scores won't be saved</span>
+      <span style="font-size:7px; color:#4b5563;">${t('user.guest_notice')}</span>
       <button onclick="isGuest=false; showScreen('auth');"
               style="background:none; border:none; color:#facc15; font-size:7px;
                      font-family:'Press Start 2P',monospace; cursor:pointer;
                      text-decoration:underline; margin-top:2px;">
-        login to save scores
+        ${t('user.login_link')}
       </button>
     `;
   }
@@ -235,24 +235,32 @@ function updateStartScreenUser() {
 async function openLeaderboard() {
   document.getElementById('lb-overlay').style.display = 'flex';
   document.getElementById('lb-content').innerHTML =
-    '<p style="font-size:8px; color:#6b7280; text-align:center; padding:28px;">Loading...</p>';
+    `<p style="font-size:8px; color:#6b7280; text-align:center; padding:28px;">${t('lb.loading')}</p>`;
 
-  // Fetch top 10 scores ordered by highest streak
+  // Fetch more rows than needed so we can deduplicate per user client-side
   const { data, error } = await sb
     .from('scores')
-    .select('username, score, created_at')
+    .select('username, score')
     .order('score', { ascending: false })
-    .limit(10);
+    .limit(500);
 
   if (error) {
     document.getElementById('lb-content').innerHTML =
-      '<p style="font-size:8px; color:#f87171; text-align:center; padding:16px;">Failed to load. Try again later.</p>';
+      `<p style="font-size:8px; color:#f87171; text-align:center; padding:16px;">${t('lb.error')}</p>`;
     return;
   }
 
-  if (!data.length) {
+  // Keep only each user's highest score (data is already sorted desc, so first hit = best)
+  const seen = new Set();
+  const top = (data ?? []).filter(row => {
+    if (seen.has(row.username)) return false;
+    seen.add(row.username);
+    return true;
+  }).slice(0, 10);
+
+  if (!top.length) {
     document.getElementById('lb-content').innerHTML =
-      '<p style="font-size:8px; color:#6b7280; text-align:center; padding:28px;">No scores yet — be the first!</p>';
+      `<p style="font-size:8px; color:#6b7280; text-align:center; padding:28px;">${t('lb.empty')}</p>`;
     return;
   }
 
@@ -261,13 +269,13 @@ async function openLeaderboard() {
     <table class="lb-table">
       <thead>
         <tr>
-          <th>RANK</th>
-          <th>PLAYER</th>
-          <th style="text-align:right;">STREAK</th>
+          <th>${t('lb.rank')}</th>
+          <th>${t('lb.player')}</th>
+          <th style="text-align:right;">${t('lb.streak')}</th>
         </tr>
       </thead>
       <tbody>
-        ${data.map((row, i) => `
+        ${top.map((row, i) => `
           <tr>
             <td class="lb-rank">${medals[i] ?? '#' + (i + 1)}</td>
             <td>${row.username}</td>
@@ -287,6 +295,11 @@ function closeLbOverlay(e) {
   if (e.target === document.getElementById('lb-overlay')) closeLb();
 }
 
+function closePrivacy(e) {
+  if (e.target === document.getElementById('privacy-overlay'))
+    document.getElementById('privacy-overlay').style.display = 'none';
+}
+
 // ── Submit a score to the database ───────────────────────────────────
 async function submitScore(score) {
   // Only save if logged in and score is greater than 0
@@ -304,15 +317,15 @@ async function handleGameOver(finalScore) {
   const msgEl = document.getElementById('score-save-msg');
   if (currentProfile) {
     msgEl.style.color = '#6b7280';
-    msgEl.textContent = 'Saving score...';
+    msgEl.textContent = t('score.saving');
     const saved = await submitScore(finalScore);
     msgEl.style.color = saved ? '#4ade80' : '#f87171';
     msgEl.textContent = saved
-      ? `✓ Score of ${finalScore} saved to leaderboard!`
-      : '⚠ Could not save score. Check your connection.';
+      ? tf('score.saved', finalScore)
+      : t('score.error');
   } else if (isGuest && finalScore > 0) {
     msgEl.style.color = '#facc15';
-    msgEl.textContent = 'Login to save your score!';
+    msgEl.textContent = t('score.guest');
   } else {
     msgEl.textContent = '';
   }
@@ -335,78 +348,41 @@ let currentLang     = 'en';
 let lastResultKey   = null;
 
 // ── Translations ─────────────────────────────────────────────────────
-const TRANSLATIONS = {
-  en: {
-    'start.desc':        'A random Pokémon challenges you.\nPick one that can beat it —\nthen it becomes the next defender.',
-    'btn.start':         '▶ START GAME',
-    'btn.restart':       '↺ RESTART',
-    'label.streak':      'STREAK',
-    'input.placeholder': 'Search Pokémon...',
-    'hint.browse':       '↑ search or use ◀ ▶',
-    'btn.battle':        'BATTLE!',
-    'btn.next':          'NEXT',
-    'btn.newgame':       '▶ NEW GAME',
-    'btn.rules':         '? RULES',
-    'btn.eliminated':    '<span class="btn-icon">x </span>ELIMINATED',
-    'btn.leaderboard':   '<span class="btn-icon">🏆 </span>LEADERBOARD',
-    'modal.rules.title': 'HOW TO PLAY',
-    'rules.p1':          'A random Pokémon appears on the left. You must find a Pokémon that beats it in the shown stat category.',
-    'rules.p2':          'If your Pokémon wins, it becomes the new defender next round. Keep winning to build your streak!',
-    'rules.p3':          'If you lose, the enemy Pokémon stays and defends again. Your streak resets to 0.',
-    'rules.p4':          'No Pokémon can be used twice. Once a Pokémon has fought, it disappears from the search list forever.',
-    'rules.p5':          'Goal: get the highest streak possible before running out of Pokémon or losing.',
-    'btn.gotit':         'GOT IT ✓',
-    'modal.elim.title':  '✕ ELIMINATED',
-    'btn.close':         'CLOSE',
-    'elim.empty':        'No Pokémon eliminated yet.',
-    'cat.attack':        'HIGHER\nATTACK STAT',
-    'cat.hp':            'HIGHER\nHP STAT',
-    'cat.sp_attack':     'HIGHER\nSP. ATK STAT',
-    'stat.hp':           'HP',  'stat.attack':    'ATK',
-    'stat.defense':      'DEF', 'stat.sp_attack': 'SpA',
-    'stat.sp_defense':   'SpD', 'stat.speed':     'SPD',
-    'result.win':        '🏆 YOU WON!',
-    'result.tie':        "🤝 IT'S A TIE!",
-    'result.lose':       '💀 YOU LOSE!',
-    'err.all_used':      'All 151 Pokémon used! Restarting…',
-  },
-  de: {
-    'start.desc':        'Ein zufälliges Pokémon fordert dich heraus.\nWähle eines, das es besiegen kann —\ndann wird es der neue Verteidiger.',
-    'btn.start':         '▶ SPIEL STARTEN',
-    'btn.restart':       '↺ NEU STARTEN',
-    'label.streak':      'SERIE',
-    'input.placeholder': 'Pokémon suchen...',
-    'hint.browse':       '↑ suchen oder ◀ ▶ nutzen',
-    'btn.battle':        'KAMPF!',
-    'btn.next':          'WEITER',
-    'btn.newgame':       '▶ NEUES SPIEL',
-    'btn.rules':         '? REGELN',
-    'btn.eliminated':    '<span class="btn-icon">x </span>AUSGESCHIEDEN',
-    'btn.leaderboard':   '<span class="btn-icon">🏆 </span>RANGLISTE',
-    'modal.rules.title': 'SPIELANLEITUNG',
-    'rules.p1':          'Ein zufälliges Pokémon erscheint links. Du musst ein Pokémon finden, das es in der angezeigten Stat-Kategorie schlägt.',
-    'rules.p2':          'Wenn dein Pokémon gewinnt, wird es der neue Verteidiger. Gewinne weiter, um deine Serie zu steigern!',
-    'rules.p3':          'Wenn du verlierst, bleibt das feindliche Pokémon und verteidigt erneut. Deine Serie wird auf 0 zurückgesetzt.',
-    'rules.p4':          'Kein Pokémon kann zweimal verwendet werden. Einmal gekämpft, verschwindet es für immer aus der Suchliste.',
-    'rules.p5':          'Ziel: Erreiche die höchste Serie, bevor dir die Pokémon ausgehen oder du verlierst.',
-    'btn.gotit':         'VERSTANDEN ✓',
-    'modal.elim.title':  '✕ AUSGESCHIEDEN',
-    'btn.close':         'SCHLIESSEN',
-    'elim.empty':        'Noch keine Pokémon ausgeschieden.',
-    'cat.attack':        'HÖHERER\nANGRIFF-WERT',
-    'cat.hp':            'HÖHERER\nKP-WERT',
-    'cat.sp_attack':     'HÖHERER\nSP.-ANGr.-WERT',
-    'stat.hp':           'KP',  'stat.attack':    'ANG',
-    'stat.defense':      'VER', 'stat.sp_attack': 'SpA',
-    'stat.sp_defense':   'SpV', 'stat.speed':     'INI',
-    'result.win':        '🏆 DU HAST GEWONNEN!',
-    'result.tie':        '🤝 UNENTSCHIEDEN!',
-    'result.lose':       '💀 DU HAST VERLOREN!',
-    'err.all_used':      'Alle 151 Pokémon verwendet! Neustart…',
-  },
-};
+// Populated by loadTranslations() from locales/en.json + locales/de.json
+let TRANSLATIONS = { en: {}, de: {} };
 
+// t(key) — look up a translation key in the current language, fall back to EN
 function t(key) { return TRANSLATIONS[currentLang][key] ?? TRANSLATIONS.en[key] ?? key; }
+
+// tf(key, ...args) — same as t(), but replaces {0}, {1}, … with the given values
+function tf(key, ...args) {
+  let str = t(key);
+  args.forEach((val, i) => { str = str.replace(`{${i}}`, val); });
+  return str;
+}
+
+// Return a Pokémon's name in the active language.
+// Falls back to display_name (EN) if the JSON hasn't been re-fetched yet.
+function pkmName(pkm) {
+  if (!pkm) return '';
+  if (currentLang === 'de') return pkm.name_ger ?? pkm.display_name;
+  return pkm.name_en ?? pkm.display_name;
+}
+
+async function loadTranslations() {
+  try {
+    const [enRes, deRes] = await Promise.all([
+      fetch('./locales/en.json'),
+      fetch('./locales/de.json'),
+    ]);
+    TRANSLATIONS.en = await enRes.json();
+    TRANSLATIONS.de = await deRes.json();
+  } catch (err) {
+    console.error('Could not load translation files:', err);
+  }
+  // Apply the (possibly already-chosen) language now that strings are loaded
+  applyLanguage(currentLang);
+}
 
 function applyLanguage(lang) {
   currentLang = lang;
@@ -421,6 +397,29 @@ function applyLanguage(lang) {
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     el.placeholder = t(el.dataset.i18nPlaceholder);
   });
+  // Auth submit button text depends on which tab is active
+  const submitBtn = document.getElementById('auth-submit-btn');
+  if (submitBtn && !submitBtn.disabled) {
+    submitBtn.textContent = currentAuthTab === 'login'
+      ? t('auth.tab.login')
+      : t('auth.tab.signup');
+  }
+  // Rebuild dynamic HTML sections that contain translated strings
+  updateStartScreenUser();
+
+  // Refresh Pokémon names that are currently visible on the cards
+  if (enemyPokemon && document.getElementById('content-1').style.display !== 'none') {
+    document.getElementById('name-1').textContent = pkmName(enemyPokemon);
+  }
+  if (playerPokemon && document.getElementById('player-preview').style.display !== 'none') {
+    document.getElementById('player-name').textContent = pkmName(playerPokemon);
+    document.getElementById('pkm-input').value = pkmName(playerPokemon);
+  }
+  // Rebuild eliminated modal if it's currently open
+  if (document.getElementById('elim-overlay').style.display !== 'none') {
+    openEliminated();
+  }
+
   if (currentCategory) {
     document.getElementById('category-badge').textContent = t('cat.' + currentCategory.key);
   }
@@ -441,6 +440,9 @@ const CATEGORIES = [
   { key: 'attack' },
   { key: 'hp' },
   { key: 'sp_attack' },
+  { key: 'defense' },
+  { key: 'sp_defense' },
+  { key: 'speed' },
 ];
 
 const STAT_COLORS = {
@@ -453,6 +455,9 @@ const STAT_COLORS = {
 // Loads Pokémon data, then checks if there's already a logged-in session.
 // ═══════════════════════════════════════════════════════════════════════
 async function init() {
+  // Load translation files first so all UI strings are ready
+  await loadTranslations();
+
   // Load Pokémon data from local JSON file
   try {
     const res = await fetch('./pkm/pokemon.json');
@@ -675,10 +680,10 @@ function displayEnemy(pkm) {
   document.getElementById('loading-1').style.display  = 'flex';
   document.getElementById('content-1').style.display  = 'none';
   const img = document.getElementById('sprite-1');
-  img.src = pkm.sprite; img.alt = pkm.display_name;
+  img.src = pkm.sprite; img.alt = pkmName(pkm);
   img.onload = () => {
     document.getElementById('id-1').textContent   = `#${String(pkm.id).padStart(3,'0')}`;
-    document.getElementById('name-1').textContent = pkm.display_name;
+    document.getElementById('name-1').textContent = pkmName(pkm);
     document.getElementById('types-1').innerHTML  = renderTypes(pkm.types);
     document.getElementById('stats-1').innerHTML  = renderStats(pkm.stats);
     document.getElementById('loading-1').style.display = 'none';
@@ -690,10 +695,10 @@ function displayPlayer(pkm) {
   const preview = document.getElementById('player-preview');
   preview.style.display = 'none';
   const img = document.getElementById('player-sprite');
-  img.src = pkm.sprite; img.alt = pkm.display_name;
+  img.src = pkm.sprite; img.alt = pkmName(pkm);
   img.onload = () => {
     document.getElementById('player-id').textContent          = `#${String(pkm.id).padStart(3,'0')}`;
-    document.getElementById('player-name').textContent        = pkm.display_name;
+    document.getElementById('player-name').textContent        = pkmName(pkm);
     document.getElementById('player-types').innerHTML         = renderTypes(pkm.types);
     document.getElementById('player-stats').innerHTML         = renderStatsHidden(pkm.stats);
     document.getElementById('player-types').style.visibility = 'hidden';
@@ -762,7 +767,9 @@ function getMatches(query) {
   if (!query) return available;
   const q = query.toLowerCase();
   return available.filter(p =>
-    p.name.includes(q) || p.display_name.toLowerCase().includes(q)
+    p.name.includes(q) ||
+    (p.name_en  ?? p.display_name).toLowerCase().includes(q) ||
+    (p.name_ger ?? '').toLowerCase().includes(q)
   );
 }
 
@@ -774,8 +781,8 @@ function openDropdown() {
   if (!matches.length) { dd.style.display = 'none'; return; }
   dd.innerHTML = matches.map((p, i) => `
     <div class="dropdown-item" data-index="${i}" onmousedown="selectPokemon('${p.name}')">
-      <img src="${p.sprite}" alt="${p.display_name}" />
-      <span>${p.display_name}</span>
+      <img src="${p.sprite}" alt="${pkmName(p)}" />
+      <span>${pkmName(p)}</span>
       <span style="margin-left:auto;font-size:9px;color:#6b7280;">#${String(p.id).padStart(3,'0')}</span>
     </div>
   `).join('');
@@ -800,7 +807,7 @@ function selectPokemon(name) {
   const pkm = pokemonData.find(p => p.name === name);
   if (!pkm) return;
   playerPokemon = pkm;
-  document.getElementById('pkm-input').value = pkm.display_name;
+  document.getElementById('pkm-input').value = pkmName(pkm);
   closeDropdown();
   const sorted = availableSorted();
   browseIndex = sorted.findIndex(p => p.id === pkm.id);
@@ -876,10 +883,10 @@ function openEliminated() {
     gridEl.style.display  = 'grid';
     gridEl.innerHTML = eliminated.map(p => `
       <div style="display:flex; flex-direction:column; align-items:center; gap:4px; opacity:0.7;">
-        <img src="${p.sprite}" alt="${p.display_name}"
+        <img src="${p.sprite}" alt="${pkmName(p)}"
              style="width:56px;height:56px;image-rendering:pixelated;filter:grayscale(100%);" />
         <span style="font-size:6px; color:#6b7280; text-align:center; line-height:1.4;">
-          ${p.display_name}
+          ${pkmName(p)}
         </span>
       </div>
     `).join('');

@@ -20,7 +20,13 @@ def fetch(url):
 
 def get_pokemon(pokemon_id):
     """Fetch and clean a single Pokemon's data."""
-    data = fetch(f"{BASE_URL}/pokemon/{pokemon_id}")
+    data         = fetch(f"{BASE_URL}/pokemon/{pokemon_id}")
+    species_data = fetch(f"{BASE_URL}/pokemon-species/{pokemon_id}")
+
+    # Pull localised names from the species endpoint
+    names_by_lang = {n["language"]["name"]: n["name"] for n in species_data["names"]}
+    name_en  = names_by_lang.get("en", data["name"].capitalize())
+    name_ger = names_by_lang.get("de", name_en)  # fall back to EN if DE missing
 
     # Only keep level-up moves to keep file size manageable
     level_up_moves = [
@@ -30,18 +36,20 @@ def get_pokemon(pokemon_id):
     ]
 
     return {
-        "id": data["id"],
-        "name": data["name"],
-        "display_name": data["name"].capitalize(),
-        "sprite": data["sprites"]["front_default"],
-        "types": [t["type"]["name"] for t in data["types"]],
+        "id":           data["id"],
+        "name":         data["name"],       # internal slug, e.g. "bulbasaur"
+        "name_en":      name_en,            # "Bulbasaur"
+        "name_ger":     name_ger,           # "Bisasam"
+        "display_name": name_en,            # kept for backward-compat
+        "sprite":       data["sprites"]["front_default"],
+        "types":        [t["type"]["name"] for t in data["types"]],
         "stats": {
-            "hp":        data["stats"][0]["base_stat"],
-            "attack":    data["stats"][1]["base_stat"],
-            "defense":   data["stats"][2]["base_stat"],
-            "sp_attack": data["stats"][3]["base_stat"],
-            "sp_defense":data["stats"][4]["base_stat"],
-            "speed":     data["stats"][5]["base_stat"],
+            "hp":         data["stats"][0]["base_stat"],
+            "attack":     data["stats"][1]["base_stat"],
+            "defense":    data["stats"][2]["base_stat"],
+            "sp_attack":  data["stats"][3]["base_stat"],
+            "sp_defense": data["stats"][4]["base_stat"],
+            "speed":      data["stats"][5]["base_stat"],
         },
         "moves": level_up_moves,
     }

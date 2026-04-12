@@ -168,6 +168,10 @@ body {
   gap: 10px; flex-shrink: 0; width: 80px;
 }
 
+@media (min-width: 601px) {
+  .vs-col { margin: 0 40px; }
+}
+
 /* ── Stat bars ──────────────────────────────────────────────────────── */
 .stat-row  { display:flex; align-items:center; gap:6px; width:100%; }
 .stat-label{ font-size:7px; color:#9ca3af; width:28px; text-align:right; flex-shrink:0; }
@@ -250,6 +254,15 @@ body {
 }
 .btn-rules:hover{ color:#facc15; border-color:#facc15; }
 
+/* Fixed-width rules/eliminated buttons — never resize on language switch.
+   Width is sized to fit the longest label across all languages ("AUSGESCHIEDEN"). */
+.btn-fixed {
+  width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .btn-newgame {
   background:#facc15; color:#111;
   font-size:11px; padding:12px 28px;
@@ -284,6 +297,9 @@ body {
 
 /* ── Mobile tweaks ──────────────────────────────────────────────────── */
 @media (max-width: 600px) {
+  /* Push game-screen content below the fixed top-left/right corner buttons */
+  #game-screen { padding-top: 56px; }
+
   /* Hide icon/prefix characters on small screens to save button space */
   .btn-icon { display: none; }
 

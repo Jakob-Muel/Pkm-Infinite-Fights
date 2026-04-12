@@ -1,11 +1,13 @@
 {
   "version": "1.0",
-  "last_updated": "2026-03-25",
+  "last_updated": "2026-04-12",
   "count": 151,
   "pokemon": [
     {
       "id": 1,
       "name": "bulbasaur",
+      "name_en": "Bulbasaur",
+      "name_ger": "Bisasam",
       "display_name": "Bulbasaur",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
       "types": [
@@ -42,6 +44,8 @@
     {
       "id": 2,
       "name": "ivysaur",
+      "name_en": "Ivysaur",
+      "name_ger": "Bisaknosp",
       "display_name": "Ivysaur",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
       "types": [
@@ -78,6 +82,8 @@
     {
       "id": 3,
       "name": "venusaur",
+      "name_en": "Venusaur",
+      "name_ger": "Bisaflor",
       "display_name": "Venusaur",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
       "types": [
@@ -117,6 +123,8 @@
     {
       "id": 4,
       "name": "charmander",
+      "name_en": "Charmander",
+      "name_ger": "Glumanda",
       "display_name": "Charmander",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
       "types": [
@@ -154,6 +162,8 @@
     {
       "id": 5,
       "name": "charmeleon",
+      "name_en": "Charmeleon",
+      "name_ger": "Glutexo",
       "display_name": "Charmeleon",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
       "types": [
@@ -191,6 +201,8 @@
     {
       "id": 6,
       "name": "charizard",
+      "name_en": "Charizard",
+      "name_ger": "Glurak",
       "display_name": "Charizard",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
       "types": [
@@ -236,6 +248,8 @@
     {
       "id": 7,
       "name": "squirtle",
+      "name_en": "Squirtle",
+      "name_ger": "Schiggy",
       "display_name": "Squirtle",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
       "types": [
@@ -273,6 +287,8 @@
     {
       "id": 8,
       "name": "wartortle",
+      "name_en": "Wartortle",
+      "name_ger": "Schillok",
       "display_name": "Wartortle",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
       "types": [
@@ -310,6 +326,8 @@
     {
       "id": 9,
       "name": "blastoise",
+      "name_en": "Blastoise",
+      "name_ger": "Turtok",
       "display_name": "Blastoise",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
       "types": [
@@ -350,6 +368,8 @@
     {
       "id": 10,
       "name": "caterpie",
+      "name_en": "Caterpie",
+      "name_ger": "Raupy",
       "display_name": "Caterpie",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
       "types": [
@@ -372,6 +392,8 @@
     {
       "id": 11,
       "name": "metapod",
+      "name_en": "Metapod",
+      "name_ger": "Safcon",
       "display_name": "Metapod",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
       "types": [
@@ -392,6 +414,8 @@
     {
       "id": 12,
       "name": "butterfree",
+      "name_en": "Butterfree",
+      "name_ger": "Smettbo",
       "display_name": "Butterfree",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
       "types": [
@@ -432,6 +456,8 @@
     {
       "id": 13,
       "name": "weedle",
+      "name_en": "Weedle",
+      "name_ger": "Hornliu",
       "display_name": "Weedle",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
       "types": [
@@ -455,6 +481,8 @@
     {
       "id": 14,
       "name": "kakuna",
+      "name_en": "Kakuna",
+      "name_ger": "Kokuna",
       "display_name": "Kakuna",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
       "types": [
@@ -476,6 +504,8 @@
     {
       "id": 15,
       "name": "beedrill",
+      "name_en": "Beedrill",
+      "name_ger": "Bibor",
       "display_name": "Beedrill",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
       "types": [
@@ -517,6 +547,8 @@
     {
       "id": 16,
       "name": "pidgey",
+      "name_en": "Pidgey",
+      "name_ger": "Taubsi",
       "display_name": "Pidgey",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
       "types": [
@@ -553,6 +585,8 @@
     {
       "id": 17,
       "name": "pidgeotto",
+      "name_en": "Pidgeotto",
+      "name_ger": "Tauboga",
       "display_name": "Pidgeotto",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
       "types": [
@@ -589,6 +623,8 @@
     {
       "id": 18,
       "name": "pidgeot",
+      "name_en": "Pidgeot",
+      "name_ger": "Tauboss",
       "display_name": "Pidgeot",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
       "types": [
@@ -627,6 +663,8 @@
     {
       "id": 19,
       "name": "rattata",
+      "name_en": "Rattata",
+      "name_ger": "Rattfratz",
       "display_name": "Rattata",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
       "types": [
@@ -661,6 +699,8 @@
     {
       "id": 20,
       "name": "raticate",
+      "name_en": "Raticate",
+      "name_ger": "Rattikarl",
       "display_name": "Raticate",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
       "types": [
@@ -699,6 +739,8 @@
     {
       "id": 21,
       "name": "spearow",
+      "name_en": "Spearow",
+      "name_ger": "Habitak",
       "display_name": "Spearow",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
       "types": [
@@ -733,6 +775,8 @@
     {
       "id": 22,
       "name": "fearow",
+      "name_en": "Fearow",
+      "name_ger": "Ibitak",
       "display_name": "Fearow",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
       "types": [
@@ -771,6 +815,8 @@
     {
       "id": 23,
       "name": "ekans",
+      "name_en": "Ekans",
+      "name_ger": "Rettan",
       "display_name": "Ekans",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
       "types": [
@@ -811,6 +857,8 @@
     {
       "id": 24,
       "name": "arbok",
+      "name_en": "Arbok",
+      "name_ger": "Arbok",
       "display_name": "Arbok",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
       "types": [
@@ -856,6 +904,8 @@
     {
       "id": 25,
       "name": "pikachu",
+      "name_en": "Pikachu",
+      "name_ger": "Pikachu",
       "display_name": "Pikachu",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
       "types": [
@@ -899,6 +949,8 @@
     {
       "id": 26,
       "name": "raichu",
+      "name_en": "Raichu",
+      "name_ger": "Raichu",
       "display_name": "Raichu",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
       "types": [
@@ -943,6 +995,8 @@
     {
       "id": 27,
       "name": "sandshrew",
+      "name_en": "Sandshrew",
+      "name_ger": "Sandan",
       "display_name": "Sandshrew",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
       "types": [
@@ -982,6 +1036,8 @@
     {
       "id": 28,
       "name": "sandslash",
+      "name_en": "Sandslash",
+      "name_ger": "Sandamer",
       "display_name": "Sandslash",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
       "types": [
@@ -1023,7 +1079,9 @@
     {
       "id": 29,
       "name": "nidoran-f",
-      "display_name": "Nidoran-f",
+      "name_en": "Nidoran\u2640",
+      "name_ger": "Nidoran\u2640",
+      "display_name": "Nidoran\u2640",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
       "types": [
         "poison"
@@ -1059,6 +1117,8 @@
     {
       "id": 30,
       "name": "nidorina",
+      "name_en": "Nidorina",
+      "name_ger": "Nidorina",
       "display_name": "Nidorina",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png",
       "types": [
@@ -1095,6 +1155,8 @@
     {
       "id": 31,
       "name": "nidoqueen",
+      "name_en": "Nidoqueen",
+      "name_ger": "Nidoqueen",
       "display_name": "Nidoqueen",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
       "types": [
@@ -1135,7 +1197,9 @@
     {
       "id": 32,
       "name": "nidoran-m",
-      "display_name": "Nidoran-m",
+      "name_en": "Nidoran\u2642",
+      "name_ger": "Nidoran\u2642",
+      "display_name": "Nidoran\u2642",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png",
       "types": [
         "poison"
@@ -1170,6 +1234,8 @@
     {
       "id": 33,
       "name": "nidorino",
+      "name_en": "Nidorino",
+      "name_ger": "Nidorino",
       "display_name": "Nidorino",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png",
       "types": [
@@ -1205,6 +1271,8 @@
     {
       "id": 34,
       "name": "nidoking",
+      "name_en": "Nidoking",
+      "name_ger": "Nidoking",
       "display_name": "Nidoking",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
       "types": [
@@ -1245,6 +1313,8 @@
     {
       "id": 35,
       "name": "clefairy",
+      "name_en": "Clefairy",
+      "name_ger": "Piepi",
       "display_name": "Clefairy",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
       "types": [
@@ -1301,6 +1371,8 @@
     {
       "id": 36,
       "name": "clefable",
+      "name_en": "Clefable",
+      "name_ger": "Pixi",
       "display_name": "Clefable",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
       "types": [
@@ -1351,6 +1423,8 @@
     {
       "id": 37,
       "name": "vulpix",
+      "name_en": "Vulpix",
+      "name_ger": "Vulpix",
       "display_name": "Vulpix",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
       "types": [
@@ -1396,6 +1470,8 @@
     {
       "id": 38,
       "name": "ninetales",
+      "name_en": "Ninetales",
+      "name_ger": "Vulnona",
       "display_name": "Ninetales",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
       "types": [
@@ -1437,6 +1513,8 @@
     {
       "id": 39,
       "name": "jigglypuff",
+      "name_en": "Jigglypuff",
+      "name_ger": "Pummeluff",
       "display_name": "Jigglypuff",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
       "types": [
@@ -1483,6 +1561,8 @@
     {
       "id": 40,
       "name": "wigglytuff",
+      "name_en": "Wigglytuff",
+      "name_ger": "Knuddeluff",
       "display_name": "Wigglytuff",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
       "types": [
@@ -1527,6 +1607,8 @@
     {
       "id": 41,
       "name": "zubat",
+      "name_en": "Zubat",
+      "name_ger": "Zubat",
       "display_name": "Zubat",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png",
       "types": [
@@ -1567,6 +1649,8 @@
     {
       "id": 42,
       "name": "golbat",
+      "name_en": "Golbat",
+      "name_ger": "Golbat",
       "display_name": "Golbat",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png",
       "types": [
@@ -1611,6 +1695,8 @@
     {
       "id": 43,
       "name": "oddish",
+      "name_en": "Oddish",
+      "name_ger": "Myrapla",
       "display_name": "Oddish",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
       "types": [
@@ -1649,6 +1735,8 @@
     {
       "id": 44,
       "name": "gloom",
+      "name_en": "Gloom",
+      "name_ger": "Duflor",
       "display_name": "Gloom",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png",
       "types": [
@@ -1688,6 +1776,8 @@
     {
       "id": 45,
       "name": "vileplume",
+      "name_en": "Vileplume",
+      "name_ger": "Giflor",
       "display_name": "Vileplume",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
       "types": [
@@ -1725,6 +1815,8 @@
     {
       "id": 46,
       "name": "paras",
+      "name_en": "Paras",
+      "name_ger": "Paras",
       "display_name": "Paras",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png",
       "types": [
@@ -1762,6 +1854,8 @@
     {
       "id": 47,
       "name": "parasect",
+      "name_en": "Parasect",
+      "name_ger": "Parasek",
       "display_name": "Parasect",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png",
       "types": [
@@ -1802,6 +1896,8 @@
     {
       "id": 48,
       "name": "venonat",
+      "name_en": "Venonat",
+      "name_ger": "Bluzuk",
       "display_name": "Venonat",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png",
       "types": [
@@ -1839,6 +1935,8 @@
     {
       "id": 49,
       "name": "venomoth",
+      "name_en": "Venomoth",
+      "name_ger": "Omot",
       "display_name": "Venomoth",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png",
       "types": [
@@ -1883,6 +1981,8 @@
     {
       "id": 50,
       "name": "diglett",
+      "name_en": "Diglett",
+      "name_ger": "Digda",
       "display_name": "Diglett",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
       "types": [
@@ -1919,6 +2019,8 @@
     {
       "id": 51,
       "name": "dugtrio",
+      "name_en": "Dugtrio",
+      "name_ger": "Digdri",
       "display_name": "Dugtrio",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
       "types": [
@@ -1960,6 +2062,8 @@
     {
       "id": 52,
       "name": "meowth",
+      "name_en": "Meowth",
+      "name_ger": "Mauzi",
       "display_name": "Meowth",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
       "types": [
@@ -1996,6 +2100,8 @@
     {
       "id": 53,
       "name": "persian",
+      "name_en": "Persian",
+      "name_ger": "Snobilikat",
       "display_name": "Persian",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
       "types": [
@@ -2037,6 +2143,8 @@
     {
       "id": 54,
       "name": "psyduck",
+      "name_en": "Psyduck",
+      "name_ger": "Enton",
       "display_name": "Psyduck",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
       "types": [
@@ -2076,6 +2184,8 @@
     {
       "id": 55,
       "name": "golduck",
+      "name_en": "Golduck",
+      "name_ger": "Entoron",
       "display_name": "Golduck",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png",
       "types": [
@@ -2119,6 +2229,8 @@
     {
       "id": 56,
       "name": "mankey",
+      "name_en": "Mankey",
+      "name_ger": "Menki",
       "display_name": "Mankey",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png",
       "types": [
@@ -2162,6 +2274,8 @@
     {
       "id": 57,
       "name": "primeape",
+      "name_en": "Primeape",
+      "name_ger": "Rasaff",
       "display_name": "Primeape",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png",
       "types": [
@@ -2210,6 +2324,8 @@
     {
       "id": 58,
       "name": "growlithe",
+      "name_en": "Growlithe",
+      "name_ger": "Fukano",
       "display_name": "Growlithe",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png",
       "types": [
@@ -2249,6 +2365,8 @@
     {
       "id": 59,
       "name": "arcanine",
+      "name_en": "Arcanine",
+      "name_ger": "Arkani",
       "display_name": "Arcanine",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
       "types": [
@@ -2289,6 +2407,8 @@
     {
       "id": 60,
       "name": "poliwag",
+      "name_en": "Poliwag",
+      "name_ger": "Quapsel",
       "display_name": "Poliwag",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png",
       "types": [
@@ -2326,6 +2446,8 @@
     {
       "id": 61,
       "name": "poliwhirl",
+      "name_en": "Poliwhirl",
+      "name_ger": "Quaputzi",
       "display_name": "Poliwhirl",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png",
       "types": [
@@ -2363,6 +2485,8 @@
     {
       "id": 62,
       "name": "poliwrath",
+      "name_en": "Poliwrath",
+      "name_ger": "Quappo",
       "display_name": "Poliwrath",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png",
       "types": [
@@ -2404,6 +2528,8 @@
     {
       "id": 63,
       "name": "abra",
+      "name_en": "Abra",
+      "name_ger": "Abra",
       "display_name": "Abra",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png",
       "types": [
@@ -2424,6 +2550,8 @@
     {
       "id": 64,
       "name": "kadabra",
+      "name_en": "Kadabra",
+      "name_ger": "Kadabra",
       "display_name": "Kadabra",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png",
       "types": [
@@ -2465,6 +2593,8 @@
     {
       "id": 65,
       "name": "alakazam",
+      "name_en": "Alakazam",
+      "name_ger": "Simsala",
       "display_name": "Alakazam",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
       "types": [
@@ -2508,6 +2638,8 @@
     {
       "id": 66,
       "name": "machop",
+      "name_en": "Machop",
+      "name_ger": "Machollo",
       "display_name": "Machop",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png",
       "types": [
@@ -2555,6 +2687,8 @@
     {
       "id": 67,
       "name": "machoke",
+      "name_en": "Machoke",
+      "name_ger": "Maschock",
       "display_name": "Machoke",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png",
       "types": [
@@ -2602,6 +2736,8 @@
     {
       "id": 68,
       "name": "machamp",
+      "name_en": "Machamp",
+      "name_ger": "Machomei",
       "display_name": "Machamp",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
       "types": [
@@ -2653,6 +2789,8 @@
     {
       "id": 69,
       "name": "bellsprout",
+      "name_en": "Bellsprout",
+      "name_ger": "Knofensa",
       "display_name": "Bellsprout",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png",
       "types": [
@@ -2688,6 +2826,8 @@
     {
       "id": 70,
       "name": "weepinbell",
+      "name_en": "Weepinbell",
+      "name_ger": "Ultrigaria",
       "display_name": "Weepinbell",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png",
       "types": [
@@ -2723,6 +2863,8 @@
     {
       "id": 71,
       "name": "victreebel",
+      "name_en": "Victreebel",
+      "name_ger": "Sarzenia",
       "display_name": "Victreebel",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
       "types": [
@@ -2767,6 +2909,8 @@
     {
       "id": 72,
       "name": "tentacool",
+      "name_en": "Tentacool",
+      "name_ger": "Tentacha",
       "display_name": "Tentacool",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png",
       "types": [
@@ -2808,6 +2952,8 @@
     {
       "id": 73,
       "name": "tentacruel",
+      "name_en": "Tentacruel",
+      "name_ger": "Tentoxa",
       "display_name": "Tentacruel",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
       "types": [
@@ -2852,6 +2998,8 @@
     {
       "id": 74,
       "name": "geodude",
+      "name_en": "Geodude",
+      "name_ger": "Kleinstein",
       "display_name": "Geodude",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
       "types": [
@@ -2896,6 +3044,8 @@
     {
       "id": 75,
       "name": "graveler",
+      "name_en": "Graveler",
+      "name_ger": "Georok",
       "display_name": "Graveler",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png",
       "types": [
@@ -2940,6 +3090,8 @@
     {
       "id": 76,
       "name": "golem",
+      "name_en": "Golem",
+      "name_ger": "Geowaz",
       "display_name": "Golem",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png",
       "types": [
@@ -2987,6 +3139,8 @@
     {
       "id": 77,
       "name": "ponyta",
+      "name_en": "Ponyta",
+      "name_ger": "Ponita",
       "display_name": "Ponyta",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
       "types": [
@@ -3025,6 +3179,8 @@
     {
       "id": 78,
       "name": "rapidash",
+      "name_en": "Rapidash",
+      "name_ger": "Gallopa",
       "display_name": "Rapidash",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png",
       "types": [
@@ -3068,6 +3224,8 @@
     {
       "id": 79,
       "name": "slowpoke",
+      "name_en": "Slowpoke",
+      "name_ger": "Flegmon",
       "display_name": "Slowpoke",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png",
       "types": [
@@ -3106,6 +3264,8 @@
     {
       "id": 80,
       "name": "slowbro",
+      "name_en": "Slowbro",
+      "name_ger": "Lahmus",
       "display_name": "Slowbro",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png",
       "types": [
@@ -3146,6 +3306,8 @@
     {
       "id": 81,
       "name": "magnemite",
+      "name_en": "Magnemite",
+      "name_ger": "Magnetilo",
       "display_name": "Magnemite",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png",
       "types": [
@@ -3187,6 +3349,8 @@
     {
       "id": 82,
       "name": "magneton",
+      "name_en": "Magneton",
+      "name_ger": "Magneton",
       "display_name": "Magneton",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png",
       "types": [
@@ -3230,7 +3394,9 @@
     {
       "id": 83,
       "name": "farfetchd",
-      "display_name": "Farfetchd",
+      "name_en": "Farfetch\u2019d",
+      "name_ger": "Porenta",
+      "display_name": "Farfetch\u2019d",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png",
       "types": [
         "normal",
@@ -3275,6 +3441,8 @@
     {
       "id": 84,
       "name": "doduo",
+      "name_en": "Doduo",
+      "name_ger": "Dodu",
       "display_name": "Doduo",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png",
       "types": [
@@ -3315,6 +3483,8 @@
     {
       "id": 85,
       "name": "dodrio",
+      "name_en": "Dodrio",
+      "name_ger": "Dodri",
       "display_name": "Dodrio",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png",
       "types": [
@@ -3357,6 +3527,8 @@
     {
       "id": 86,
       "name": "seel",
+      "name_en": "Seel",
+      "name_ger": "Jurob",
       "display_name": "Seel",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png",
       "types": [
@@ -3398,6 +3570,8 @@
     {
       "id": 87,
       "name": "dewgong",
+      "name_en": "Dewgong",
+      "name_ger": "Jugong",
       "display_name": "Dewgong",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
       "types": [
@@ -3443,6 +3617,8 @@
     {
       "id": 88,
       "name": "grimer",
+      "name_en": "Grimer",
+      "name_ger": "Sleima",
       "display_name": "Grimer",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png",
       "types": [
@@ -3481,6 +3657,8 @@
     {
       "id": 89,
       "name": "muk",
+      "name_en": "Muk",
+      "name_ger": "Sleimok",
       "display_name": "Muk",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
       "types": [
@@ -3522,6 +3700,8 @@
     {
       "id": 90,
       "name": "shellder",
+      "name_en": "Shellder",
+      "name_ger": "Muschas",
       "display_name": "Shellder",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png",
       "types": [
@@ -3558,6 +3738,8 @@
     {
       "id": 91,
       "name": "cloyster",
+      "name_en": "Cloyster",
+      "name_ger": "Austos",
       "display_name": "Cloyster",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png",
       "types": [
@@ -3600,6 +3782,8 @@
     {
       "id": 92,
       "name": "gastly",
+      "name_en": "Gastly",
+      "name_ger": "Nebulak",
       "display_name": "Gastly",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png",
       "types": [
@@ -3641,6 +3825,8 @@
     {
       "id": 93,
       "name": "haunter",
+      "name_en": "Haunter",
+      "name_ger": "Alpollo",
       "display_name": "Haunter",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
       "types": [
@@ -3683,6 +3869,8 @@
     {
       "id": 94,
       "name": "gengar",
+      "name_en": "Gengar",
+      "name_ger": "Gengar",
       "display_name": "Gengar",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
       "types": [
@@ -3729,6 +3917,8 @@
     {
       "id": 95,
       "name": "onix",
+      "name_en": "Onix",
+      "name_ger": "Onix",
       "display_name": "Onix",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
       "types": [
@@ -3775,6 +3965,8 @@
     {
       "id": 96,
       "name": "drowzee",
+      "name_en": "Drowzee",
+      "name_ger": "Traumato",
       "display_name": "Drowzee",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png",
       "types": [
@@ -3813,6 +4005,8 @@
     {
       "id": 97,
       "name": "hypno",
+      "name_en": "Hypno",
+      "name_ger": "Hypno",
       "display_name": "Hypno",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png",
       "types": [
@@ -3854,6 +4048,8 @@
     {
       "id": 98,
       "name": "krabby",
+      "name_en": "Krabby",
+      "name_ger": "Krabby",
       "display_name": "Krabby",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png",
       "types": [
@@ -3891,6 +4087,8 @@
     {
       "id": 99,
       "name": "kingler",
+      "name_en": "Kingler",
+      "name_ger": "Kingler",
       "display_name": "Kingler",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png",
       "types": [
@@ -3932,6 +4130,8 @@
     {
       "id": 100,
       "name": "voltorb",
+      "name_en": "Voltorb",
+      "name_ger": "Voltobal",
       "display_name": "Voltorb",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
       "types": [
@@ -3970,6 +4170,8 @@
     {
       "id": 101,
       "name": "electrode",
+      "name_en": "Electrode",
+      "name_ger": "Lektrobal",
       "display_name": "Electrode",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png",
       "types": [
@@ -4009,6 +4211,8 @@
     {
       "id": 102,
       "name": "exeggcute",
+      "name_en": "Exeggcute",
+      "name_ger": "Owei",
       "display_name": "Exeggcute",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png",
       "types": [
@@ -4050,6 +4254,8 @@
     {
       "id": 103,
       "name": "exeggutor",
+      "name_en": "Exeggutor",
+      "name_ger": "Kokowei",
       "display_name": "Exeggutor",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png",
       "types": [
@@ -4092,6 +4298,8 @@
     {
       "id": 104,
       "name": "cubone",
+      "name_en": "Cubone",
+      "name_ger": "Tragosso",
       "display_name": "Cubone",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png",
       "types": [
@@ -4128,6 +4336,8 @@
     {
       "id": 105,
       "name": "marowak",
+      "name_en": "Marowak",
+      "name_ger": "Knogga",
       "display_name": "Marowak",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png",
       "types": [
@@ -4166,6 +4376,8 @@
     {
       "id": 106,
       "name": "hitmonlee",
+      "name_en": "Hitmonlee",
+      "name_ger": "Kicklee",
       "display_name": "Hitmonlee",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
       "types": [
@@ -4210,6 +4422,8 @@
     {
       "id": 107,
       "name": "hitmonchan",
+      "name_en": "Hitmonchan",
+      "name_ger": "Nockchan",
       "display_name": "Hitmonchan",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png",
       "types": [
@@ -4256,6 +4470,8 @@
     {
       "id": 108,
       "name": "lickitung",
+      "name_en": "Lickitung",
+      "name_ger": "Schlurp",
       "display_name": "Lickitung",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png",
       "types": [
@@ -4300,6 +4516,8 @@
     {
       "id": 109,
       "name": "koffing",
+      "name_en": "Koffing",
+      "name_ger": "Smogon",
       "display_name": "Koffing",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
       "types": [
@@ -4335,6 +4553,8 @@
     {
       "id": 110,
       "name": "weezing",
+      "name_en": "Weezing",
+      "name_ger": "Smogmog",
       "display_name": "Weezing",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
       "types": [
@@ -4374,6 +4594,8 @@
     {
       "id": 111,
       "name": "rhyhorn",
+      "name_en": "Rhyhorn",
+      "name_ger": "Rihorn",
       "display_name": "Rhyhorn",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png",
       "types": [
@@ -4419,6 +4641,8 @@
     {
       "id": 112,
       "name": "rhydon",
+      "name_en": "Rhydon",
+      "name_ger": "Rizeros",
       "display_name": "Rhydon",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
       "types": [
@@ -4467,6 +4691,8 @@
     {
       "id": 113,
       "name": "chansey",
+      "name_en": "Chansey",
+      "name_ger": "Chaneira",
       "display_name": "Chansey",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png",
       "types": [
@@ -4517,6 +4743,8 @@
     {
       "id": 114,
       "name": "tangela",
+      "name_en": "Tangela",
+      "name_ger": "Tangela",
       "display_name": "Tangela",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
       "types": [
@@ -4561,6 +4789,8 @@
     {
       "id": 115,
       "name": "kangaskhan",
+      "name_en": "Kangaskhan",
+      "name_ger": "Kangama",
       "display_name": "Kangaskhan",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png",
       "types": [
@@ -4601,6 +4831,8 @@
     {
       "id": 116,
       "name": "horsea",
+      "name_en": "Horsea",
+      "name_ger": "Seeper",
       "display_name": "Horsea",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png",
       "types": [
@@ -4637,6 +4869,8 @@
     {
       "id": 117,
       "name": "seadra",
+      "name_en": "Seadra",
+      "name_ger": "Seemon",
       "display_name": "Seadra",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png",
       "types": [
@@ -4675,6 +4909,8 @@
     {
       "id": 118,
       "name": "goldeen",
+      "name_en": "Goldeen",
+      "name_ger": "Goldini",
       "display_name": "Goldeen",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png",
       "types": [
@@ -4709,6 +4945,8 @@
     {
       "id": 119,
       "name": "seaking",
+      "name_en": "Seaking",
+      "name_ger": "Golking",
       "display_name": "Seaking",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png",
       "types": [
@@ -4746,6 +4984,8 @@
     {
       "id": 120,
       "name": "staryu",
+      "name_en": "Staryu",
+      "name_ger": "Sterndu",
       "display_name": "Staryu",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
       "types": [
@@ -4786,6 +5026,8 @@
     {
       "id": 121,
       "name": "starmie",
+      "name_en": "Starmie",
+      "name_ger": "Starmie",
       "display_name": "Starmie",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
       "types": [
@@ -4825,7 +5067,9 @@
     {
       "id": 122,
       "name": "mr-mime",
-      "display_name": "Mr-mime",
+      "name_en": "Mr. Mime",
+      "name_ger": "Pantimos",
+      "display_name": "Mr. Mime",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
       "types": [
         "psychic",
@@ -4878,6 +5122,8 @@
     {
       "id": 123,
       "name": "scyther",
+      "name_en": "Scyther",
+      "name_ger": "Sichlor",
       "display_name": "Scyther",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png",
       "types": [
@@ -4920,6 +5166,8 @@
     {
       "id": 124,
       "name": "jynx",
+      "name_en": "Jynx",
+      "name_ger": "Rossana",
       "display_name": "Jynx",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png",
       "types": [
@@ -4964,6 +5212,8 @@
     {
       "id": 125,
       "name": "electabuzz",
+      "name_en": "Electabuzz",
+      "name_ger": "Elektek",
       "display_name": "Electabuzz",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png",
       "types": [
@@ -5000,6 +5250,8 @@
     {
       "id": 126,
       "name": "magmar",
+      "name_en": "Magmar",
+      "name_ger": "Magmar",
       "display_name": "Magmar",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png",
       "types": [
@@ -5039,6 +5291,8 @@
     {
       "id": 127,
       "name": "pinsir",
+      "name_en": "Pinsir",
+      "name_ger": "Pinsir",
       "display_name": "Pinsir",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png",
       "types": [
@@ -5077,6 +5331,8 @@
     {
       "id": 128,
       "name": "tauros",
+      "name_en": "Tauros",
+      "name_ger": "Tauros",
       "display_name": "Tauros",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
       "types": [
@@ -5117,6 +5373,8 @@
     {
       "id": 129,
       "name": "magikarp",
+      "name_en": "Magikarp",
+      "name_ger": "Karpador",
       "display_name": "Magikarp",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
       "types": [
@@ -5139,6 +5397,8 @@
     {
       "id": 130,
       "name": "gyarados",
+      "name_en": "Gyarados",
+      "name_ger": "Garados",
       "display_name": "Gyarados",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
       "types": [
@@ -5185,6 +5445,8 @@
     {
       "id": 131,
       "name": "lapras",
+      "name_en": "Lapras",
+      "name_ger": "Lapras",
       "display_name": "Lapras",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
       "types": [
@@ -5224,6 +5486,8 @@
     {
       "id": 132,
       "name": "ditto",
+      "name_en": "Ditto",
+      "name_ger": "Ditto",
       "display_name": "Ditto",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
       "types": [
@@ -5244,6 +5508,8 @@
     {
       "id": 133,
       "name": "eevee",
+      "name_en": "Eevee",
+      "name_ger": "Evoli",
       "display_name": "Eevee",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
       "types": [
@@ -5285,6 +5551,8 @@
     {
       "id": 134,
       "name": "vaporeon",
+      "name_en": "Vaporeon",
+      "name_ger": "Aquana",
       "display_name": "Vaporeon",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
       "types": [
@@ -5335,6 +5603,8 @@
     {
       "id": 135,
       "name": "jolteon",
+      "name_en": "Jolteon",
+      "name_ger": "Blitza",
       "display_name": "Jolteon",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
       "types": [
@@ -5382,6 +5652,8 @@
     {
       "id": 136,
       "name": "flareon",
+      "name_en": "Flareon",
+      "name_ger": "Flamara",
       "display_name": "Flareon",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png",
       "types": [
@@ -5433,6 +5705,8 @@
     {
       "id": 137,
       "name": "porygon",
+      "name_en": "Porygon",
+      "name_ger": "Porygon",
       "display_name": "Porygon",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png",
       "types": [
@@ -5474,6 +5748,8 @@
     {
       "id": 138,
       "name": "omanyte",
+      "name_en": "Omanyte",
+      "name_ger": "Amonitas",
       "display_name": "Omanyte",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png",
       "types": [
@@ -5515,6 +5791,8 @@
     {
       "id": 139,
       "name": "omastar",
+      "name_en": "Omastar",
+      "name_ger": "Amoroso",
       "display_name": "Omastar",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png",
       "types": [
@@ -5559,6 +5837,8 @@
     {
       "id": 140,
       "name": "kabuto",
+      "name_en": "Kabuto",
+      "name_ger": "Kabuto",
       "display_name": "Kabuto",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png",
       "types": [
@@ -5600,6 +5880,8 @@
     {
       "id": 141,
       "name": "kabutops",
+      "name_en": "Kabutops",
+      "name_ger": "Kabutops",
       "display_name": "Kabutops",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png",
       "types": [
@@ -5647,6 +5929,8 @@
     {
       "id": 142,
       "name": "aerodactyl",
+      "name_en": "Aerodactyl",
+      "name_ger": "Aerodactyl",
       "display_name": "Aerodactyl",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
       "types": [
@@ -5687,6 +5971,8 @@
     {
       "id": 143,
       "name": "snorlax",
+      "name_en": "Snorlax",
+      "name_ger": "Relaxo",
       "display_name": "Snorlax",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
       "types": [
@@ -5742,6 +6028,8 @@
     {
       "id": 144,
       "name": "articuno",
+      "name_en": "Articuno",
+      "name_ger": "Arktos",
       "display_name": "Articuno",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
       "types": [
@@ -5784,6 +6072,8 @@
     {
       "id": 145,
       "name": "zapdos",
+      "name_en": "Zapdos",
+      "name_ger": "Zapdos",
       "display_name": "Zapdos",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
       "types": [
@@ -5823,6 +6113,8 @@
     {
       "id": 146,
       "name": "moltres",
+      "name_en": "Moltres",
+      "name_ger": "Lavados",
       "display_name": "Moltres",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
       "types": [
@@ -5864,6 +6156,8 @@
     {
       "id": 147,
       "name": "dratini",
+      "name_en": "Dratini",
+      "name_ger": "Dratini",
       "display_name": "Dratini",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
       "types": [
@@ -5898,6 +6192,8 @@
     {
       "id": 148,
       "name": "dragonair",
+      "name_en": "Dragonair",
+      "name_ger": "Dragonir",
       "display_name": "Dragonair",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
       "types": [
@@ -5932,6 +6228,8 @@
     {
       "id": 149,
       "name": "dragonite",
+      "name_en": "Dragonite",
+      "name_ger": "Dragoran",
       "display_name": "Dragonite",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
       "types": [
@@ -5975,6 +6273,8 @@
     {
       "id": 150,
       "name": "mewtwo",
+      "name_en": "Mewtwo",
+      "name_ger": "Mewtu",
       "display_name": "Mewtwo",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
       "types": [
@@ -6021,6 +6321,8 @@
     {
       "id": 151,
       "name": "mew",
+      "name_en": "Mew",
+      "name_ger": "Mew",
       "display_name": "Mew",
       "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
       "types": [
