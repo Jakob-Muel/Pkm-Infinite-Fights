@@ -42,7 +42,7 @@
   "stat.speed":        "INI",
   "result.win":        "🏆 DU HAST GEWONNEN!",
   "result.tie":        "🤝 UNENTSCHIEDEN!",
-  "result.lose":       "💀 DU HAST VERLOREN!",
+  "result.lose":       "DU HAST VERLOREN!",
   "err.all_used":      "Alle 151 Pokémon verwendet! Neustart…",
 
   "auth.tab.login":            "LOGIN",
@@ -73,7 +73,7 @@
   "lb.streak":  "SERIE",
 
   "score.saving": "Punktzahl wird gespeichert...",
-  "score.saved":  "✓ Punktzahl {0} in der Rangliste gespeichert!",
+  "score.saved":  "Kannst du deinen Highscore von {0} schlagen? Starte ein neues Spiel!",
   "score.error":  "⚠ Punktzahl konnte nicht gespeichert werden. Verbindung prüfen.",
   "score.guest":  "Melde dich an, um deine Punktzahl zu speichern!",
 

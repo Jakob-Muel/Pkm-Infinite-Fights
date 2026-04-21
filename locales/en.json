@@ -42,7 +42,7 @@
   "stat.speed":        "Spe",
   "result.win":        "🏆 YOU WON!",
   "result.tie":        "🤝 IT'S A TIE!",
-  "result.lose":       "💀 YOU LOSE!",
+  "result.lose":       "YOU LOSE!",
   "err.all_used":      "All 151 Pokémon used! Restarting…",
 
   "auth.tab.login":            "LOGIN",
@@ -73,7 +73,7 @@
   "lb.streak":  "STREAK",
 
   "score.saving": "Saving score...",
-  "score.saved":  "✓ Score of {0} saved to leaderboard!",
+  "score.saved":  "Can you beat your highscore of {0}? Start a new game!",
   "score.error":  "⚠ Could not save score. Check your connection.",
   "score.guest":  "Login to save your score!",
 
