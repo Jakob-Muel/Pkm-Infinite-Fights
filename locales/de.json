@@ -1,7 +1,14 @@
 {
   "start.desc":        "Ein zufälliges Pokémon fordert dich heraus.\nWähle eines, das es besiegen kann —\ndann wird es der neue Verteidiger.",
   "btn.start":         "▶ SPIEL STARTEN",
-  "btn.restart":       "↺ NEU STARTEN",
+  "btn.homepage":      "STARTSEITE",
+  "modal.tie.title":   "UNENTSCHIEDEN!",
+  "modal.tie.body":    "Dein Pokémon scheidet aus — gleicher Wert, kein Sieger. Wähle ein neues und versuche es nochmal.",
+  "modal.tie.btn":     "NEU WÄHLEN",
+  "modal.homepage.title": "ZUR STARTSEITE?",
+  "modal.homepage.body":  "Deine aktuelle Serie geht verloren.",
+  "modal.homepage.confirm": "JA, NACH HAUSE",
+  "modal.homepage.cancel":  "ABBRECHEN",
   "label.streak":      "SERIE",
   "input.placeholder": "Pokémon suchen...",
   "hint.browse":       "↑ suchen oder ◀ ▶ nutzen",
@@ -70,9 +77,10 @@
   "score.error":  "⚠ Punktzahl konnte nicht gespeichert werden. Verbindung prüfen.",
   "score.guest":  "Melde dich an, um deine Punktzahl zu speichern!",
 
-  "privacy.btn":   "Datenschutz",
-  "privacy.title": "DATENSCHUTZHINWEIS",
+  "privacy.btn":   "Datenschutz & Kontakt",
+  "privacy.title": "DATENSCHUTZHINWEIS & Kontakt",
   "privacy.text":  "PKM Chain-Athon verwendet Supabase, um deine Kontodaten (E-Mail-Adresse und Benutzername) sowie Ranglisten-Punkte zu speichern. Diese Daten werden ausschließlich für die Rangliste genutzt und nicht an Dritte weitergegeben. Du kannst jederzeit als Gast spielen, ohne ein Konto zu erstellen — in diesem Fall werden keine Daten gespeichert.",
+  "privacy.contact": "Dieses Spiel wurde von einer Privatperson als Hobbyprojekt entwickelt. Pokémon und alle verwandten Namen sind urheberrechtlich geschützt © Nintendo, Game Freak und Creatures Inc. Für Fragen, Feature-Wünsche oder Kontakt erreichst du mich unter <a href=\"mailto:jakob.mueller.arbeit@gmail.com\" style=\"color:#facc15;\">jakob.mueller.arbeit@gmail.com</a> oder auf <a href=\"https://github.com/Jakob-Muel/Pkm-Chain-Athon\" target=\"_blank\" rel=\"noopener\" style=\"color:#facc15;\">GitHub</a>.",
   "privacy.close": "VERSTANDEN ✓",
 
   "user.playing_as":   "SPIELST ALS",

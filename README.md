@@ -1,6 +1,6 @@
 # PKM Infinite Fights
 
-A browser-based Pokémon stat-battle game. A random Pokémon defends — you pick your challenger and choose your moment to fight. Win, and your Pokémon carries the streak forward. Lose, and it's game over.
+A browser-based Pokémon stat-battle game. A random Pokémon defends — you pick your challenger to fight. Win, and your Pokémon carries the streak forward. Lose, and it's game over.
 
 ## How to Play
 
@@ -20,16 +20,21 @@ A browser-based Pokémon stat-battle game. A random Pokémon defends — you pic
 ## Local Development
 
 ```bash
-# Fetch Pokémon data (only needed once)
-python3 fetch_pokemon.py
-
 # Serve locally
 python3 -m http.server 8000
 # → open http://localhost:8000
 ```
 
+## Roadmap
+
+- **Accessibility / Keyboard mode** — make the full game playable with keyboard only
+- **New generations** — expand beyond Gen 1 to the full National Pokédex
+- **New game modes** — Easy mode with a health system; Hard mode where ties count as a loss
+- **own URL** — making the website accesible over a dedicated URL
+
 ## Credits
 
 - Pokémon data provided by [PokéAPI](https://pokeapi.co) — a free, open RESTful Pokémon API.
 - Built with the assistance of [Claude](https://claude.ai) (Anthropic AI).
+- [Supabase](https://supabase.com) for managing user data and the leaderboard. The only data stored are login credentials, username, and leaderboard scores.
 - Pokémon and all related names are trademarks of Nintendo / Game Freak.

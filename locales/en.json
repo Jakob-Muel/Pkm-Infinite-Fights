@@ -1,7 +1,14 @@
 {
   "start.desc":        "A random Pokémon challenges you.\nPick one that can beat it —\nthen it becomes the next defender.",
   "btn.start":         "▶ START GAME",
-  "btn.restart":       "↺ RESTART",
+  "btn.homepage":      "HOMEPAGE",
+  "modal.tie.title":   "IT'S A TIE!",
+  "modal.tie.body":    "Your Pokémon is eliminated — same stat, no winner. Pick a new one and try again.",
+  "modal.tie.btn":     "PICK AGAIN",
+  "modal.homepage.title": "GO TO HOMEPAGE?",
+  "modal.homepage.body":  "Your current streak will be lost.",
+  "modal.homepage.confirm": "YES, GO HOME",
+  "modal.homepage.cancel":  "CANCEL",
   "label.streak":      "STREAK",
   "input.placeholder": "Search Pokémon...",
   "hint.browse":       "↑ search or use ◀ ▶",
@@ -70,9 +77,10 @@
   "score.error":  "⚠ Could not save score. Check your connection.",
   "score.guest":  "Login to save your score!",
 
-  "privacy.btn":   "privacy notice",
-  "privacy.title": "PRIVACY NOTICE",
+  "privacy.btn":   "privacy notice & contact",
+  "privacy.title": "PRIVACY NOTICE & CONTACT",
   "privacy.text":  "PKM Chain-Athon uses Supabase to store your account data (email address and username) and leaderboard scores. This data is only used to run the leaderboard and is never shared with third parties. You can play as a guest at any time without creating an account — no data is stored in that case.",
+  "privacy.contact": "This game was made by a private person as a hobby project. Pokémon and all related names are copyright © Nintendo, Game Freak, and Creatures Inc. For questions, feature requests, or contact, reach out via <a href=\"mailto:jakob.mueller.arbeit@gmail.com\" style=\"color:#facc15;\">jakob.mueller.arbeit@gmail.com</a> or on <a href=\"https://github.com/Jakob-Muel/Pkm-Chain-Athon\" target=\"_blank\" rel=\"noopener\" style=\"color:#facc15;\">GitHub</a>.",
   "privacy.close": "GOT IT ✓",
 
   "user.playing_as":   "PLAYING AS",
