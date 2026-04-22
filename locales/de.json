@@ -73,7 +73,7 @@
   "lb.streak":  "SERIE",
 
   "score.saving": "Punktzahl wird gespeichert...",
-  "score.saved":  "Kannst du deinen Highscore von {0} schlagen? Starte ein neues Spiel!",
+  "score.saved":  "Du hast deinen Highscore von {0} nicht übertroffen. Versuch es in einer neuen Runde!",
   "score.error":  "⚠ Punktzahl konnte nicht gespeichert werden. Verbindung prüfen.",
   "score.guest":  "Melde dich an, um deine Punktzahl zu speichern!",
 

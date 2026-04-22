@@ -73,7 +73,7 @@
   "lb.streak":  "STREAK",
 
   "score.saving": "Saving score...",
-  "score.saved":  "Can you beat your highscore of {0}? Start a new game!",
+  "score.saved":  "Highest score not beaten. Try beating your score of {0} in the next round!",
   "score.error":  "⚠ Could not save score. Check your connection.",
   "score.guest":  "Login to save your score!",
 
