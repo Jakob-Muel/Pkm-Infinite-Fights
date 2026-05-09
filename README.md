@@ -27,7 +27,7 @@ python3 -m http.server 8000
 
 ## Roadmap
 
-- **Accessibility / Keyboard mode** — make the full game playable with keyboard only
+- **Accessibility / Keyboard mode** — make the gameplay experience with just keyboard mor enjoyable
 - **New generations** — expand beyond Gen 1 to the full National Pokédex
 - **New game modes** — Easy mode with a health system; Hard mode where ties count as a loss
 - **own URL** — making the website accesible over a dedicated URL
